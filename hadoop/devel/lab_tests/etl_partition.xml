@@ -1,0 +1,108 @@
+<!DOCTYPE etl SYSTEM "http://scriptella.javaforge.com/dtd/etl.dtd">
+<etl>
+	<description>LAB ETL</description>
+	<connection id="hive" driver="org.apache.hive.jdbc.HiveDriver"
+		url="jdbc:hive2://ktphadoop.vsshp.net:10000/ktp"
+	statement.fetchSize=100
+	encoding=UTF-8
+	</connection>
+
+	<connection id="pg_createtable" driver="org.postgresql.Driver" 
+		url="jdbc:postgresql://ktppg.vsshp.net/ktp" 
+	encoding=UTF-8
+	</connection>
+
+	<connection id="pg" driver="org.postgresql.Driver" 
+		url="jdbc:postgresql://ktppg.vsshp.net/ktp" 
+	<!--statement.batchSize=5 -->
+	encoding=UTF-8
+	</connection>
+
+	<!-- For printing debug information on the console --> 
+	<connection id="log" driver="text"/> 
+
+	<!--ETL Queries and Scripts -->
+	<script connection-id="pg_createtable">
+	BEGIN;
+	CREATE TABLE IF NOT EXISTS stage.lab (
+		testid VARCHAR,
+		testp VARCHAR,
+		test VARCHAR,
+		testt INT,
+		urgency INT,
+		sampleid VARCHAR,
+		cost DOUBLE PRECISION,
+		fee DOUBLE PRECISION,
+		outcomet VARCHAR,
+		outcomen DOUBLE PRECISION,
+		unit VARCHAR,
+		microbe VARCHAR,
+		refmin DOUBLE PRECISION,
+		Refmax DOUBLE PRECISION,
+		refval DOUBLE PRECISION,
+		outsour VARCHAR,
+		weekday VARCHAR,
+		custorg0 VARCHAR,
+		custorg1 VARCHAR,
+		custorg2 VARCHAR,
+		custorg3 VARCHAR,
+		custorgt VARCHAR,
+		projid VARCHAR,
+		payer1 VARCHAR,
+		payer2 VARCHAR,
+		provorg1 VARCHAR,
+		labspecd VARCHAR,
+		labspec VARCHAR,
+		provorg2 VARCHAR,
+		testorg VARCHAR,
+		datetime1 TIMESTAMP,
+		datetime2 TIMESTAMP,
+		datetime3 TIMESTAMP,
+		Datetime4 TIMESTAMP,
+		Datetime5 TIMESTAMP,
+		Datetime6 TIMESTAMP,
+		Datetime7 TIMESTAMP,
+		Macid VARCHAR,
+		Batchid VARCHAR,
+		Patidcode VARCHAR,
+		Agedays VARCHAR,
+		Ageyear VARCHAR,
+		Sex VARCHAR,
+		Patarea1 VARCHAR,
+		Spec VARCHAR,
+		Agecat1 VARCHAR,
+		Autoack VARCHAR,
+		macgrp VARCHAR,
+		testgrp VARCHAR,
+		agecat2 VARCHAR,
+		Agecat3 VARCHAR,
+ 		Hetu VARCHAR,
+		Mergeid VARCHAR,
+		datetime8 TIMESTAMP,
+		dt DATE);
+	COMMIT;
+	</script>
+
+	<query connection-id="hive">
+	SELECT testid, testp, test, testt INT, urgency INT, sampleid,
+	  cost, fee, outcomet, outcomen, unit, microbe, refmin, Refmax,
+	  refval, outsour, weekday, custorg0, custorg1, custorg2,
+	  custorg3, custorgt, projid, payer1, payer2, provorg1,
+	  labspecd, labspec, provorg2, testorg, datetime1, datetime2,
+	  datetime3, Datetime4, Datetime5, Datetime6, Datetime7, Macid,
+	  Batchid, Patidcode, Agedays, Ageyear, Sex, Patarea1, Spec,
+	  Agecat1, Autoack, macgrp, testgrp, agecat2, Agecat3, Hetu,
+	  Mergeid, datetime8, dt 
+	FROM lab
+	WHERE dt='$partition';
+
+	<script connection-id="pg">
+		INSERT INTO stage.lab
+		VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11,
+		  ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22,
+		  ?23, ?24, ?25, ?26, ?27, ?28, ?29, ?30, ?31, ?32, ?33,
+		  ?34, ?35, ?36, ?37, ?38, ?39, ?40, ?41, ?42, ?43, ?44,
+		  ?45, ?46, ?47, ?48, ?49, ?50, ?51, ?52, ?53, ?54, ?55::DATE );
+	</script>
+	</query>
+</etl>

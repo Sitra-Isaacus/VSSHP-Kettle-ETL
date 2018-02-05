@@ -1,0 +1,101 @@
+-- Table: stage_sasdata.upkl_salo_97_04
+
+-- DROP TABLE stage_sasdata.upkl_salo_97_04;
+
+CREATE TABLE stage_sasdata.upkl_salo_97_04
+(
+  upkl_salo_97_04_id INTEGER
+, sairaalanro INTEGER
+, erikoisala INTEGER
+, henkilotunnus VARCHAR(11)
+, syntymapaiva DATE
+, kunta VARCHAR(3)
+, saapumistapa SMALLINT
+, maksuluokka SMALLINT
+, saapumistapa_tulotapa SMALLINT
+, hoitokerta SMALLINT
+, dg_oire_koodi_1 VARCHAR(5)
+, dg_oire_koodi_2 VARCHAR(5)
+, dg_oire_koodi_3 VARCHAR(5)
+, dg_oire_koodi_4 VARCHAR(5)
+, onko_leikattu SMALLINT
+, toimenpide_koodi_1 VARCHAR(4)
+, toimenpide_koodi_2 VARCHAR(4)
+, tapaturman_ulkoinen_syy VARCHAR(5)
+, kuntalaskutettava SMALLINT
+, tietuetunnus_r VARCHAR(1)
+, potilaan_sairaanhoitopiiri VARCHAR(2)
+, sairaalan_sairaanhoitopiiri VARCHAR(2)
+, lupa VARCHAR(5)
+, ika SMALLINT
+, sukupuoli SMALLINT
+, diagnoosiryhma VARCHAR(2)
+, hoitopaivat_erikoisalalla SMALLINT
+, vtkk_n_sairaalanumero VARCHAR(4)
+, toimipiste_koodi VARCHAR(4)
+, lahde SMALLINT
+, sty VARCHAR(2)
+, laji SMALLINT
+, henkilon_koko_nimi VARCHAR(20)
+, kayntipaiva DATE
+, tapvv VARCHAR(2)
+, vvkk VARCHAR(4)
+, tpplk SMALLINT
+, tp1lk SMALLINT
+, tp2lk SMALLINT
+, tp3lk SMALLINT
+, osaston_hoitopaivat SMALLINT
+, jasenkunta_1_kylla_2_ei SMALLINT
+, potilaan_terveyskeskuskoodi INTEGER
+, potilaan_aidinkieli VARCHAR(2)
+, katv VARCHAR(2)
+, pkstk VARCHAR(3)
+, kyt SMALLINT
+, jatkohoitopaikka_tyksissa VARCHAR(4)
+, huom_kayta_tata_jatkohoitopaikkaa INTEGER
+, sivutoimenpiteet_1 VARCHAR(5)
+, sivutoimenpiteet_2 VARCHAR(5)
+, etpt VARCHAR(8)
+, erikoistiedot_1 VARCHAR(2)
+, erikoistiedot_2 VARCHAR(2)
+, erikoistiedot_3 VARCHAR(2)
+, erikoistiedot_4 VARCHAR(2)
+, erikoistiedot_5 VARCHAR(2)
+, erikoisryhma VARCHAR(6)
+, kayntityyppi VARCHAR(2)
+, mluv VARCHAR(2)
+, maksuluokka_1 VARCHAR(2)
+, mista_tullut VARCHAR(2)
+, laskutusryhma VARCHAR(2)
+, ulkomaalainen SMALLINT
+, potilaan_kotikunnan_mukaan SMALLINT
+, lahetteen_vastaanottaja_resurssi VARCHAR(6)
+, eriho VARCHAR(3)
+, viikonpaiva_1_su_2_ma INTEGER
+, lahettava_yksikko VARCHAR(5)
+, ilmoittautumisaika VARCHAR(2)
+, potilaan_asuinmaa VARCHAR(3)
+, lisalas VARCHAR(2)
+, dg_syy_koodi_1 VARCHAR(5)
+, dg_syy_koodi_2 VARCHAR(4)
+, dg_syy_koodi_3 VARCHAR(4)
+, dg_syy_koodi_4 VARCHAR(4)
+, hh VARCHAR(2)
+, "min" VARCHAR(2)
+, erik VARCHAR(3)
+, vpklvo VARCHAR(6)
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+,  CONSTRAINT upkl_salo_97_04_pkey PRIMARY KEY (upkl_salo_97_04_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.upkl_salo_97_04
+  OWNER TO ktp;
+
+
+
+
+
+

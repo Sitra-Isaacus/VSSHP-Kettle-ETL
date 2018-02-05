@@ -1,0 +1,204 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.4.9
+-- Dumped by pg_dump version 9.4.9
+-- Started on 2016-11-08 11:42:28 EET
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = map, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 598 (class 1259 OID 31437025)
+-- Name: html_unicode; Type: TABLE; Schema: map; Owner: ktp; Tablespace: 
+--
+
+CREATE TABLE html_unicode (
+    html_unicode_id integer NOT NULL,
+    code text,
+    "dec" integer,
+    symbol text
+);
+
+
+ALTER TABLE html_unicode OWNER TO ktp;
+
+--
+-- TOC entry 597 (class 1259 OID 31437023)
+-- Name: html_unicode_html_unicode_id_seq; Type: SEQUENCE; Schema: map; Owner: ktp
+--
+
+CREATE SEQUENCE html_unicode_html_unicode_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE html_unicode_html_unicode_id_seq OWNER TO ktp;
+
+--
+-- TOC entry 3551 (class 0 OID 0)
+-- Dependencies: 597
+-- Name: html_unicode_html_unicode_id_seq; Type: SEQUENCE OWNED BY; Schema: map; Owner: ktp
+--
+
+ALTER SEQUENCE html_unicode_html_unicode_id_seq OWNED BY html_unicode.html_unicode_id;
+
+
+--
+-- TOC entry 3376 (class 2604 OID 31437028)
+-- Name: html_unicode_id; Type: DEFAULT; Schema: map; Owner: ktp
+--
+
+ALTER TABLE ONLY html_unicode ALTER COLUMN html_unicode_id SET DEFAULT nextval('html_unicode_html_unicode_id_seq'::regclass);
+
+
+--
+-- TOC entry 3546 (class 0 OID 31437025)
+-- Dependencies: 598
+-- Data for Name: html_unicode; Type: TABLE DATA; Schema: map; Owner: ktp
+--
+
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (1, '&#xe4;', 228, 'ä');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (2, '&#xf6;', 246, 'ö');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (3, '&#10;', 10, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (4, '&#xe5;', 229, 'å');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (5, '&#128;', 128, '€');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (6, '&#133;', 133, '…');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (7, '&#137;', 137, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (8, '&#xc4;', 196, 'Ä');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (9, '&#142;', 142, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (10, '&#146;', 146, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (11, '&#148;', 148, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (12, '&#149;', 149, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (13, '&#150;', 150, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (14, '&#151;', 151, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (15, '&#156;', 156, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (16, '&#xa4;', 164, '¤');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (17, '&#xb5;', 181, 'µ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (18, '&#xa0;', 160, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (19, '&#xae;', 174, '®');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (20, '&#xe9;', 233, 'é');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (21, '&#xc5;', 197, 'Å');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (22, '&#xab;', 171, '«');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (23, '&#xa3;', 163, '£');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (24, '&#x9;', NULL, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (25, '&#xed;', 237, 'í');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (26, '&#xd6;', 214, 'Ö');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (27, '&#x7f;', 127, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (28, '&#x80;', 128, '€');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (29, '&#x85;', 133, '…');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (30, '&#x87;', 135, '‡');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (31, '&#x92;', 146, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (32, '&#x93;', 147, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (33, '&#x94;', 148, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (34, '&#x96;', 150, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (35, '&#x99;', 153, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (36, '&#xa1;', 161, '¡');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (37, '&#xa6;', 166, '¦');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (38, '&#xa7;', 167, '§');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (39, '&#xa8;', 168, '¨');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (40, '&#xa9;', 169, '©');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (41, '&#xac;', 172, '¬');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (42, '&#xad;', 173, '­');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (43, '&#xb0;', 176, '°');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (44, '&#xb1;', 177, '±');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (45, '&#xb2;', 178, '²');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (46, '&#xb3;', 179, '³');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (47, '&#xb4;', 180, '´');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (48, '&#xb6;', 182, '¶');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (49, '&#xb7;', 183, '·');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (50, '&#xb8;', 184, '¸');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (51, '&#xba;', 186, 'º');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (52, '&#xbb;', 187, '»');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (53, '&#xbc;', 188, '¼');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (54, '&#xbd;', 189, '½');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (55, '&#xbe;', 190, '¾');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (56, '&#xbf;', 191, '¿');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (57, '&#xc0;', 192, 'À');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (58, '&#xc1;', 193, 'Á');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (59, '&#xc2;', 194, 'Â');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (60, '&#xc8;', 200, 'È');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (61, '&#xc9;', 201, 'É');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (62, '&#xca;', 202, 'Ê');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (63, '&#xcb;', 203, 'Ë');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (64, '&#xcc;', 204, 'Ì');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (65, '&#xcd;', 205, 'Í');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (66, '&#xcf;', 207, 'Ï');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (67, '&#xd;', NULL, ' ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (68, '&#xd1;', 209, 'Ñ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (69, '&#xd2;', 210, 'Ò');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (70, '&#xd3;', 211, 'Ó');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (71, '&#xd4;', 212, 'Ô');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (72, '&#xd5;', 213, 'Õ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (73, '&#xd7;', 215, '×');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (74, '&#xd8;', 216, 'Ø');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (75, '&#xd9;', 217, 'Ù');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (76, '&#xda;', 218, 'Ú');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (77, '&#xdb;', 219, 'Û');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (78, '&#xdc;', 220, 'Ü');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (79, '&#xdd;', 221, 'Ý');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (80, '&#xde;', 222, 'Þ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (81, '&#xdf;', 223, 'ß');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (82, '&#xe0;', 224, 'à');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (83, '&#xe1;', 225, 'á');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (84, '&#xe2;', 226, 'â');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (85, '&#xe3;', 227, 'ã');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (86, '&#xe7;', 231, 'ç');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (87, '&#xe8;', 232, 'è');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (88, '&#xea;', 234, 'ê');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (89, '&#xeb;', 235, 'ë');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (90, '&#xec;', 236, 'ì');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (91, '&#xef;', 239, 'ï');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (92, '&#xf1;', 241, 'ñ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (93, '&#xf2;', 242, 'ò');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (94, '&#xf3;', 243, 'ó');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (95, '&#xf4;', 244, 'ô');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (96, '&#xf5;', 245, 'õ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (97, '&#xf8;', 248, 'ø');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (98, '&#xf9;', 249, 'ù');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (99, '&#xfa;', 250, 'ú');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (100, '&#xfb;', 251, 'û');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (101, '&#xfc;', 252, 'ü');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (102, '&#xfd;', 253, 'ý');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (103, '&#xfe;', 254, 'þ');
+INSERT INTO html_unicode (html_unicode_id, code, "dec", symbol) VALUES (104, '&#xff;', 255, 'ÿ');
+
+
+--
+-- TOC entry 3552 (class 0 OID 0)
+-- Dependencies: 597
+-- Name: html_unicode_html_unicode_id_seq; Type: SEQUENCE SET; Schema: map; Owner: ktp
+--
+
+SELECT pg_catalog.setval('html_unicode_html_unicode_id_seq', 104, true);
+
+
+--
+-- TOC entry 3378 (class 2606 OID 31437033)
+-- Name: html_unicode_pk; Type: CONSTRAINT; Schema: map; Owner: ktp; Tablespace: 
+--
+
+ALTER TABLE ONLY html_unicode
+    ADD CONSTRAINT html_unicode_pk PRIMARY KEY (html_unicode_id);
+
+
+-- Completed on 2016-11-08 11:42:29 EET
+
+--
+-- PostgreSQL database dump complete
+--
+

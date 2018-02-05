@@ -1,0 +1,46 @@
+-- Table: stage_sasdata.lahe_musti_vsshp_96_03
+
+-- DROP TABLE stage_sasdata.lahe_musti_vsshp_96_03;
+
+CREATE TABLE stage_sasdata.lahe_musti_vsshp_96_03
+(
+  lahe_musti_vsshp_96_03_id INTEGER
+, sairaalanro VARCHAR(5)
+, henkilotunnus VARCHAR(11)
+, syntymapaiva DATE
+, nimi VARCHAR(20)
+, ika SMALLINT
+, sukupuoli SMALLINT
+, kotikunta VARCHAR(3)
+, lahetteen_vastaanottaja_resurssi VARCHAR(6)
+, erikoisala VARCHAR(8)
+, lahetteen_saapumispaiva DATE
+, diagnoosi VARCHAR(5)
+, toimenpide VARCHAR(5)
+, lahettavan_yksikon_osaston_laitoskoodi VARCHAR(5)
+, lahettavan_yksikon_nimi VARCHAR(22)
+, potilaan_terveyskeskuskoodi INTEGER
+, jasenkunta_1_kylla_2_ei SMALLINT
+, lahetteen_tyyppi SMALLINT
+, hilmo_mista SMALLINT
+, lahettanyt_laakari VARCHAR(20)
+, varauspaiva DATE
+, lahetteen_tila VARCHAR(12)
+, lahettajan_kiirellisyys_koodi VARCHAR(1)
+, vastaanottajan_kiirellisyys_koodi VARCHAR(1)
+, vastaanottaja VARCHAR(18)
+, diagnoosin_selite VARCHAR(30)
+, resurssi_vastaanotto VARCHAR(6)
+, lahetteen_saapumisesta_ensimmaisen_kaynnin_kayntityypi VARCHAR(2)
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.lahe_musti_vsshp_96_03
+  OWNER TO ktp;
+
+
+
+

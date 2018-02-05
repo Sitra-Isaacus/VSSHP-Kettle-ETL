@@ -1,0 +1,91 @@
+-- Table: stage_sasdata.opera_vsshp
+
+-- DROP TABLE stage_sasdata.opera_vsshp;
+
+CREATE TABLE stage_sasdata.opera_vsshp
+(
+  opera_vsshp_id INTEGER
+, henkilotunnus VARCHAR(11)
+, nimi VARCHAR(20)
+, ika SMALLINT
+, sukupuoli SMALLINT
+, toimenpideyksikko VARCHAR(3)
+, leikkaustyyppi SMALLINT
+, potilaan_paino INTEGER
+, potilaan_pituus INTEGER
+, asa_luokka SMALLINT
+, puhtausluokka SMALLINT
+, toimenpidesali VARCHAR(10)
+, paatoimenpide VARCHAR(5)
+, sivutoimenpiteet_1 VARCHAR(5)
+, sivutoimenpiteet_2 VARCHAR(5)
+, sivutoimenpiteet_3 VARCHAR(5)
+, sivutoimenpiteet_4 VARCHAR(5)
+, lisatoimenpiteita_lkm SMALLINT
+, paadiagnoosi_1 VARCHAR(5)
+, sivudiagnoosi_2 VARCHAR(5)
+, sivudiagnoosi_3 VARCHAR(5)
+, sivudiagnoosi_4 VARCHAR(5)
+, diagnooseja_yhteensa_lkm SMALLINT
+, toimenpideyksikkoon_paivamaara DATE
+, toimenpideyksikkoon_vvkk VARCHAR(4)
+, toimenpideyksikkoon_klo TIMESTAMP
+, toimenpideyksikkoon_tunti SMALLINT
+, leikkaussaliin_paivamaara DATE
+, leikkaussaliin_vvkk VARCHAR(4)
+, leikkaussaliin_klo TIMESTAMP
+, leikkaussaliin_tunti SMALLINT
+, leikkaussalissa_aika INTEGER
+, anestesia_alkoi_paivamaara DATE
+, anestesia_alkoi_vvkk VARCHAR(4)
+, anestesia_alkoi_klo TIMESTAMP
+, anestesia_alkoi_tunti INTEGER
+, anestesian_kesto INTEGER
+, toimenpide_alkoi_paivamaara DATE
+, toimenpide_alkoi_vvkk VARCHAR(4)
+, toimenpide_alkoi_klo TIMESTAMP
+, toimenpide_alkoi_tunti INTEGER
+, toimenpiteen_kesto INTEGER
+, toimenpide_alkoi_viikonpaiva DATE
+, potilas_heraamoon_paivamaara DATE
+, potilas_heraamoon_vvkk VARCHAR(4)
+, potilas_heraamoon_klo TIMESTAMP
+, potilas_heraamoon_tunti SMALLINT
+, potilas_heraamoon_kesto VARCHAR(4)
+, kirurgi_1 VARCHAR(12)
+, kirurgi_2 VARCHAR(8)
+, kirurgi_3 VARCHAR(8)
+, kirurgeja_yhteensa SMALLINT
+, anestesialaakari_1 VARCHAR(15)
+, anestesialaakari_2 VARCHAR(15)
+, anestesialaakareita_yht SMALLINT
+, jatkoh_paikka VARCHAR(7)
+, implantti_1 VARCHAR(10)
+, maara_1 SMALLINT
+, implantti_2 VARCHAR(10)
+, maara_2 SMALLINT
+, paatoimenpide_z_koodi VARCHAR(5)
+, sivutoimenpide_z_koodi_1 VARCHAR(5)
+, sivutoimenpide_z_koodi_2 VARCHAR(5)
+, sivutoimenpide_z_koodi_3 VARCHAR(5)
+, sivutoimenpide_z_koodi_4 VARCHAR(5)
+, hoitava_osasto VARCHAR(10)
+, anestesiakoodit_1 VARCHAR(5)
+, anestesiakoodit_2 VARCHAR(5)
+, anestesiakoodit_3 VARCHAR(5)
+, potilaan_erikoisala VARCHAR(3)
+, anestesiamuoto VARCHAR(30)
+, lminuutti VARCHAR(2)
+, tminuutti VARCHAR(2)
+, hminuutti VARCHAR(2)
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+,  CONSTRAINT opera_vsshp_pkey PRIMARY KEY (opera_vsshp_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.opera_vsshp
+  OWNER TO ktp;
+
+

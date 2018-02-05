@@ -1,0 +1,2692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>pitkaaikaisdiagnoosi</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2016/01/26 15:49:24.991</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2016/01/26 15:49:24.991</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Check the latest 'paivityshetki_ods'
+from the table in stage</note>
+      <xloc>208</xloc>
+      <yloc>80</yloc>
+      <width>243</width>
+      <heigth>42</heigth>
+      <fontname>Sans</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Read only the new or 
+updated rows</note>
+      <xloc>64</xloc>
+      <yloc>288</yloc>
+      <width>151</width>
+      <heigth>42</heigth>
+      <fontname>Sans</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>Oberon ODS</name>
+    <server>uranus-raportointi.vsshp.net</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>/uraods</database>
+    <port>1521</port>
+    <username>hammaisa</username>
+    
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_ORACLE.loginTimeout</code>
+        <attribute>120</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PostgreSQL gradient</name>
+    <server>gradient.vsshp.net</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>ktp</database>
+    <port>5432</port>
+    <username>ktp</username>
+    
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Table input</from>
+      <to>Read Table</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Read Table</from>
+      <to>Transform fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Transform fields</from>
+      <to>Get current timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get current timestamp</from>
+      <to>Insert / Update</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Get current timestamp</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (variable)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / Update</name>
+    <type>InsertUpdate</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>stage_uraods</schema>
+      <table>pitkaaikaisdiagnoosi</table>
+      <key>
+        <name>DGN_NUMERO</name>
+        <field>DGN_NUMERO</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>DGN_NUMERO</name>
+        <rename>DGN_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>POTILASNUMERO</name>
+        <rename>POTILASNUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>DG_OIRE_KOODI</name>
+        <rename>DG_OIRE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>DG_OIRE_SELITE</name>
+        <rename>DG_OIRE_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>DG_SYY_KOODI</name>
+        <rename>DG_SYY_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>DG_SYY_SELITE</name>
+        <rename>DG_SYY_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARKENNE</name>
+        <rename>TARKENNE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ALKUHETKI_PVM</name>
+        <rename>ALKUHETKI_PVM</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LOPPUHETKI_PVM</name>
+        <rename>LOPPUHETKI_PVM</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ULK_SYY_KOODI</name>
+        <rename>ULK_SYY_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ULK_SYY_SELITE</name>
+        <rename>ULK_SYY_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TAPATURMA_TYYPPI_KOODI</name>
+        <rename>TAPATURMA_TYYPPI_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TAPATURMA_TYYPPI_SELITE</name>
+        <rename>TAPATURMA_TYYPPI_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA</name>
+        <rename>KIRJAAJA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LUONTIHETKI_S</name>
+        <rename>LUONTIHETKI_S</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PAIVITYSHETKI_S</name>
+        <rename>PAIVITYSHETKI_S</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TIEDON_PAIVITTAJA</name>
+        <rename>TIEDON_PAIVITTAJA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PAIVITYSHETKI_ODS</name>
+        <rename>PAIVITYSHETKI_ODS</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>HISTORIA_AVAIN</name>
+        <rename>HISTORIA_AVAIN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>HOITOTAPAHTUMA_NUMERO</name>
+        <rename>HOITOTAPAHTUMA_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>HOITOTAPAHTUMA_KOODI</name>
+        <rename>HOITOTAPAHTUMA_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>HOITOTAPAHTUMA_TUNNUS</name>
+        <rename>HOITOTAPAHTUMA_TUNNUS</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PUOLISUUS_KOODI</name>
+        <rename>PUOLISUUS_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PUOLISUUS_SELITE</name>
+        <rename>PUOLISUUS_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>VARMUUSASTE_KOODI</name>
+        <rename>VARMUUSASTE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>VARMUUSASTE_SELITE</name>
+        <rename>VARMUUSASTE_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TIEDON_LAHDE_KOODI</name>
+        <rename>TIEDON_LAHDE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TIEDON_LAHDE_SELITE</name>
+        <rename>TIEDON_LAHDE_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_TYYPPI_KOODI</name>
+        <rename>KIRJAAJA_TYYPPI_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_TYYPPI_SELITE</name>
+        <rename>KIRJAAJA_TYYPPI_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_SUKUNIMI</name>
+        <rename>KIRJAAJA_SUKUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_ETUNIMI</name>
+        <rename>KIRJAAJA_ETUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_AMMATTI</name>
+        <rename>KIRJAAJA_AMMATTI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJ_AMMATTILUOKITUS_NUMERO</name>
+        <rename>KIRJAAJ_AMMATTILUOKITUS_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_AMMATTILUOKKA_KOODI</name>
+        <rename>KIRJAAJA_AMMATTILUOKKA_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_AMMATTILUOKKA_SELITE</name>
+        <rename>KIRJAAJA_AMMATTILUOKKA_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_TOIMIPISTE_NUMERO</name>
+        <rename>KIRJAAJA_TOIMIPISTE_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_TOIMIPISTE_KOODI</name>
+        <rename>KIRJAAJA_TOIMIPISTE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KIRJAAJA_TOIMIPISTE_NIMI</name>
+        <rename>KIRJAAJA_TOIMIPISTE_NIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_TYYPPI_KOODI</name>
+        <rename>TOTEAJA_TYYPPI_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_TYYPPI_SELITE</name>
+        <rename>TOTEAJA_TYYPPI_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_SUKUNIMI</name>
+        <rename>TOTEAJA_SUKUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_ETUNIMI</name>
+        <rename>TOTEAJA_ETUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_AMMATTI</name>
+        <rename>TOTEAJA_AMMATTI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_AMMATTILUOKITUS_NUMERO</name>
+        <rename>TOTEAJA_AMMATTILUOKITUS_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_AMMATTILUOKKA_KOODI</name>
+        <rename>TOTEAJA_AMMATTILUOKKA_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_AMMATTILUOKKA_SELITE</name>
+        <rename>TOTEAJA_AMMATTILUOKKA_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_TOIMIPISTE_NUMERO</name>
+        <rename>TOTEAJA_TOIMIPISTE_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_TOIMIPISTE_KOODI</name>
+        <rename>TOTEAJA_TOIMIPISTE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TOTEAJA_TOIMIPISTE_NIMI</name>
+        <rename>TOTEAJA_TOIMIPISTE_NIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MUUTOS_TYYPPI_KOODI</name>
+        <rename>MUUTOS_TYYPPI_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MUUTOS_TYYPPI_SELITE</name>
+        <rename>MUUTOS_TYYPPI_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MUUTOS_SYY</name>
+        <rename>MUUTOS_SYY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MUUTOS_SELITE</name>
+        <rename>MUUTOS_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MUUTOSHETKI_S</name>
+        <rename>MUUTOSHETKI_S</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_TYYPPI_KOODI</name>
+        <rename>TILA_MUUT_TYYPPI_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_TYYPPI_SELITE</name>
+        <rename>TILA_MUUT_TYYPPI_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_SUKUNIMI</name>
+        <rename>TILA_MUUT_SUKUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_ETUNIMI</name>
+        <rename>TILA_MUUT_ETUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_AMMATTI</name>
+        <rename>TILA_MUUT_AMMATTI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MU_AMMATTILUOKITUS_NUMERO</name>
+        <rename>TILA_MU_AMMATTILUOKITUS_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_AMMATTILUOKKA_KOODI</name>
+        <rename>TILA_MUUT_AMMATTILUOKKA_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_AMMATTILUOKKA_SELITE</name>
+        <rename>TILA_MUUT_AMMATTILUOKKA_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_TOIMIPISTE_NUMERO</name>
+        <rename>TILA_MUUT_TOIMIPISTE_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_TOIMIPISTE_KOODI</name>
+        <rename>TILA_MUUT_TOIMIPISTE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUT_TOIMIPISTE_NIMI</name>
+        <rename>TILA_MUUT_TOIMIPISTE_NIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_KOODI</name>
+        <rename>TILA_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_SELITE</name>
+        <rename>TILA_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUTOS_SYY</name>
+        <rename>TILA_MUUTOS_SYY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUTOS_SELITE</name>
+        <rename>TILA_MUUTOS_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TILA_MUUTOSHETKI_S</name>
+        <rename>TILA_MUUTOSHETKI_S</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_TYYPPI_KOODI</name>
+        <rename>MAARAAJA_TYYPPI_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_TYYPPI_SELITE</name>
+        <rename>MAARAAJA_TYYPPI_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_SUKUNIMI</name>
+        <rename>MAARAAJA_SUKUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_ETUNIMI</name>
+        <rename>MAARAAJA_ETUNIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_AMMATTI</name>
+        <rename>MAARAAJA_AMMATTI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJ_AMMATTILUOKITUS_NUMERO</name>
+        <rename>MAARAAJ_AMMATTILUOKITUS_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_AMMATTILUOKKA_KOODI</name>
+        <rename>MAARAAJA_AMMATTILUOKKA_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_AMMATTILUOKKA_SELITE</name>
+        <rename>MAARAAJA_AMMATTILUOKKA_SELITE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_TOIMIPISTE_NUMERO</name>
+        <rename>MAARAAJA_TOIMIPISTE_NUMERO</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_TOIMIPISTE_KOODI</name>
+        <rename>MAARAAJA_TOIMIPISTE_KOODI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MAARAAJA_TOIMIPISTE_NIMI</name>
+        <rename>MAARAAJA_TOIMIPISTE_NIMI</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PERUTTU</name>
+        <rename>PERUTTU</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paivityshetki_stage</name>
+        <rename>paivityshetki_stage</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Read Table</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Oberon ODS</connection>
+    <sql>SELECT
+  DGN_NUMERO
+, POTILASNUMERO
+, DG_OIRE_KOODI
+, DG_OIRE_SELITE
+, DG_SYY_KOODI
+, DG_SYY_SELITE
+, TARKENNE
+, ALKUHETKI_PVM
+, LOPPUHETKI_PVM
+, ULK_SYY_KOODI
+, ULK_SYY_SELITE
+, TAPATURMA_TYYPPI_KOODI
+, TAPATURMA_TYYPPI_SELITE
+, KIRJAAJA
+, LUONTIHETKI_S
+, PAIVITYSHETKI_S
+, TIEDON_PAIVITTAJA
+, PAIVITYSHETKI_ODS
+, HISTORIA_AVAIN
+, HOITOTAPAHTUMA_NUMERO
+, HOITOTAPAHTUMA_KOODI
+, HOITOTAPAHTUMA_TUNNUS
+, PUOLISUUS_KOODI
+, PUOLISUUS_SELITE
+, VARMUUSASTE_KOODI
+, VARMUUSASTE_SELITE
+, TIEDON_LAHDE_KOODI
+, TIEDON_LAHDE_SELITE
+, KIRJAAJA_TYYPPI_KOODI
+, KIRJAAJA_TYYPPI_SELITE
+, KIRJAAJA_SUKUNIMI
+, KIRJAAJA_ETUNIMI
+, KIRJAAJA_AMMATTI
+, KIRJAAJ_AMMATTILUOKITUS_NUMERO
+, KIRJAAJA_AMMATTILUOKKA_KOODI
+, KIRJAAJA_AMMATTILUOKKA_SELITE
+, KIRJAAJA_TOIMIPISTE_NUMERO
+, KIRJAAJA_TOIMIPISTE_KOODI
+, KIRJAAJA_TOIMIPISTE_NIMI
+, TOTEAJA_TYYPPI_KOODI
+, TOTEAJA_TYYPPI_SELITE
+, TOTEAJA_SUKUNIMI
+, TOTEAJA_ETUNIMI
+, TOTEAJA_AMMATTI
+, TOTEAJA_AMMATTILUOKITUS_NUMERO
+, TOTEAJA_AMMATTILUOKKA_KOODI
+, TOTEAJA_AMMATTILUOKKA_SELITE
+, TOTEAJA_TOIMIPISTE_NUMERO
+, TOTEAJA_TOIMIPISTE_KOODI
+, TOTEAJA_TOIMIPISTE_NIMI
+, MUUTOS_TYYPPI_KOODI
+, MUUTOS_TYYPPI_SELITE
+, MUUTOS_SYY
+, MUUTOS_SELITE
+, MUUTOSHETKI_S
+, TILA_MUUT_TYYPPI_KOODI
+, TILA_MUUT_TYYPPI_SELITE
+, TILA_MUUT_SUKUNIMI
+, TILA_MUUT_ETUNIMI
+, TILA_MUUT_AMMATTI
+, TILA_MU_AMMATTILUOKITUS_NUMERO
+, TILA_MUUT_AMMATTILUOKKA_KOODI
+, TILA_MUUT_AMMATTILUOKKA_SELITE
+, TILA_MUUT_TOIMIPISTE_NUMERO
+, TILA_MUUT_TOIMIPISTE_KOODI
+, TILA_MUUT_TOIMIPISTE_NIMI
+, TILA_KOODI
+, TILA_SELITE
+, TILA_MUUTOS_SYY
+, TILA_MUUTOS_SELITE
+, TILA_MUUTOSHETKI_S
+, MAARAAJA_TYYPPI_KOODI
+, MAARAAJA_TYYPPI_SELITE
+, MAARAAJA_SUKUNIMI
+, MAARAAJA_ETUNIMI
+, MAARAAJA_AMMATTI
+, MAARAAJ_AMMATTILUOKITUS_NUMERO
+, MAARAAJA_AMMATTILUOKKA_KOODI
+, MAARAAJA_AMMATTILUOKKA_SELITE
+, MAARAAJA_TOIMIPISTE_NUMERO
+, MAARAAJA_TOIMIPISTE_KOODI
+, MAARAAJA_TOIMIPISTE_NIMI
+, PERUTTU
+FROM MDODS.PITKAAIKAISDIAGNOOSI_ODS
+WHERE ? &lt;= PAIVITYSHETKI_ODS
+AND PAIVITYSHETKI_ODS &lt; ?</sql>
+    <limit>0</limit>
+    <lookup>Table input</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient</connection>
+    <sql>-- Find the previous update time
+SELECT last_load, current_load
+FROM stage_uraods.cdc_time
+WHERE process_name = 'pitkaaikaisdiagnoosi';</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Transform fields</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>DGN_NUMERO</name>
+        <rename>DGN_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>POTILASNUMERO</name>
+        <rename>POTILASNUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DG_OIRE_KOODI</name>
+        <rename>DG_OIRE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DG_OIRE_SELITE</name>
+        <rename>DG_OIRE_SELITE</rename>
+        <type>None</type>
+        <length>250</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DG_SYY_KOODI</name>
+        <rename>DG_SYY_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DG_SYY_SELITE</name>
+        <rename>DG_SYY_SELITE</rename>
+        <type>None</type>
+        <length>250</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TARKENNE</name>
+        <rename>TARKENNE</rename>
+        <type>None</type>
+        <length>250</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ALKUHETKI_PVM</name>
+        <rename>ALKUHETKI_PVM</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LOPPUHETKI_PVM</name>
+        <rename>LOPPUHETKI_PVM</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ULK_SYY_KOODI</name>
+        <rename>ULK_SYY_KOODI</rename>
+        <type>None</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ULK_SYY_SELITE</name>
+        <rename>ULK_SYY_SELITE</rename>
+        <type>None</type>
+        <length>250</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TAPATURMA_TYYPPI_KOODI</name>
+        <rename>TAPATURMA_TYYPPI_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TAPATURMA_TYYPPI_SELITE</name>
+        <rename>TAPATURMA_TYYPPI_SELITE</rename>
+        <type>None</type>
+        <length>250</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA</name>
+        <rename>KIRJAAJA</rename>
+        <type>None</type>
+        <length>70</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LUONTIHETKI_S</name>
+        <rename>LUONTIHETKI_S</rename>
+        <type>Timestamp</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PAIVITYSHETKI_S</name>
+        <rename>PAIVITYSHETKI_S</rename>
+        <type>Timestamp</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TIEDON_PAIVITTAJA</name>
+        <rename>TIEDON_PAIVITTAJA</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PAIVITYSHETKI_ODS</name>
+        <rename>PAIVITYSHETKI_ODS</rename>
+        <type>Timestamp</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HISTORIA_AVAIN</name>
+        <rename>HISTORIA_AVAIN</rename>
+        <type>None</type>
+        <length>36</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOTAPAHTUMA_NUMERO</name>
+        <rename>HOITOTAPAHTUMA_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOTAPAHTUMA_KOODI</name>
+        <rename>HOITOTAPAHTUMA_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOTAPAHTUMA_TUNNUS</name>
+        <rename>HOITOTAPAHTUMA_TUNNUS</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PUOLISUUS_KOODI</name>
+        <rename>PUOLISUUS_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PUOLISUUS_SELITE</name>
+        <rename>PUOLISUUS_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>VARMUUSASTE_KOODI</name>
+        <rename>VARMUUSASTE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>VARMUUSASTE_SELITE</name>
+        <rename>VARMUUSASTE_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TIEDON_LAHDE_KOODI</name>
+        <rename>TIEDON_LAHDE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TIEDON_LAHDE_SELITE</name>
+        <rename>TIEDON_LAHDE_SELITE</rename>
+        <type>None</type>
+        <length>250</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_TYYPPI_KOODI</name>
+        <rename>KIRJAAJA_TYYPPI_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_TYYPPI_SELITE</name>
+        <rename>KIRJAAJA_TYYPPI_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_SUKUNIMI</name>
+        <rename>KIRJAAJA_SUKUNIMI</rename>
+        <type>None</type>
+        <length>35</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_ETUNIMI</name>
+        <rename>KIRJAAJA_ETUNIMI</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_AMMATTI</name>
+        <rename>KIRJAAJA_AMMATTI</rename>
+        <type>None</type>
+        <length>300</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJ_AMMATTILUOKITUS_NUMERO</name>
+        <rename>KIRJAAJ_AMMATTILUOKITUS_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_AMMATTILUOKKA_KOODI</name>
+        <rename>KIRJAAJA_AMMATTILUOKKA_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_AMMATTILUOKKA_SELITE</name>
+        <rename>KIRJAAJA_AMMATTILUOKKA_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_TOIMIPISTE_NUMERO</name>
+        <rename>KIRJAAJA_TOIMIPISTE_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_TOIMIPISTE_KOODI</name>
+        <rename>KIRJAAJA_TOIMIPISTE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>KIRJAAJA_TOIMIPISTE_NIMI</name>
+        <rename>KIRJAAJA_TOIMIPISTE_NIMI</rename>
+        <type>None</type>
+        <length>70</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_TYYPPI_KOODI</name>
+        <rename>TOTEAJA_TYYPPI_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_TYYPPI_SELITE</name>
+        <rename>TOTEAJA_TYYPPI_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_SUKUNIMI</name>
+        <rename>TOTEAJA_SUKUNIMI</rename>
+        <type>None</type>
+        <length>35</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_ETUNIMI</name>
+        <rename>TOTEAJA_ETUNIMI</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_AMMATTI</name>
+        <rename>TOTEAJA_AMMATTI</rename>
+        <type>None</type>
+        <length>300</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_AMMATTILUOKITUS_NUMERO</name>
+        <rename>TOTEAJA_AMMATTILUOKITUS_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_AMMATTILUOKKA_KOODI</name>
+        <rename>TOTEAJA_AMMATTILUOKKA_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_AMMATTILUOKKA_SELITE</name>
+        <rename>TOTEAJA_AMMATTILUOKKA_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_TOIMIPISTE_NUMERO</name>
+        <rename>TOTEAJA_TOIMIPISTE_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_TOIMIPISTE_KOODI</name>
+        <rename>TOTEAJA_TOIMIPISTE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOTEAJA_TOIMIPISTE_NIMI</name>
+        <rename>TOTEAJA_TOIMIPISTE_NIMI</rename>
+        <type>None</type>
+        <length>70</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MUUTOS_TYYPPI_KOODI</name>
+        <rename>MUUTOS_TYYPPI_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MUUTOS_TYYPPI_SELITE</name>
+        <rename>MUUTOS_TYYPPI_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MUUTOS_SYY</name>
+        <rename>MUUTOS_SYY</rename>
+        <type>None</type>
+        <length>64</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MUUTOS_SELITE</name>
+        <rename>MUUTOS_SELITE</rename>
+        <type>None</type>
+        <length>256</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MUUTOSHETKI_S</name>
+        <rename>MUUTOSHETKI_S</rename>
+        <type>Timestamp</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_TYYPPI_KOODI</name>
+        <rename>TILA_MUUT_TYYPPI_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_TYYPPI_SELITE</name>
+        <rename>TILA_MUUT_TYYPPI_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_SUKUNIMI</name>
+        <rename>TILA_MUUT_SUKUNIMI</rename>
+        <type>None</type>
+        <length>35</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_ETUNIMI</name>
+        <rename>TILA_MUUT_ETUNIMI</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_AMMATTI</name>
+        <rename>TILA_MUUT_AMMATTI</rename>
+        <type>None</type>
+        <length>300</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MU_AMMATTILUOKITUS_NUMERO</name>
+        <rename>TILA_MU_AMMATTILUOKITUS_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_AMMATTILUOKKA_KOODI</name>
+        <rename>TILA_MUUT_AMMATTILUOKKA_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_AMMATTILUOKKA_SELITE</name>
+        <rename>TILA_MUUT_AMMATTILUOKKA_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_TOIMIPISTE_NUMERO</name>
+        <rename>TILA_MUUT_TOIMIPISTE_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_TOIMIPISTE_KOODI</name>
+        <rename>TILA_MUUT_TOIMIPISTE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUT_TOIMIPISTE_NIMI</name>
+        <rename>TILA_MUUT_TOIMIPISTE_NIMI</rename>
+        <type>None</type>
+        <length>70</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_KOODI</name>
+        <rename>TILA_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_SELITE</name>
+        <rename>TILA_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUTOS_SYY</name>
+        <rename>TILA_MUUTOS_SYY</rename>
+        <type>None</type>
+        <length>64</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUTOS_SELITE</name>
+        <rename>TILA_MUUTOS_SELITE</rename>
+        <type>None</type>
+        <length>256</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILA_MUUTOSHETKI_S</name>
+        <rename>TILA_MUUTOSHETKI_S</rename>
+        <type>Timestamp</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_TYYPPI_KOODI</name>
+        <rename>MAARAAJA_TYYPPI_KOODI</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_TYYPPI_SELITE</name>
+        <rename>MAARAAJA_TYYPPI_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_SUKUNIMI</name>
+        <rename>MAARAAJA_SUKUNIMI</rename>
+        <type>None</type>
+        <length>35</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_ETUNIMI</name>
+        <rename>MAARAAJA_ETUNIMI</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_AMMATTI</name>
+        <rename>MAARAAJA_AMMATTI</rename>
+        <type>None</type>
+        <length>300</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJ_AMMATTILUOKITUS_NUMERO</name>
+        <rename>MAARAAJ_AMMATTILUOKITUS_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_AMMATTILUOKKA_KOODI</name>
+        <rename>MAARAAJA_AMMATTILUOKKA_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_AMMATTILUOKKA_SELITE</name>
+        <rename>MAARAAJA_AMMATTILUOKKA_SELITE</rename>
+        <type>None</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_TOIMIPISTE_NUMERO</name>
+        <rename>MAARAAJA_TOIMIPISTE_NUMERO</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_TOIMIPISTE_KOODI</name>
+        <rename>MAARAAJA_TOIMIPISTE_KOODI</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MAARAAJA_TOIMIPISTE_NIMI</name>
+        <rename>MAARAAJA_TOIMIPISTE_NIMI</rename>
+        <type>None</type>
+        <length>70</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PERUTTU</name>
+        <rename>PERUTTU</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

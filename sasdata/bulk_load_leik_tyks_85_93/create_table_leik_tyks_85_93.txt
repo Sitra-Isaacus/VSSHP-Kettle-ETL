@@ -1,0 +1,66 @@
+-- Table: stage_sasdata.leik_tyks_85_93
+
+-- DROP TABLE stage_sasdata.leik_tyks_85_93;
+
+CREATE TABLE stage_sasdata.leik_tyks_85_93
+(
+leik_tyks_85_93_id INTEGER
+, henkilotunnus VARCHAR(11)
+, nimi VARCHAR(20)
+, kotikunta VARCHAR(3)
+, ika INTEGER
+, sukupuoli SMALLINT
+, toimenpideyksikko INTEGER
+, osasto_poliklinikka VARCHAR(4)
+, leikkaustyyppi SMALLINT
+, potilaan_paino SMALLINT
+, potilaan_pituus SMALLINT
+, puhtausluokka SMALLINT
+, toimenpidesali VARCHAR(2)
+, paatoimenpide VARCHAR(4)
+, sivutoimenpiteet_1 INTEGER
+, sivutoimenpiteet_2 INTEGER
+, sivutoimenpiteet_3 INTEGER
+, sivutoimenpiteet_4 INTEGER
+, diagnoosi_1 VARCHAR(5)
+, diagnoosi_2 VARCHAR(5)
+, diagnoosi_3 VARCHAR(5)
+, diagnoosi_4 VARCHAR(5)
+, saapumispaiva DATE
+, saapumisaika VARCHAR(4)
+, potilas_toimenpideyksikkossa_min INTEGER
+, leikkauspaiva INTEGER
+, leikkaussaliintuloaika VARCHAR(4)
+, potilas_leikkaussalissa_min INTEGER
+, anestesia_alkanut_vvkkpp INTEGER
+, anestesia_alkoi VARCHAR(4)
+, anestesian_kesto_min INTEGER
+, toimenpide_alkanut_vvkkpp INTEGER
+, toimenpide_alkanut VARCHAR(4)
+, toimenpiteen_kesto_min INTEGER
+, toimenpiteen_viikonpaiva SMALLINT
+, potilas_saapunut_heraamoon_vvkkpp INTEGER
+, heraamoontuloaika VARCHAR(4)
+, heraamoika_min INTEGER
+, kirurgit_sv_tunnuksilla_1 VARCHAR(15)
+, kirurgit_sv_tunnuksilla_2 VARCHAR(15)
+, kirurgit_sv_tunnuksilla_3 VARCHAR(15)
+, anestesiakoodi_1 VARCHAR(3)
+, anestesiakoodi_2 VARCHAR(3)
+, anestesiakoodi_3 VARCHAR(3)
+, anestesialaakarit_1 VARCHAR(15)
+, anestesialaakarit_2 VARCHAR(15)
+, hoitohenkilot_1 VARCHAR(15)
+, hoitohenkilot_2 VARCHAR(15)
+, hoitohenkilot_3 VARCHAR(15)
+, toimenpidekomplikaatio SMALLINT
+, anestesiakomplikaatio SMALLINT
+, jatkohoitotapa VARCHAR(2)
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.leik_tyks_85_93
+  OWNER TO ktp;

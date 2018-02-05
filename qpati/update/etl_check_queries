@@ -1,0 +1,26 @@
+﻿select * from main_dev.v_cdc_times where schema_name = 'stage_qpati';
+
+-- ei uutta loadia 2016-12-16 jälkeen
+select cdc_load_time::date, count(*)
+from stage_qpati.file_io_log
+group by cdc_load_time::date
+order by cdc_load_time::date;
+-- 2016-08-19	1133937
+-- 2016-09-16	5439
+-- 2016-09-19	70
+-- 2016-09-20	54
+-- 2016-12-16	202033
+-- 2016-12-20	759
+
+
+
+select paivityshetki_stage::date, count(*)
+from stage_qpati.qpatisample
+group by paivityshetki_stage::date
+order by paivityshetki_stage::date;
+-- 2016-08-19	1133937
+-- 2016-09-19	5509
+-- 2016-09-20	54
+-- 2016-12-17	202033
+-- 2016-12-20	759
+

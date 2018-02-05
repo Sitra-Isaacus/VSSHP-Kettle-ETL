@@ -1,0 +1,41 @@
+﻿-- (2016-12-30) Query returned successfully: 20026669 rows affected, 14:57:37 hours execution time.
+
+CREATE TABLE text_mine.teksti as
+
+
+SELECT
+a.henkilotunnus,
+p.potilasnumero,
+CASE
+    when t.teksti like '<%' THEN 'XML'::text
+    ELSE 'suora'::text
+END AS teksti_muoto,
+p.hoitotapahtuma_numero,
+p.hoitotapahtuma_tunnus,
+COALESCE(v.alkuhetki_pvm, al.tapahtuma_aika_alku) AS hoitotapahtuma_alkuhetki,
+COALESCE(v.alkuhetki_pvm, al.tapahtuma_aika_alku, al.teksti_aika, p.paivityshetki_s) AS hoitotapahtuma_alkuhetki_arvio,
+COALESCE(v.loppuhetki_pvm, al.tapahtuma_aika_loppu) AS hoitotapahtuma_loppuhetki,
+p.potilaskertomus_numero,
+p.toimipiste_koodi,
+p.toimipiste_nimi,
+y.yksikko_nimi,
+p.nakyma_selite,
+p.tila,
+p.teksti_numero,
+map.clean_up_text(t.teksti) as teksti,
+p.paivityshetki_s AS kertomus_paivityshetki_s,
+p.paivityshetki_ods AS kertomus_paivityshetki_ods,
+t.paivityshetki_ods AS teksti_paivityshetki_ods,
+al.teksti_aika,
+now() as paivityshetki_mine
+
+FROM stage_uraods.potilaskertomus p
+     LEFT JOIN stage_uraods.asiakas a ON p.potilasnumero::text = a.potilasnumero::text
+     LEFT JOIN stage_uraods.mv_hoitotapahtuma v ON v.hoitotapahtuma_numero::text = p.hoitotapahtuma_numero::text AND v.hoitotapahtuma_tunnus::text = p.hoitotapahtuma_tunnus::text
+     LEFT JOIN text_mine.aikaleimat al ON p.teksti_numero::text = al.teksti_numero::text
+     INNER JOIN stage_uraods.potilaskertomus_teksti t ON p.teksti_numero::text = t.teksti_numero::text
+	LEFT JOIN stage_uraods.yksikko as y on p.toimipiste_koodi = y.yksikko_koodi or (p.toimipiste_nimi = y.yksikko_koodi and p.toimipiste_koodi != y.yksikko_koodi)
+
+where p.tila in ('hyväksytty', 'lukittu');
+
+

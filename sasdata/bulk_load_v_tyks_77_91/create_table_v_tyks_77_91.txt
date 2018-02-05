@@ -1,0 +1,39 @@
+-- Table: stage_sasdata.v_tyks_77_91
+
+-- DROP TABLE stage_sasdata.v_tyks_77_91;
+
+CREATE TABLE stage_sasdata.v_tyks_77_91
+(
+  v_tyks_77_91_id INTEGER
+, v_vuodeosasto VARCHAR(1)
+, osasto VARCHAR(4)
+, erikoisala VARCHAR(2)
+, henkilotunnus VARCHAR(11)
+, henkilon_nimi VARCHAR(20)
+, kunta VARCHAR(3)
+, syntymapaiva DATE
+, tulopaiva DATE
+, poistumispaiva DATE
+, ika_tulopaiva INTEGER
+, ika_poistumispaiva INTEGER
+, diagnoosi_1 VARCHAR(5)
+, diagnoosi_2 VARCHAR(5)
+, diagnoosi_3 VARCHAR(5)
+, diagnoosi_4 VARCHAR(5)
+, diagnoosi_5 VARCHAR(5)
+, toimenpide_1 VARCHAR(4)
+, toimenpide_2 VARCHAR(4)
+, toimenpide_3 VARCHAR(4)
+, toimenpide_4 VARCHAR(4)
+, toimenpide_5 VARCHAR(4)
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+,  CONSTRAINT v_tyks_77_91_pkey PRIMARY KEY (v_tyks_77_91_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.v_tyks_77_91
+  OWNER TO ktp;
+
+

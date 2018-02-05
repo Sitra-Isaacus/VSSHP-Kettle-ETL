@@ -1,0 +1,115 @@
+-- Table: stage_sasdata.synt_tyks_91_95
+
+-- DROP TABLE stage_sasdata.synt_tyks_91_95;
+
+CREATE TABLE stage_sasdata.synt_tyks_91_95
+(
+  synt_tyks_91_95_id INTEGER
+, aidin_henkilotunnus VARCHAR(11)
+, aidin_sukunimi VARCHAR(20)
+, aidin_syntymapaiva DATE
+, sairaalanumero INTEGER
+, lapsen_henkilotunnus VARCHAR(11)
+, henkilotunnuksen_paivamaaraosa DATE
+, henkilotunnuksen_valimerkki VARCHAR(1)
+, henkilotunnuksen_4_viimeista_merkkia VARCHAR(4)
+, synt_kellonaika VARCHAR(4)
+, lapsen_sukupuoli SMALLINT
+, sikioiden_lukumaara SMALLINT
+, monisik_jarjestyskirjain VARCHAR(1)
+, lapsi_syntyi_paikka SMALLINT
+, aidin_asuinkunta INTEGER
+, kansalaisuus SMALLINT
+, siviilisaaty SMALLINT
+, avoliitto SMALLINT
+, ammatti VARCHAR(18)
+, aiemmat_raskaudet SMALLINT
+, aiemmat_keskenmenot SMALLINT
+, aiemmat_synnytykset SMALLINT
+, kuolleena_synt SMALLINT
+, tarkastuskaynn_ras_aik_yht SMALLINT
+, poliklinikalla SMALLINT
+, ens_neuvolakaynnin_paivamaara DATE
+, tupakointi_rask_aikana SMALLINT
+, viim_kuukautisten_alk_pvm VARCHAR(6)
+, raskauden_kesto_viikkoina SMALLINT
+, paivina_0_6_paivaa SMALLINT
+, rask_liitt_riskit_ja_toimenpiteet SMALLINT
+, v29 SMALLINT
+, v30 SMALLINT
+, v31 SMALLINT
+, v32 SMALLINT
+, v33 SMALLINT
+, v34 SMALLINT
+, sairaalahoito SMALLINT
+, v36 SMALLINT
+, v37 SMALLINT
+, v38 SMALLINT
+, rask_ja_synnytysdiagnoosit SMALLINT
+, v40 SMALLINT
+, v41 SMALLINT
+, v42 SMALLINT
+, v43 SMALLINT
+, v44 SMALLINT
+, synnytystapa SMALLINT
+, synnytys_kivun_lievitys SMALLINT
+, v47 SMALLINT
+, v48 SMALLINT
+, v49 SMALLINT
+, v50 SMALLINT
+, muita_synnytystoimenpiteita VARCHAR(2)
+, v52 VARCHAR(2)
+, v53 VARCHAR(2)
+, v54 VARCHAR(2)
+, v55 VARCHAR(2)
+, v56 VARCHAR(2)
+, v57 VARCHAR(2)
+, v58 VARCHAR(2)
+, v59 VARCHAR(2)
+, v60 SMALLINT
+, lapsi_synt_elavana_kuolleena SMALLINT
+, syntymapaino INTEGER
+, syntymapituus SMALLINT
+, apgarin_pisteet_1_min VARCHAR(2)
+, napavaltimoveren_ph INTEGER
+, lapsen_diagnooseja SMALLINT
+, v67 SMALLINT
+, v68 SMALLINT
+, v69 SMALLINT
+, v70 SMALLINT
+, lapsen_toimenpiteita SMALLINT
+, v72 SMALLINT
+, v73 SMALLINT
+, v74 SMALLINT
+, v75 SMALLINT
+, v76 SMALLINT
+, v77 SMALLINT
+, v78 SMALLINT
+, aidin_sairaalaantulopaiva DATE
+, lahtopaiva VARCHAR(6)
+, lapsen_jatkohoitopaikka SMALLINT
+, lapsen_kuolinpaiva DATE
+, lapsen_kuolinkelloaika VARCHAR(8)
+, v90 VARCHAR(2)
+, v91 SMALLINT
+, v92 SMALLINT
+, v93 SMALLINT
+, v94 VARCHAR(2)
+, v95 VARCHAR(2)
+, v96 VARCHAR(2)
+, v97 VARCHAR(2)
+, v98 VARCHAR(2)
+, v99 VARCHAR(2)
+, v100 VARCHAR(2)
+, v101 VARCHAR(2)
+, v102 VARCHAR(2)
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+,  CONSTRAINT synt_tyks_91_95_pkey PRIMARY KEY (synt_tyks_91_95_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.synt_tyks_91_95
+  OWNER TO ktp;
+

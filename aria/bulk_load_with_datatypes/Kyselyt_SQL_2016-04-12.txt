@@ -1,0 +1,467 @@
+
+
+
+
+
+
+## Erilliset kyselyt eri tauluille, 2016-04-11 (juuri ennen versionvaihdosta ja AURA-j‰rjestelm‰‰)
+
+---------------------------------------------
+-- n. 45 000 Patient
+r_anna_hammais_patient
+
+select
+dbo.Patient.PatientSer,   
+dbo.Patient.PatientId,
+dbo.Patient.HstryTimeStamp,
+dbo.Patient.HstryDateTime
+from dbo.Patient;
+
+
+---------------------------------------------
+-- n. 120 000 Course
+
+select
+dbo.Course.CourseSer,
+dbo.Course.PatientSer,
+dbo.Course.CourseId,   
+dbo.Course.StartDateTime,
+dbo.Course.HstryTimeStamp,
+dbo.Course.HstryDateTime
+from dbo.Course;
+
+
+---------------------------------------------------------
+-- noin 700 000 PlanSetup
+
+
+select
+dbo.PlanSetup.PlanSetupSer,   
+dbo.PlanSetup.CourseSer,
+dbo.PlanSetup.PlanSetupId, 
+dbo.PlanSetup.HstryTimeStamp,
+dbo.PlanSetup.HstryDateTime
+from dbo.PlanSetup
+where dbo.PlanSetup.PlanSetupSer <= 500000;
+
+
+select
+dbo.PlanSetup.PlanSetupSer,   
+dbo.PlanSetup.CourseSer,  
+dbo.PlanSetup.PlanSetupId, 
+dbo.PlanSetup.HstryTimeStamp,
+dbo.PlanSetup.HstryDateTime
+from dbo.PlanSetup
+where dbo.PlanSetup.PlanSetupSer > 500000
+and dbo.PlanSetup.PlanSetupSer <= 1000000;
+
+
+select
+dbo.PlanSetup.PlanSetupSer,   
+dbo.PlanSetup.CourseSer,  
+dbo.PlanSetup.PlanSetupId, 
+dbo.PlanSetup.HstryTimeStamp,
+dbo.PlanSetup.HstryDateTime
+from dbo.PlanSetup
+where dbo.PlanSetup.PlanSetupSer > 1000000;
+
+-- ei en‰‰ tulosta
+
+
+
+
+----------------------------------------------
+-- n. 800 000 RTPlan (kesti alle 20sek)
+
+select dbo.RTPlan.RTPlanSer,  
+select dbo.RTPlan.PlanSetupSer,
+dbo.RTPlan.RTPlanId,   
+dbo.RTPlan.RTPlanName,   
+dbo.RTPlan.NoFractions,
+dbo.RTPlan.HstryTimeStamp,
+dbo.RTPlan.HstryDateTime
+from dbo.RTPlan;
+
+
+
+
+-------------------------------------------------
+-- n. 1 200 000 TreatmentRecord
+
+ -- miljoona rivi‰ haku kest‰‰ 1-2 min
+
+select
+dbo.TreatmentRecord.TreatmentRecordSer,   
+dbo.TreatmentRecord.RTPlanSer,
+dbo.TreatmentRecord.PatientSer,
+dbo.TreatmentRecord.TreatmentRecordDateTime,   
+dbo.TreatmentRecord.NoOfFractions
+dbo.TreatmentRecord.HstryTimeStamp,
+dbo.TreatmentRecord.HstryDateTime
+from dbo.TreatmentRecord
+where dbo.TreatmentRecord.TreatmentRecordSer <= 1000000;
+
+
+
+select
+dbo.TreatmentRecord.TreatmentRecordSer,   
+dbo.TreatmentRecord.RTPlanSer,
+dbo.TreatmentRecord.PatientSer,
+dbo.TreatmentRecord.TreatmentRecordDateTime,   
+dbo.TreatmentRecord.NoOfFractions
+dbo.TreatmentRecord.HstryTimeStamp,
+dbo.TreatmentRecord.HstryDateTime
+from dbo.TreatmentRecord
+where dbo.TreatmentRecord.TreatmentRecordSer > 1000000
+and dbo.TreatmentRecord.TreatmentRecordSer <= 2000000;
+
+
+
+select
+dbo.TreatmentRecord.TreatmentRecordSer,   
+dbo.TreatmentRecord.RTPlanSer,
+dbo.TreatmentRecord.PatientSer,
+dbo.TreatmentRecord.TreatmentRecordDateTime,   
+dbo.TreatmentRecord.NoOfFractions
+dbo.TreatmentRecord.HstryTimeStamp,
+dbo.TreatmentRecord.HstryDateTime
+from dbo.TreatmentRecord
+where dbo.TreatmentRecord.TreatmentRecordSer > 2000000;
+
+-- ei en‰‰ yht‰‰n tulosta
+
+
+
+
+---------------------------------------------------
+-- n. 1 300 000 RadiationHstry
+
+select 
+dbo.RadiationHstry.RadiationHstrySer,
+dbo.RadiationHstry.TreatmentRecordSer,
+dbo.RadiationHstry.RadiationSer,   
+dbo.RadiationHstry.RadiationId,   
+dbo.RadiationHstry.RadiationName,   
+dbo.RadiationHstry.TreatmentStartTime,
+dbo.RadiationHstry.TreatmentEndTime,
+dbo.RadiationHstry.FractionNumber,
+dbo.RadiationHstry.HstryTimeStamp,
+dbo.RadiationHstry.HstryDateTime
+from dbo.RadiationHstry
+where dbo.RadiationHstry.RadiationHstrySer <= 1000000;
+
+
+
+select 
+dbo.RadiationHstry.RadiationHstrySer,
+dbo.RadiationHstry.TreatmentRecordSer,
+dbo.RadiationHstry.RadiationSer,   
+dbo.RadiationHstry.RadiationId,   
+dbo.RadiationHstry.RadiationName,   
+dbo.RadiationHstry.TreatmentStartTime,
+dbo.RadiationHstry.TreatmentEndTime,
+dbo.RadiationHstry.FractionNumber,
+dbo.RadiationHstry.HstryTimeStamp,
+dbo.RadiationHstry.HstryDateTime
+from dbo.RadiationHstry
+where dbo.RadiationHstry.RadiationHstrySer > 1000000
+and dbo.RadiationHstry.RadiationHstrySer <= 2000000;
+
+
+select 
+dbo.RadiationHstry.RadiationHstrySer,
+dbo.RadiationHstry.TreatmentRecordSer,
+dbo.RadiationHstry.RadiationSer,   
+dbo.RadiationHstry.RadiationId,   
+dbo.RadiationHstry.RadiationName,   
+dbo.RadiationHstry.TreatmentStartTime,
+dbo.RadiationHstry.TreatmentEndTime,
+dbo.RadiationHstry.FractionNumber,
+dbo.RadiationHstry.HstryTimeStamp,
+dbo.RadiationHstry.HstryDateTime
+from dbo.RadiationHstry
+where dbo.RadiationHstry.RadiationHstrySer > 2000000
+and dbo.RadiationHstry.RadiationHstrySer <= 3000000;
+
+-- ei yht‰‰n tulosta v‰lill‰ 2M - 10M, mutta yli 10 000 000 taas tulee
+
+
+
+select 
+dbo.RadiationHstry.RadiationHstrySer,
+dbo.RadiationHstry.TreatmentRecordSer,
+dbo.RadiationHstry.RadiationSer,   
+dbo.RadiationHstry.RadiationId,   
+dbo.RadiationHstry.RadiationName,   
+dbo.RadiationHstry.TreatmentStartTime,
+dbo.RadiationHstry.TreatmentEndTime,
+dbo.RadiationHstry.FractionNumber,
+dbo.RadiationHstry.HstryTimeStamp,
+dbo.RadiationHstry.HstryDateTime
+from dbo.RadiationHstry
+where dbo.RadiationHstry.RadiationHstrySer > 10000000
+and dbo.RadiationHstry.RadiationHstrySer <= 11000000;
+
+
+select 
+dbo.RadiationHstry.RadiationHstrySer,
+dbo.RadiationHstry.RadiationSer,   
+dbo.RadiationHstry.RadiationId,   
+dbo.RadiationHstry.RadiationName,   
+dbo.RadiationHstry.FractionNumber,
+dbo.RadiationHstry.HstryTimeStamp,
+dbo.RadiationHstry.HstryDateTime
+from dbo.RadiationHstry
+where dbo.RadiationHstry.RadiationHstrySer > 11000000
+and dbo.RadiationHstry.RadiationHstrySer <= 12000000;
+
+-- yli 12M ei tule en‰‰ rivej‰
+
+
+
+-----------------------------------------
+-- n. 3 000 000 RefPointHstry
+
+select
+dbo.RefPointHstry.RefPointHstrySer,   
+dbo.RefPointHstry.RadiationHstrySer, 
+dbo.RefPointHstry.RefPointSer, 
+dbo.RefPointHstry.ActualDose, 
+dbo.RefPointHstry.HstryTimeStamp,
+dbo.RefPointHstry.HstryDateTime
+from dbo.RefPointHstry
+where RefPointHstry.RefPointHstrySer <= 1000000;
+
+
+
+select
+dbo.RefPointHstry.RefPointHstrySer,   
+dbo.RefPointHstry.RadiationHstrySer, 
+dbo.RefPointHstry.RefPointSer, 
+dbo.RefPointHstry.ActualDose, 
+dbo.RefPointHstry.HstryTimeStamp,
+dbo.RefPointHstry.HstryDateTime
+from dbo.RefPointHstry
+where RefPointHstry.RefPointHstrySer > 1000000
+and RefPointHstry.RefPointHstrySer <= 2000000;
+
+
+select
+dbo.RefPointHstry.RefPointHstrySer,   
+dbo.RefPointHstry.RadiationHstrySer, 
+dbo.RefPointHstry.RefPointSer, 
+dbo.RefPointHstry.ActualDose, 
+dbo.RefPointHstry.HstryTimeStamp,
+dbo.RefPointHstry.HstryDateTime
+from dbo.RefPointHstry
+where RefPointHstry.RefPointHstrySer > 2000000
+and RefPointHstry.RefPointHstrySer <= 3000000;
+
+
+-- yli 3M ei en‰‰ lˆydy rivej‰
+
+
+
+
+------------------------------------------
+-- n. 250 000 RefPoint
+
+select
+dbo.RefPoint.RefPointSer,   
+dbo.RefPoint.PatientSer,
+dbo.RefPoint.TotalDoseLimit,
+dbo.RefPoint.DailyDoseLimit,
+dbo.RefPoint.SessionDoseLimit,
+dbo.RefPoint.RefPointType,
+dbo.RefPoint.RefPointName,
+dbo.RefPoint.RefPointId,
+dbo.RefPoint.HstryTimeStamp,
+dbo.RefPoint.HstryDateTime
+from dbo.RefPoint;
+
+
+-----------------------------------------
+-- n. 250 000
+
+select
+dbo.RefPointTotalDeliveredDose.RefPointSer,
+dbo.RefPointTotalDeliveredDose.TotalDeliveredDose
+from dbo.RefPointTotalDeliveredDose;
+
+
+
+
+------------------------------------------------
+-- n. 150 000 MLCPlan
+
+
+select
+dbo.MLCPlan.MLCPlanSer,
+dbo.MLCPlan.RadiationSer,
+dbo.MLCPlan.MLCPlanId,
+dbo.MLCPlan.MLCPlanName,
+dbo.MLCPlan.CreationDate,
+dbo.MLCPlan.MLCPlanType,
+dbo.MLCPlan.IndexParameterType,
+dbo.MLCPlan.IsLockedFlag,
+dbo.MLCPlan.HstryTimeStamp,
+dbo.MLCPlan.HstryDateTime
+from dbo.MLCPlan
+where dbo.MLCPlan.MLCPlanSer <= 1000000;
+
+-- ei en‰‰ rivej‰ t‰m‰n j‰lkeen
+
+
+
+
+
+----------------------------------------------------
+-- CourseIntent
+-- vanha kysely, k‰ytetty sellaisenaan
+
+
+SELECT
+p.PatientSer,  
+pi.CourseSer,
+pi.CreationDate,
+pi.PhysicianIntentSer,   
+pi.PhysicianIntentUID,   
+pi.TreatmentIntentType,
+ci.Expression1 as treatment_intent_name_from_lookup   
+FROM
+dbo.Patient as p,
+dbo.Course as c,
+dbo.PhysicianIntent as pi
+LEFT OUTER JOIN dbo.vv_CourseIntentLng as ci  on pi.TreatmentIntentType = ci.LookupValue
+WHERE p.PatientSer = c.PatientSer
+and c.CourseSer = pi.CourseSer;
+
+
+--------------------------------------------------
+-- CourseDiagnosis
+-- vanha kysely, k‰ytetty sellaisenaan
+
+SELECT dbo.Patient.PatientSer,
+dbo.Patient.PatientId,
+dbo.Course.CourseSer, 
+dbo.Course.CourseId,
+dbo.Diagnosis.DiagnosisSer,
+dbo.Diagnosis.DiagnosisId,
+dbo.Diagnosis.DateStamp, 
+dbo.Diagnosis.DiagnosisTableName,
+dbo.Diagnosis.DiagnosisCode,
+dbo.Diagnosis.Description,
+dbo.Diagnosis.DiagnosisType, 
+ dbo.LookupTable.Expression1 AS DiagnosisTypeLookup,
+PrmryDiagnosis.TStage, 
+PrmryDiagnosis.NStage, 
+PrmryDiagnosis.MStage, 
+PrmryDiagnosis.AltStage,
+PrmryDiagnosis.TumorSize,
+SecndryDiagnosis.MetastasisFlag
+FROM
+dbo.Patient,
+dbo.Course,   
+dbo.CourseDiagnosis,   
+dbo.Diagnosis
+LEFT OUTER JOIN dbo.PrmryDiagnosis ON dbo.Diagnosis.DiagnosisSer = dbo.PrmryDiagnosis.DiagnosisSer
+LEFT OUTER JOIN dbo.SecndryDiagnosis ON dbo.Diagnosis.DiagnosisSer = dbo.SecndryDiagnosis.DiagnosisSer
+LEFT OUTER JOIN dbo.LookupTable ON dbo.Diagnosis.DiagnosisType = dbo.LookupTable.LookupValue
+WHERE ( dbo.Patient.PatientSer = dbo.Course.PatientSer )
+AND ( dbo.Course.CourseSer = dbo.CourseDiagnosis.CourseSer )
+AND ( dbo.CourseDiagnosis.DiagnosisSer = dbo.Diagnosis.DiagnosisSer );  
+
+
+
+
+----------------------------------------
+
+
+###
+Samun kysely
+
+
+
+
+SELECT dbo.Patient.PatientId,   
+         dbo.Course.CourseId,   
+         dbo.PlanSetup.PlanSetupId,   
+         dbo.RTPlan.RTPlanId,   
+         dbo.TreatmentRecord.TreatmentRecordDateTime,   
+         dbo.RadiationHstry.RadiationId,   
+         dbo.RadiationHstry.FractionNumber,   
+         dbo.RefPointHstry.ActualDose,   
+         dbo.RefPoint.RefPointId  
+    FROM dbo.Patient,   
+         dbo.Course,   
+         dbo.PlanSetup,   
+         dbo.RTPlan,   
+         dbo.TreatmentRecord,   
+         dbo.RadiationHstry,   
+         dbo.RefPointHstry,   
+         dbo.RefPoint  
+   WHERE ( dbo.Course.PatientSer = dbo.Patient.PatientSer ) and  
+         ( dbo.PlanSetup.CourseSer = dbo.Course.CourseSer ) and  
+         ( dbo.RTPlan.PlanSetupSer = dbo.PlanSetup.PlanSetupSer ) and  
+         ( dbo.TreatmentRecord.RTPlanSer = dbo.RTPlan.RTPlanSer ) and  
+         ( dbo.RadiationHstry.TreatmentRecordSer = dbo.TreatmentRecord.TreatmentRecordSer ) and  
+         ( dbo.RefPointHstry.RadiationHstrySer = dbo.RadiationHstry.RadiationHstrySer ) and  
+         ( dbo.RefPoint.RefPointSer = dbo.RefPointHstry.RefPointSer ) and  
+         ( ( dbo.TreatmentRecord.TreatmentRecordDateTime between '2012-01-01' AND '2014-01-01' ) )    
+
+
+
+###
+Samun kysely - uusi versio jossa Ser:it ja v‰h‰n muutakin mukana
+
+
+
+
+
+  SELECT dbo.Patient.PatientSer,   
+         dbo.Patient.PatientId,   
+         dbo.Course.CourseSer,   
+         dbo.Course.CourseId,   
+         dbo.Course.StartDateTime,   
+         dbo.PlanSetup.PlanSetupSer,   
+         dbo.PlanSetup.PlanSetupId,   
+         dbo.RTPlan.RTPlanSer,   
+         dbo.RTPlan.RTPlanId,   
+         dbo.RTPlan.RTPlanName,   
+         dbo.RTPlan.NoFractions,   
+         dbo.TreatmentRecord.TreatmentRecordSer,   
+         dbo.TreatmentRecord.TreatmentRecordDateTime,   
+         dbo.TreatmentRecord.NoOfFractions,   
+         dbo.RadiationHstry.RadiationSer,   
+         dbo.RadiationHstry.RadiationId,   
+         dbo.RadiationHstry.RadiationName,   
+         dbo.RadiationHstry.FractionNumber,   
+         dbo.RefPointHstry.RefPointHstrySer,   
+         dbo.RefPointHstry.ActualDose,   
+         dbo.RefPoint.RefPointSer,   
+         dbo.RefPoint.RefPointId  
+    FROM dbo.Patient,   
+         dbo.Course,   
+         dbo.PlanSetup,   
+         dbo.RTPlan,   
+         dbo.TreatmentRecord,   
+         dbo.RadiationHstry,   
+         dbo.RefPointHstry,   
+         dbo.RefPoint  
+   WHERE ( dbo.Course.PatientSer = dbo.Patient.PatientSer ) and  
+         ( dbo.PlanSetup.CourseSer = dbo.Course.CourseSer ) and  
+         ( dbo.RTPlan.PlanSetupSer = dbo.PlanSetup.PlanSetupSer ) and  
+         ( dbo.TreatmentRecord.RTPlanSer = dbo.RTPlan.RTPlanSer ) and  
+         ( dbo.RadiationHstry.TreatmentRecordSer = dbo.TreatmentRecord.TreatmentRecordSer ) and  
+         ( dbo.RefPointHstry.RadiationHstrySer = dbo.RadiationHstry.RadiationHstrySer ) and  
+         ( dbo.RefPoint.RefPointSer = dbo.RefPointHstry.RefPointSer ) and  
+         ( dbo.TreatmentRecord.TreatmentRecordDateTime > '2010-01-01' )   
+
+
+
+
+
+
+
+
+

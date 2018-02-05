@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>allastransformation</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>data</name>
+            <default_value>data</default_value>
+            <description>data</description>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2016&#x2f;02&#x2f;29 14&#x3a;40&#x3a;18.599</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2016&#x2f;02&#x2f;29 14&#x3a;40&#x3a;18.599</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+  <hop> <from>createUrl</from><to>logUrl</to><enabled>Y</enabled> </hop>
+  <hop> <from>logUrl</from><to>AllasRESTClient</to><enabled>Y</enabled> </hop>
+  <hop> <from>splitTimestep</from><to>logTimeSplit</to><enabled>Y</enabled> </hop>
+  <hop> <from>logTimeSplit</from><to>filterValues</to><enabled>Y</enabled> </hop>
+  <hop> <from>filterValues</from><to>saveForNextRound</to><enabled>Y</enabled> </hop>
+  <hop> <from>AllasRESTClient</from><to>logRestError</to><enabled>Y</enabled> </hop>
+  <hop> <from>AllasRESTClient</from><to>logRestAllas</to><enabled>Y</enabled> </hop>
+  <hop> <from>logRestAllas</from><to>branchBasedOnServerResponse</to><enabled>Y</enabled> </hop>
+  <hop> <from>branchBasedOnServerResponse</from><to>splitTimestep</to><enabled>Y</enabled> </hop>
+  <hop> <from>logPreUrl</from><to>createUrl</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result 2</from><to>logPreUrl</to><enabled>Y</enabled> </hop>
+  <hop> <from>saveForNextRound</from><to>Write to log</to><enabled>Y</enabled> </hop>
+  <hop> <from>branchBasedOnServerResponse</from><to>Write to log 2</to><enabled>N</enabled> </hop>
+  <hop> <from>Write to log 2</from><to>Copy rows to result</to><enabled>N</enabled> </hop>
+  </order>
+  <step>
+    <name>AllasRESTClient</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <applicationType>TEXT PLAIN</applicationType>
+    <method>GET</method>
+    <url/>
+    <urlInField>Y</urlInField>
+    <dynamicMethod>N</dynamicMethod>
+    <methodFieldName/>
+    <urlField>url</urlField>
+    <bodyField/>
+    <httpLogin/>
+    <httpPassword>Encrypted </httpPassword>
+    <proxyHost/>
+    <proxyPort/>
+    <preemptive>N</preemptive>
+    <trustStoreFile/>
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <headers>
+      </headers>
+    <parameters>
+      </parameters>
+    <matrixParameters>
+      </matrixParameters>
+    <result>
+      <name>result</name>
+      <code>statusCode</code>
+      <response_time>responseTime</response_time>
+      </result>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>416</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Copy rows to result</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>704</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get rows from result</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>32</xloc>
+      <yloc>96</yloc>
+      <draw>N</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get rows from result 2</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>data</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>32</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Write to log</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      <field>
+        <name>data</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Write to log 2</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      <field>
+        <name>data</name>
+        </field>
+      <field>
+        <name>url</name>
+        </field>
+      <field>
+        <name>SF</name>
+        </field>
+      <field>
+        <name>ST</name>
+        </field>
+      <field>
+        <name>result</name>
+        </field>
+      <field>
+        <name>statusCode</name>
+        </field>
+      <field>
+        <name>responseTime</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>816</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>branchBasedOnServerResponse</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<fieldname>result</fieldname>
+<use_contains>Y</use_contains>
+<case_value_type>String</case_value_type>
+<case_value_format/>
+<case_value_decimal/>
+<case_value_group/>
+<default_target_step>Write to log 2</default_target_step>
+<cases><case><value>Too big dataset</value>
+<target_step>splitTimestep</target_step>
+</case></cases>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>672</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>createUrl</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[//Created 2016-02-29
+//@author Markus Ylikerälä
+import java.util.*;
+import java.security.MessageDigest;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.math.BigInteger;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+
+//third party jars can be imported:
+//eg put gson.jar into pentaho/libext folder
+//put libext into libraries and classpath variables of launcher.properties
+//restart spoon
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+//Alternative json parser to gson but not tested
+//import org.json.simple.JSONArray;
+//import org.json.simple.JSONObject;
+//import org.json.simple.parser.JSONParser;
+//import org.json.simple.parser.ParseException;
+
+private MessageDigest md;
+private SimpleDateFormat sdf;
+private Gson gson;
+private int dataIndex;
+private String SSO;
+private String FP;
+private String R;
+private String P;
+private String W;
+private String host;
+private String path;
+private String protocol;
+
+// RestClient does not accpet self-signed certifacates but rejected is gotten.
+// But, RestClient accept self-signed certifacates after the following:
+// 1) Export Medbits certificate with Firefox 
+// 2) Import the certificate into truststore:
+// keytool -import -file medshare.vsshp.net -alias Medbit -keystore myTrustStore.jks
+// 3) Add path and password to the truststore into spoon.sh to the OPT variable of spoon.sh eg:
+//-Djavax.net.ssl.trustStore=/home/ktp/ETL/myTrustStore.jks -Djavax.net.ssl.trustStorePassword=qwerty
+// Restart spoon
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException {
+	try{
+ 		Object[] r = getRow();
+		if(r==null){
+   		    //No more data so end processing
+		    //setOutputDone();
+			logBasic("NO GOT URL");
+			return false;
+  		}
+	
+		logBasic("GO URL");
+
+		//first is a pre-defined variable so that 
+	    //getParameters does not need to be executed for each row but only once
+		if(first){
+			getParameters();
+		}
+
+	logBasic("GOGO URL");
+
+		//Parse JSON input
+		String json = getInputRowMeta().getString(r, dataIndex);		
+		JsonObject  jsonObject = (JsonObject)gson.fromJson(json, JsonObject.class);
+		if(jsonObject == null){
+			throw new KettleException("Bizarre - parameter data");
+		}
+
+		String FM = null;
+		String F = null;
+		String PAT = null;
+		String SF = null;
+		String ST = null;
+		String IOMIN = null;
+		String IOMAX = null;
+		String IO = null;
+
+		//Iterator itr = jsonArr.iterator();
+		//while(itr.hasNext()){
+			//JsonElement jsonElm = (JsonElement)itr.next();			
+			//JsonObject	jsonObject = (JsonObject)jsonElm.getAsJsonObject();		
+		
+			//Try to read all these parameters if something is missing it is omitted from the generated url
+			FM = getAsString(jsonObject, "FM");
+			F = getAsString(jsonObject, "F");
+			PAT = getAsString(jsonObject, "PAT");
+			SF = getAsString(jsonObject, "SF");
+			ST = getAsString(jsonObject, "ST");
+			IOMIN = getAsString(jsonObject, "IOMIN");
+			IOMAX = getAsString(jsonObject, "IOMAX");
+			IO = getAsString(jsonObject, "IO");	
+	//	}
+
+		//Generate url
+		String TS= currentTimestamp();
+		//String tmp = "https://master-pool.vsshp.net/medshare/?" +
+		String url = protocol + "://" + host + "/" + path + "/?" + 
+		append("TS", TS) + 
+		append("FP", FP) + 
+		append("SSO", SSO) + 
+		append("P", P) + 
+		append("R", R) + 
+		append("W", W) + 
+		append("PAT", PAT) + 
+		append("F", F) + 
+		append("H", getDigest(TS, PAT)) + 
+		append("FM", FM) + 
+		append("SF", SF) + 
+		append("ST", ST) +
+		append("IO", IO) +
+		append("IOMIN", IOMIN) +
+		append("IOMAX", IOMAX);	
+		
+		String result = removeuUnecessaryAmpersand(url);
+		logBasic("The result: " + result);
+
+		//Set output
+	 	Object[] outputRowData = RowDataUtil.resizeArray(r, data.outputRowMeta.size());
+	  	int outputIndex = getInputRowMeta().size();
+		outputRowData[outputIndex++] = result;
+	outputRowData[outputIndex++] = SF;
+	outputRowData[outputIndex++] = ST;
+  		putRow(data.outputRowMeta, outputRowData);
+
+     	logBasic("GO URL");
+		setOutputDone();	
+	}
+	catch(UnsupportedEncodingException e){
+		logBasic("BIZARRE: " + e);
+	}
+	return true;
+}
+
+private String removeuUnecessaryAmpersand(String url){
+	return url.substring(0, url.length()-1);
+}
+
+private void getParameters() throws KettleException{
+	
+	dataIndex = getInputRowMeta().indexOfValue(getParameter("data"));
+	if(dataIndex < 0){
+		throw new KettleException("Bizarre - Didn't get parameter data");
+	}
+
+	SSO = getParameter("SSO");
+	FP = getParameter("FP");
+	R = getParameter("R");
+	P = getParameter("P");
+	W = getParameter("W");
+	host = getParameter("host");
+	path = getParameter("path");
+    protocol = getParameter("protocol");
+
+	first = false;	
+}
+
+private String getDigest(String TS, String PAT) throws KettleException{
+	try{
+		String salt = "iFf1.Lp9h-srswvQ";			
+		String toBeHashed = P + TS + FP + PAT + salt;	            
+		md.update(toBeHashed.getBytes("UTF-8"));
+		// left-pads the hash with zeros if its length is less than 32
+        BigInteger digest = new BigInteger(1, md.digest());
+		String resultHash = String.format("%1$032x", new Object[]{digest});		
+		return resultHash;
+	}
+	catch(UnsupportedEncodingException e){
+		throw new KettleException("Bizarre:  Couldn't create hash" + e);
+	}
+}
+
+private String getAsString(JsonObject jsonObject, String key){
+	JsonElement jsonElm = jsonObject.get(key);
+	return jsonElm != null ? jsonElm.getAsString() : "";
+}
+
+private String append(String name, String value) throws UnsupportedEncodingException{
+	//logBasic("try to append;  [" + name + "]  [" + value + "] " + (value == null || value.length() == 0 ? "SKIP" : ""));
+	return value == null || value.length() == 0 ? "" : (name + "=" + URLEncoder.encode(value, "utf-8") +  "&"); 
+}
+
+private String currentTimestamp() {
+	 return sdf.format(new Date());
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface) {
+   if(super.init(stepMetaInterface, stepDataInterface)){
+		try{
+			md = MessageDigest.getInstance("MD5");
+			sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");  
+			gson = new GsonBuilder().create();
+			return true;
+		}
+		catch(NoSuchAlgorithmException e){
+			logBasic("BIZARRE - init failed: " + e);
+		}    
+	}
+	return false;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>url</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>SF</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>ST</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>SSO</parameter_tag>
+<parameter_value>YLIKERAM</parameter_value>
+<parameter_description>UserId</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>data</parameter_tag>
+<parameter_value>data</parameter_value>
+<parameter_description>data</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>R</parameter_tag>
+<parameter_value>testaus</parameter_value>
+<parameter_description>reason</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>FP</parameter_tag>
+<parameter_value>ktp.vsshp.fi</parameter_value>
+<parameter_description>host</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>P</parameter_tag>
+<parameter_value>GET</parameter_value>
+<parameter_description>method</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>W</parameter_tag>
+<parameter_value>PAT</parameter_value>
+<parameter_description>w</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>host</parameter_tag>
+<parameter_value>master-pool.vsshp.net</parameter_value>
+<parameter_description>server</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>path</parameter_tag>
+<parameter_value>medshare</parameter_value>
+<parameter_description>medshare</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>protocol</parameter_tag>
+<parameter_value>https</parameter_value>
+<parameter_description>protocol</parameter_description>
+</usage_parameter></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filterValues</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>data_1</name>
+        <rename>data</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>560</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>logPreUrl</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage>LOGPREUrl GOT DATA data &#x23; &#x24;&#x7b;data&#x7d; &#x24;&#x7b;retry&#x7d;</logmessage>
+    <fields>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>128</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>logRestAllas</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>560</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>logRestError</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage>Got log rest ERROR</logmessage>
+    <fields>
+      <field>
+        <name>data</name>
+        </field>
+      <field>
+        <name>url</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>416</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>logTimeSplit</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      <field>
+        <name>data_1</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>688</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>logUrl</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      <field>
+        <name>url</name>
+        </field>
+      <field>
+        <name>SF</name>
+        </field>
+      <field>
+        <name>ST</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>saveForNextRound</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>splitTimestep</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+
+
+private SimpleDateFormat sdf;
+private SimpleDateFormat sdft;
+private Gson gson;
+private int dataIndex;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException {
+	logBasic("jee");
+	Object[] r = getRow();
+	if(r==null){
+   		//No more data so end processing		
+		return false;
+	}
+
+	int dataIndex = getInputRowMeta().indexOfValue(getParameter("data"));
+	if(dataIndex < 0){
+		throw new KettleException("Bizarre - Didn't get parameter data");
+	}
+
+	try{
+
+	logBasic("huuhaA");
+
+
+		String json = getInputRowMeta().getString(r, dataIndex);		
+		//logBasic("json: " + json);
+
+		JsonObject  jsonObj = (JsonObject)gson.fromJson(json, JsonObject.class);
+		logBasic("jsonIn: " + jsonObj);
+	
+		SimpleDateFormat df;
+		String beginTime = jsonObj.get("SF").getAsString();
+		logBasic("beginTime: " + beginTime + "#" + beginTime.length() );
+		df = beginTime.length() > 10 ? sdft : sdf;
+		Calendar begin = dateToCalendar(df.parse(beginTime));
+
+		if(beginTime.length() < 11){
+			beginTime = jsonObj.remove("SF").getAsString();
+			jsonObj.add("SF", new JsonPrimitive(sdft.format(begin.getTime())));
+		}
+
+		String endTime = jsonObj.remove("ST").getAsString();
+		logBasic("endTime: " + endTime+ "#" + endTime.length() );
+		df = endTime.length() > 10 ? sdft : sdf;
+		Calendar end = dateToCalendar(df.parse(endTime));
+
+		long newEndTime = ( (end.getTimeInMillis() - begin.getTimeInMillis()) /2 + begin.getTimeInMillis() );
+		Calendar newEnd = Calendar.getInstance();
+		newEnd.setTimeInMillis(newEndTime);
+		jsonObj.add("ST", new JsonPrimitive(sdft.format(newEnd.getTime())));
+
+	
+		logBasic("jsonOut: " + jsonObj);
+
+		Object[] outputRowData = RowDataUtil.resizeArray(r, data.outputRowMeta.size());
+	  	int outputIndex = getInputRowMeta().size();
+		outputRowData[outputIndex++] = jsonObj;
+  		putRow(data.outputRowMeta, outputRowData);
+		setOutputDone();	
+	}
+	catch(Throwable t){
+		throw new KettleException("Bizarre - " + t);
+	}
+
+	return true;
+}
+
+private Calendar dateToCalendar(Date date) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		return calendar;
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface) {
+   if(super.init(stepMetaInterface, stepDataInterface)){
+			sdf = new SimpleDateFormat("dd.MM.yyyy");  	
+			sdft = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");  	
+			gson = new GsonBuilder().create();
+			return true;	
+	}
+	return false;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>data</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>data</parameter_tag>
+<parameter_value>data</parameter_value>
+<parameter_description>data</parameter_description>
+</usage_parameter></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>688</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+      <error>
+        <source_step>AllasRESTClient</source_step>
+        <target_step>logRestError</target_step>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors/>
+        <max_pct_errors/>
+        <min_pct_rows/>
+      </error>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

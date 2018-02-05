@@ -1,0 +1,131 @@
+-- Table: stage_sasdata.hilmo_tyks_94_95
+
+-- DROP TABLE stage_sasdata.hilmo_tyks_94_95;
+
+
+CREATE TABLE stage_sasdata.hilmo_tyks_94_95
+(
+  hilmo_tyks_94_95_id INTEGER
+, sairaalanro INTEGER
+, osasto VARCHAR(4)
+, erikoisala VARCHAR(3)
+, henkilotunnus VARCHAR(11)
+, syntymapaiva VARCHAR(10)
+, ika INTEGER
+, sukupuoli SMALLINT
+, nimi VARCHAR(20)
+, kunta VARCHAR(3)
+, tulopaiva VARCHAR(10)
+, vaestovastuualue_postinumero VARCHAR(5)
+, ulkomaalaisen_kotimaa VARCHAR(3)
+, saapumistapa_hilmo SMALLINT
+, lahtopaikan_laitoskoodi VARCHAR(5)
+, mista_tuli_hilmo SMALLINT
+, lahettava_yksikko VARCHAR(5)
+, alkuperaisen_lahetteen_antajan_luokitus SMALLINT
+, hoitoon_tulon_syy SMALLINT
+, jonoon_asettamispaiva INTEGER
+, jatkohoitoyksikko_paikan_koodi VARCHAR(5)
+, mihin_hilmo_potilas_siirtyy_sairaalasta VARCHAR(2)
+, hoitoisuus SMALLINT
+, pitkaaikainen_hoitopaatos SMALLINT
+, erikoisryhma VARCHAR(4)
+, erikoistmp_1 VARCHAR(2)
+, erikoistmp_2 VARCHAR(2)
+, erikoistmp_3 VARCHAR(2)
+, erikoistmp_4 VARCHAR(2)
+, erikoistmp_5 VARCHAR(2)
+, erityistason_hoitokoodi INTEGER
+, potilaan_sairaanhoitopiiri SMALLINT
+, sairaalan_sairaanhoitopiiri SMALLINT
+, potilaan_psyk_piiri SMALLINT
+, sairaalan_psyk_piiri INTEGER
+, diagnoosiryhma VARCHAR(2)
+, hoitopaivat_erikoisalalla INTEGER
+, vtkk_n_sairaalanumero INTEGER
+, osaston_hoitopaivat INTEGER
+, jasenkunta_1_kylla_2_ei SMALLINT
+, potilaan_terveyskeskuskoodi INTEGER
+, ulkomaalainen VARCHAR(1)
+, tarkoituksenmukainen_hoitopaikka VARCHAR(2)
+, vaativa_sydanpotilas SMALLINT
+, toimenpidelaji SMALLINT
+, nyha_kipuarvo_1_4 SMALLINT
+, tyostatus_tullessa_1_5 SMALLINT
+, psykiatrian_tulotapa SMALLINT
+, pakkohoidon_kesto_paivina INTEGER
+, hoitokerta_psyk_s_sijalla SMALLINT
+, gas_arvo_tullessa_gas VARCHAR(3)
+, gas_arvo_lahtiessa_gas VARCHAR(3)
+, laakehoito SMALLINT
+, pakkotoimet_1 SMALLINT
+, pakkotoimet_2 SMALLINT
+, omaisten_tapaaminen SMALLINT
+, oirediagnoosi_1 VARCHAR(5)
+, oirediagnoosi_tarkennus_1 VARCHAR(3)
+, oirediagnoosi_uusi_aik_1 SMALLINT
+, oirediagnoosi_2 VARCHAR(5)
+, oirediagnoosi_uusi_aik_2 SMALLINT
+, oirediagnoosi_tarkennus_2 VARCHAR(3)
+, oirediagnoosi_3 VARCHAR(5)
+, oirediagnoosi_uusi_aik_3 SMALLINT
+, oirediagnoosi_tarkennus_3 VARCHAR(3)
+, oirediagnoosi_4 VARCHAR(5)
+, oirediagnoosi_uusi_aik_4 SMALLINT
+, oirediagnoosi_tarkennus_4 VARCHAR(3)
+, tapaturman_ulkoinen_syy VARCHAR(5)
+, toimenpidepaiva VARCHAR(10)
+, paatoimenpide VARCHAR(5)
+, sivutoimenpide_1 VARCHAR(5)
+, sivutoimenpide_2 VARCHAR(5)
+, sivutoimenpide_3 VARCHAR(5)
+, mista_tuli_hilmo_luokitus VARCHAR(2)
+, saapumistapa SMALLINT
+, maksuluokka SMALLINT
+, saapumistapa_tulotapa SMALLINT
+, mt_ii_paatos SMALLINT
+, hoitokerta SMALLINT
+, onko_leikattu SMALLINT
+, tapaturmapaikka SMALLINT
+, tietuetunnus_r SMALLINT
+, psykiatrian_erikoiskoodi VARCHAR(1)
+, tahdosta_riipp_hoidon_kesto VARCHAR(1)
+, osastolle_saapumiskoodi SMALLINT
+, osastolta_lahtopaiva VARCHAR(10)
+, osastolta_poistumiskoodi SMALLINT
+, sairaalan_laani SMALLINT
+, sairaalaan_ottosyy SMALLINT
+, mihin_poistunut VARCHAR(2)
+, potilaan_kotikunnan_mukaan SMALLINT
+, sivudiagnoosi_4 VARCHAR(5)
+, uusi_dg_aikaisempi_dg_4 SMALLINT
+, sivudiagnoosi_4_tarkennus VARCHAR(3)
+, sivudiagnoosi_5 VARCHAR(5)
+, uusi_dg_aikaisempi_dg_5 SMALLINT
+, sivudiagnoosi_5_tarkennus VARCHAR(3)
+, sivudiagnoosi_6 VARCHAR(5)
+, uusi_dg_aikaisempi_dg_5_1 SMALLINT
+, sivudiagnoosi_6_tarkennus VARCHAR(3)
+, toimenpide_1 VARCHAR(4)
+, liittyy_diagnoosiin_1 SMALLINT
+, toimenpide_2 VARCHAR(4)
+, liittyy_diagnoosiin_2 SMALLINT
+, toimenpide_3 VARCHAR(4)
+, liittyy_diagnoosiin_3 SMALLINT
+, toimenpide_4 VARCHAR(4)
+, liittyy_diagnoosiin_4 SMALLINT
+, toimenpide_5 VARCHAR(4)
+, liittyy_diagnoosiin_5 SMALLINT
+, toimenpidetyyppi_1_5 SMALLINT
+, tarkennin_1_2 SMALLINT
+, virhe SMALLINT
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+, CONSTRAINT hilmo_tyks_94_95_pkey PRIMARY KEY (hilmo_tyks_94_95_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.hilmo_tyks_94_95
+  OWNER TO ktp;
+

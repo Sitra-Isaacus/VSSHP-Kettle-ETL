@@ -1,0 +1,32 @@
+<!DOCTYPE etl SYSTEM "http://scriptella.javaforge.com/dtd/etl.dtd">
+<etl>
+	<description>Scriptella ETL Test</description>
+
+	<connection id="hive" driver="org.apache.hive.jdbc.HiveDriver"
+		url="jdbc:hive2://ktphadoop.vsshp.net:10000/ktp"
+    statement.fetchSize=2
+    encoding=UTF-8
+  </connection>
+
+	<connection id="postgres" driver="org.postgresql.Driver" 
+		url="jdbc:postgresql://ktppg.vsshp.net/ktp" 
+   statement.batchSize=2
+    encoding=UTF-8
+  </connection>
+  
+	<!--ETL Queries and Scripts -->
+
+	<query connection-id="hive">
+	<include href="build/select.sql"/>
+
+	<script connection-id="postgres">
+<onerror connection-id="java">
+Throwable error = (Throwable)get("error");
+com.app.ApplicationLoggerEtlError(error);
+error.printStackTrace();
+</onerror>
+		<include href="build/insert.sql"/>
+
+	</script>
+	</query>
+</etl>

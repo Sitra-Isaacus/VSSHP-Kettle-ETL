@@ -1,0 +1,33 @@
+-- Table: stage_sasdata.a_tyks_80_91
+
+-- DROP TABLE stage_sasdata.a_tyks_80_91;
+
+CREATE TABLE stage_sasdata.a_tyks_80_91
+(
+  a_tyks_80_91_id integer NOT NULL,
+  a_avohoito_poliklinikka character varying(1),
+  poliklinikka character varying(4),
+  erikoisala character varying(2),
+  henkilotunnus character varying(11),
+  potilaan_nimi character varying(20),
+  kunta character varying(3),
+  vastaanotto character varying(2),
+  syntymapaiva character varying(10),
+  kayntipaiva character varying(10),
+  ika integer,
+  diagnoosien_lkm integer,
+  diagnoosi_1 character varying(5),
+  diagnoosi_2 character varying(5),
+  diagnoosi_3 character varying(5),
+  toimenpide_1 integer,
+  toimenpide_2 integer,
+  toimenpide_3 integer,
+  tieto_ladattu_tietokantaan timestamp without time zone,
+  paivityshetki_stage_sasdata timestamp without time zone,
+  CONSTRAINT a_tyks_80_91_pkey PRIMARY KEY (a_tyks_80_91_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.a_tyks_80_91
+  OWNER TO ktp;

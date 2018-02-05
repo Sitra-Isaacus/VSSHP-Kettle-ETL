@@ -1,0 +1,142 @@
+CREATE TABLE stage_dw.toti
+
+( rivi_id INTEGER
+, henkilotunnus VARCHAR(200)
+, nimi VARCHAR(200)
+, sukupuoli SMALLINT
+, syntymapaiva DATE
+, ika SMALLINT
+, kotikunta VARCHAR(10)
+
+, paino INTEGER
+, pituus INTEGER
+, erikoisala VARCHAR(10)
+, asa_luokka SMALLINT
+, puhtausluokka SMALLINT
+, riskiryhma SMALLINT
+
+, toimenpideyksikko VARCHAR(100)
+, toimenpidesali VARCHAR(100)
+, onko_leikattu SMALLINT
+, hoitava_osasto VARCHAR(100)
+, hoitava_osasto_vanha VARCHAR(100)
+
+, leikkaustyyppi SMALLINT
+, hoitomuoto SMALLINT
+, jatkohoitopaikka VARCHAR(100)
+, jatkohoitotapa VARCHAR(100)
+, erikoismaksluokka SMALLINT
+, salijarjestysnumero VARCHAR(100)
+
+, paatoimenpide VARCHAR(100)
+, sivutoimenpide_1 VARCHAR(100)
+, sivutoimenpide_2 VARCHAR(100)
+, sivutoimenpide_3 VARCHAR(100)
+, sivutoimenpide_4 VARCHAR(100)
+
+, lisatoimenpiteiden_lkm SMALLINT
+
+, diagnoosi_1 VARCHAR(100)
+, diagnoosi_2 VARCHAR(100)
+, diagnoosi_3 VARCHAR(100)
+, diagnoosi_4 VARCHAR(100)
+, lisädiagnoosien_lkm SMALLINT
+
+, paasyydiagnoosi VARCHAR(100)
+, sivusyydiagnoosi_1 VARCHAR(100)
+, sivusyydiagnoosi_2 VARCHAR(100)
+, sivusyydiagnoosi_3 VARCHAR(100)
+
+, Z_paalisakoodi VARCHAR(100)
+, Z_sivulisakoodi_1 VARCHAR(100)
+, Z_sivulisakoodi_2 VARCHAR(100)
+, Z_sivulisakoodi_3 VARCHAR(100)
+, Z_sivulisakoodi_4 VARCHAR(100)
+
+, implantti_1_lkm SMALLINT
+, implantti_2_lkm SMALLINT
+, implantti_1 VARCHAR(100)
+, implantti_2 VARCHAR(100)
+
+, potilas_toimenpideyksikkoon_pvm DATE
+, potilas_toimenpideyksikkoon_klo VARCHAR(10)
+, potilas_toimenpideyksikkoon_tunnit SMALLINT
+, potilas_toimenpideyksikossa_kesto INTEGER
+
+
+
+, potilas_saliin_pvm DATE
+, potilas_saliin_klo VARCHAR(100)
+, potilas_saliin_tunnit SMALLINT
+, potilas_saliin_minuutit SMALLINT
+, potilas_salissa_kesto INTEGER
+
+
+, anestesia_alkanut_pvm DATE
+, anestesia_alkanut_klo VARCHAR(100)
+, anestesia_alkanut_tunnit SMALLINT
+, anestesian_kesto INTEGER
+
+, toimenpide_pvm DATE
+, toimenpide_klo VARCHAR(100)
+, toimenpide_tunnit SMALLINT
+, toimenpide_kesto INTEGER
+, toimenpide_viikonpaiva SMALLINT
+
+, potilas_heraamoon_pvm DATE
+, potilas_heraamoon_klo VARCHAR(100)
+, potilas_heraamoon_tunnit SMALLINT
+, potilas_heraamossa_kesto INTEGER
+
+
+, toimenpidekomplikaatio SMALLINT
+, anestesiakomplikaatio SMALLINT
+
+, kirurgi_1 VARCHAR(100)
+, kirurgi_2 VARCHAR(100)
+, kirurgi_3 VARCHAR(100)
+, lisakirurgit_lkm SMALLINT
+
+, hoitohenkilokunta_1 VARCHAR(100)
+, hoitohenkilokunta_2 VARCHAR(100)
+, hoitohenkilokunta_3 VARCHAR(100)
+, lisahoitohenkilokunta_lkm SMALLINT
+
+
+, anestesialaakari_1 VARCHAR(100)
+, anestesialaakari_2 VARCHAR(100)
+, lisaanestesialaakarit_lkm SMALLINT
+, anestesiahoitaja VARCHAR(100)
+
+, vanha_anestesiakoodi_1 VARCHAR(100)
+, vanha_anestesiakoodi_2 VARCHAR(100)
+, vanha_anestesiakoodi_3 VARCHAR(100)
+
+, uusi_anestesiakoodi_1 VARCHAR(100)
+, uusi_anestesiakoodi_2 VARCHAR(100)
+, uusi_anestesiakoodi_3 VARCHAR(100)
+
+, anestesia_huomio VARCHAR(100)
+
+, hoitoisuusluokka VARCHAR(100)
+, anestesian_hoitoisuusluokka VARCHAR(100)
+, heraamon_hoitoisuusluokka VARCHAR(100)
+
+, paatoimenpide_hinta NUMERIC(12, 2)
+, sivutoimenpide_1_hinta NUMERIC(12, 2)
+, sivutoimenpide_2_hinta NUMERIC(12, 2)
+, sivutoimenpide_3_hinta NUMERIC(12, 2)
+, sivutoimenpide_4_hinta NUMERIC(12, 2)
+, impantti_1_hinta NUMERIC(12, 2)
+, implantti_2_hinta NUMERIC(12, 2)
+
+, tieto_ladattu_tietokantaan_pvm  timestamp without time zone
+)
+;
+
+COMMENT ON COLUMN stage_dw.toti.anestesiakomplikaatio IS '0 ei, 1 kyllä';
+COMMENT ON COLUMN stage_dw.toti.erikoismaksluokka IS '0 ei, 1 kyllä, null ei';
+COMMENT ON COLUMN stage_dw.toti.leikkaustyyppi IS '0 elekt, 1 paivystys, 2 hätä, 3 semi';
+COMMENT ON COLUMN stage_dw.toti.hoitomuoto IS '1 normaali, 2 lyki, 3 päiki';
+COMMENT ON COLUMN stage_dw.toti.toimenpidekomplikaatio IS '0 ei, 1 kyllä';
+

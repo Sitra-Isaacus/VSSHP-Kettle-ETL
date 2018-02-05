@@ -1,0 +1,48 @@
+﻿-- create view stage_sentrysuite.v_koodisto as
+-- select 
+-- st.symtop_id, st.symtop_name, sd.sym_nr, sd.sym_group, si.short_text, si.long_text
+
+-- mittauksia vuosittain
+select extract(year from submeas_date) as vuosi, count(*) as maara
+
+from
+
+stage_sentrysuite.sesquery_measparameter as m
+inner join stage_sentrysuite.submeasure as sm on m.submeas_id = sm.submeas_id
+where submeas_deleted = 0
+group by vuosi
+order by vuosi
+-- limit 100; 
+
+create materialized view stage_sentrysuite.mv_measurements as 
+select
+para.parameter_id,
+para.para_index,
+para.parameternameshort as parameter_name_short,
+para.parameternamelong as parameter_name_long,
+para.para_value as numeric_value, para.para_values as string_value,
+para.para_status,
+para.parades_lowerlimit as lower_limit,
+para.parades_upperlimit as upper_limit,
+para.unitdeftypelong as unit_type,
+para.srcunitdeflong as unit_long,
+para.srcunitdefshort as unit_short,
+sub.submeas_id, sub.submeas_trial, sub.submeas_bestmarker,
+sub.submeas_status as submeasurement_status, sub.submeas_localdate as submeasurement_time,
+meas.meas_id, meas.meas_status as measurement_status,
+pat.pat_externalid as henkilotunnus, pat.pat_lastname as last_name, pat.pat_firstname as first_name,
+pat.pat_birthdate as birth_date, pat.gender_id,
+visit.visitinfo_localdate as visit_time,
+visit.visitinfo_height as visit_height,  visit.visitinfo_weight as visit_weight,
+sub.submeas_localdate as tapahtuma_aikaleima
+from stage_sentrysuite.sesquery_measparameter as para
+inner join stage_sentrysuite.submeasure as sub on para.submeas_id = sub.submeas_id -- 5 545 795
+inner join  stage_sentrysuite.measurement as meas on sub.meas_id = meas.meas_id
+inner join stage_sentrysuite.visitinfo as visit on meas.visitinfo_id = visit.visitinfo_id
+inner join stage_sentrysuite.patient as pat on visit.pat_demid = pat.pat_demid
+where sub.submeas_deleted = 0
+and meas.meas_deleted = 0
+and visit.visitinfo_deleted = 0
+and pat.pat_deleted = 0;
+
+

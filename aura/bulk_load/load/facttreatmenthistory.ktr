@@ -1,0 +1,3875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>facttreatmenthistory</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>1000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2017/06/01 07:50:42.793</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2017/06/01 07:50:42.793</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Aura radiotherapy database</name>
+    <server>193.143.223.10</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>variandw</database>
+    <port>1433</port>
+    <username>KTP_Lukija</username>
+    
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PostgreSQL gradient</name>
+    <server>gradient.vsshp.net</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>ktp</database>
+    <port>5432</port>
+    <username>ktp</username>
+    
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Read Table FactTreatmentHistory</from>
+      <to>Transform fields FactTreatmentHistory</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Transform fields FactTreatmentHistory</from>
+      <to>PostgreSQL Bulk Loader FactTreatmentHistory</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>PostgreSQL Bulk Loader FactTreatmentHistory</name>
+    <type>PGBulkLoader</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient</connection>
+    <schema>stage_aura</schema>
+    <table>FactTreatmentHistory</table>
+    <load_action>TRUNCATE</load_action>
+    <PsqlPath>/usr/bin/psql</PsqlPath>
+    <dbname_override />
+    <enclosure>"</enclosure>
+    <delimiter>;</delimiter>
+    <stop_on_error>N</stop_on_error>
+    <mapping>
+      <stream_name>FactTreatmentHistoryID</stream_name>
+      <field_name>FactTreatmentHistoryID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPatientID</stream_name>
+      <field_name>DimPatientID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimCourseID</stream_name>
+      <field_name>DimCourseID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_TreatmentIntentType</stream_name>
+      <field_name>DimLookupID_TreatmentIntentType</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_CompletedByUser</stream_name>
+      <field_name>DimUserID_CompletedByUser</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_ClinicalStatus</stream_name>
+      <field_name>DimLookupID_ClinicalStatus</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlanID</stream_name>
+      <field_name>DimPlanID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_PlanStatus</stream_name>
+      <field_name>DimLookupID_PlanStatus</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_StatusUser</stream_name>
+      <field_name>DimUserID_StatusUser</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_FieldTechnique</stream_name>
+      <field_name>DimLookupID_FieldTechnique</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimFieldID</stream_name>
+      <field_name>DimFieldID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlannedAddOnID1</stream_name>
+      <field_name>DimPlannedAddOnID1</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlannedAddOnID2</stream_name>
+      <field_name>DimPlannedAddOnID2</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlannedAddOnID3</stream_name>
+      <field_name>DimPlannedAddOnID3</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlannedAddOnID4</stream_name>
+      <field_name>DimPlannedAddOnID4</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlannedAddOnID5</stream_name>
+      <field_name>DimPlannedAddOnID5</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlanMachineID</stream_name>
+      <field_name>DimPlanMachineID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_Technique</stream_name>
+      <field_name>DimLookupID_Technique</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_TechniqueLabel</stream_name>
+      <field_name>DimLookupID_TechniqueLabel</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimLookupID_TreatmentDeliveryType</stream_name>
+      <field_name>DimLookupID_TreatmentDeliveryType</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualMachineID</stream_name>
+      <field_name>DimActualMachineID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimTreatmentTransactionID</stream_name>
+      <field_name>DimTreatmentTransactionID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_UserName1</stream_name>
+      <field_name>DimUserID_UserName1</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_UserName2</stream_name>
+      <field_name>DimUserID_UserName2</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_UserName3</stream_name>
+      <field_name>DimUserID_UserName3</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID1</stream_name>
+      <field_name>DimActualAddOnID1</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID2</stream_name>
+      <field_name>DimActualAddOnID2</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID3</stream_name>
+      <field_name>DimActualAddOnID3</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID4</stream_name>
+      <field_name>DimActualAddOnID4</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID5</stream_name>
+      <field_name>DimActualAddOnID5</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID6</stream_name>
+      <field_name>DimActualAddOnID6</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID7</stream_name>
+      <field_name>DimActualAddOnID7</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID8</stream_name>
+      <field_name>DimActualAddOnID8</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID9</stream_name>
+      <field_name>DimActualAddOnID9</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualAddOnID10</stream_name>
+      <field_name>DimActualAddOnID10</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_ApprovalUser</stream_name>
+      <field_name>DimUserID_ApprovalUser</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_MachineAuthorization</stream_name>
+      <field_name>DimUserID_MachineAuthorization</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimPlannedEnergyID</stream_name>
+      <field_name>DimPlannedEnergyID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimActualEnergyID</stream_name>
+      <field_name>DimActualEnergyID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_CourseCompletedDateTime</stream_name>
+      <field_name>DimDateID_CourseCompletedDateTime</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_FirstTreatmentDate</stream_name>
+      <field_name>DimDateID_FirstTreatmentDate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_LastTreatmentDate</stream_name>
+      <field_name>DimDateID_LastTreatmentDate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_PlanApprovedStatusDate</stream_name>
+      <field_name>DimDateID_PlanApprovedStatusDate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_AuthorizationDate</stream_name>
+      <field_name>DimDateID_AuthorizationDate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_CorrectionDateTime</stream_name>
+      <field_name>DimDateID_CorrectionDateTime</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_TreatmentEndTime</stream_name>
+      <field_name>DimDateID_TreatmentEndTime</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_TreatmentRecordDateTime</stream_name>
+      <field_name>DimDateID_TreatmentRecordDateTime</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_TreatmentStartTime</stream_name>
+      <field_name>DimDateID_TreatmentStartTime</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DimDateID_BreakPointDate</stream_name>
+      <field_name>DimDateID_BreakPointDate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>CompletedDateTime</stream_name>
+      <field_name>CompletedDateTime</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>FirstTreatmentDate</stream_name>
+      <field_name>FirstTreatmentDate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>LastTreatmentDate</stream_name>
+      <field_name>LastTreatmentDate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>StatusDate</stream_name>
+      <field_name>StatusDate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>IsActive</stream_name>
+      <field_name>IsActive</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>IsBrachy</stream_name>
+      <field_name>IsBrachy</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PlannedDoseRate</stream_name>
+      <field_name>PlannedDoseRate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PlannedMU</stream_name>
+      <field_name>PlannedMU</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>AuthorizationDate</stream_name>
+      <field_name>AuthorizationDate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>DimUserID_AuthorizedBy</stream_name>
+      <field_name>DimUserID_AuthorizedBy</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>OverrideParameters</stream_name>
+      <field_name>OverrideParameters</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PlannedFieldDose</stream_name>
+      <field_name>PlannedFieldDose</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DeliveredFieldDose</stream_name>
+      <field_name>DeliveredFieldDose</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>CorrectionDateTime</stream_name>
+      <field_name>CorrectionDateTime</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>RefPointId</stream_name>
+      <field_name>RefPointId</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>RefPointName</stream_name>
+      <field_name>RefPointName</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseCorrectionComment</stream_name>
+      <field_name>DoseCorrectionComment</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>CourseDoseDelivered</stream_name>
+      <field_name>CourseDoseDelivered</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>CourseDosePlanned</stream_name>
+      <field_name>CourseDosePlanned</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>CourseDoseRemaining</stream_name>
+      <field_name>CourseDoseRemaining</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>OtherCourseDoseDelivered</stream_name>
+      <field_name>OtherCourseDoseDelivered</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseCorrection</stream_name>
+      <field_name>DoseCorrection</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>TotalDoseLimit</stream_name>
+      <field_name>TotalDoseLimit</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DailyDoseLimit</stream_name>
+      <field_name>DailyDoseLimit</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>SessionDoseLimit</stream_name>
+      <field_name>SessionDoseLimit</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>BreakPointDate</stream_name>
+      <field_name>BreakPointDate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>BreakPointDose</stream_name>
+      <field_name>BreakPointDose</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>BreakPointNote</stream_name>
+      <field_name>BreakPointNote</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>BreakPointNum</stream_name>
+      <field_name>BreakPointNum</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>NoTxSessionRemaining</stream_name>
+      <field_name>NoTxSessionRemaining</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>NoTxSessionPlanned</stream_name>
+      <field_name>NoTxSessionPlanned</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>NoTxSessionDelivered</stream_name>
+      <field_name>NoTxSessionDelivered</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PrimaryFlag</stream_name>
+      <field_name>PrimaryFlag</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>FractionsDelivered</stream_name>
+      <field_name>FractionsDelivered</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>FractionsPlanned</stream_name>
+      <field_name>FractionsPlanned</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>FractionsRemaining</stream_name>
+      <field_name>FractionsRemaining</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DosePerFraction</stream_name>
+      <field_name>DosePerFraction</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseDelivered</stream_name>
+      <field_name>DoseDelivered</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseRemainingInFraction</stream_name>
+      <field_name>DoseRemainingInFraction</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>RunningPartial</stream_name>
+      <field_name>RunningPartial</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DosePredictedMax</stream_name>
+      <field_name>DosePredictedMax</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DosePredictedMin</stream_name>
+      <field_name>DosePredictedMin</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DosePredicted</stream_name>
+      <field_name>DosePredicted</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DosePredictedInOtherCourses</stream_name>
+      <field_name>DosePredictedInOtherCourses</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseRemaining</stream_name>
+      <field_name>DoseRemaining</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseRemainingMax</stream_name>
+      <field_name>DoseRemainingMax</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseRemainingMin</stream_name>
+      <field_name>DoseRemainingMin</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ActualDoseRate</stream_name>
+      <field_name>ActualDoseRate</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>TreatmentTime</stream_name>
+      <field_name>TreatmentTime</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DeliveredMU</stream_name>
+      <field_name>DeliveredMU</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseDeliveredToPrimaryRefPoint</stream_name>
+      <field_name>DoseDeliveredToPrimaryRefPoint</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PFFlag</stream_name>
+      <field_name>PFFlag</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PFMUSubFlag</stream_name>
+      <field_name>PFMUSubFlag</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PIFlag</stream_name>
+      <field_name>PIFlag</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>TreatmentEndTime</stream_name>
+      <field_name>TreatmentEndTime</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>TreatmentRecordDateTime</stream_name>
+      <field_name>TreatmentRecordDateTime</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>TreatmentStartTime</stream_name>
+      <field_name>TreatmentStartTime</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>ApprovalDate</stream_name>
+      <field_name>ApprovalDate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>CorrelatedEventNumber</stream_name>
+      <field_name>CorrelatedEventNumber</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>EventNumber</stream_name>
+      <field_name>EventNumber</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>FieldMUActual</stream_name>
+      <field_name>FieldMUActual</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>FieldStatus</stream_name>
+      <field_name>FieldStatus</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>IntendedNumOfPaintings</stream_name>
+      <field_name>IntendedNumOfPaintings</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>IsImage</stream_name>
+      <field_name>IsImage</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>NoFractions</stream_name>
+      <field_name>NoFractions</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>NoOfFractions</stream_name>
+      <field_name>NoOfFractions</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>NoOfImage</stream_name>
+      <field_name>NoOfImage</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>PrintFlag</stream_name>
+      <field_name>PrintFlag</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>RadiationNumber</stream_name>
+      <field_name>RadiationNumber</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>RecordStatus</stream_name>
+      <field_name>RecordStatus</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>RVFlag</stream_name>
+      <field_name>RVFlag</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>TerminationStatus</stream_name>
+      <field_name>TerminationStatus</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DistalEndEnergy</stream_name>
+      <field_name>DistalEndEnergy</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseDelta</stream_name>
+      <field_name>DoseDelta</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>FractionNumber</stream_name>
+      <field_name>FractionNumber</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>DoseDeliveredPerFraction</stream_name>
+      <field_name>DoseDeliveredPerFraction</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>LastChartQADate</stream_name>
+      <field_name>LastChartQADate</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <mapping>
+      <stream_name>ctrChartQATreatmentSer</stream_name>
+      <field_name>ctrChartQATreatmentSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrPhysicianIntentSer</stream_name>
+      <field_name>ctrPhysicianIntentSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrRefPointLogSer</stream_name>
+      <field_name>ctrRefPointLogSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrDoseCorrectionLogSer</stream_name>
+      <field_name>ctrDoseCorrectionLogSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrFieldStructureSer</stream_name>
+      <field_name>ctrFieldStructureSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrStructureSer</stream_name>
+      <field_name>ctrStructureSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrPhotoSer</stream_name>
+      <field_name>ctrPhotoSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrTechniqueSer</stream_name>
+      <field_name>ctrTechniqueSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrPatientVolumeSer</stream_name>
+      <field_name>ctrPatientVolumeSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrRefPointSer</stream_name>
+      <field_name>ctrRefPointSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrBreakPointSer</stream_name>
+      <field_name>ctrBreakPointSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>ctrPrescriptionSer</stream_name>
+      <field_name>ctrPrescriptionSer</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>LogID</stream_name>
+      <field_name>LogID</field_name>
+      <date_mask />
+    </mapping>
+    <mapping>
+      <stream_name>paivityshetki_stage</stream_name>
+      <field_name>paivityshetki_stage</field_name>
+      <date_mask>DATETIME</date_mask>
+    </mapping>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>860</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Read Table FactTreatmentHistory</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Aura radiotherapy database</connection>
+    <sql>SELECT 
+  FactTreatmentHistoryID
+, DimPatientID
+, DimCourseID
+, DimLookupID_TreatmentIntentType
+, DimUserID_CompletedByUser
+, DimLookupID_ClinicalStatus
+, DimPlanID
+, DimLookupID_PlanStatus
+, DimUserID_StatusUser
+, DimLookupID_FieldTechnique
+, DimFieldID
+, DimPlannedAddOnID1
+, DimPlannedAddOnID2
+, DimPlannedAddOnID3
+, DimPlannedAddOnID4
+, DimPlannedAddOnID5
+, DimPlanMachineID
+, DimLookupID_Technique
+, DimLookupID_TechniqueLabel
+, DimLookupID_TreatmentDeliveryType
+, DimActualMachineID
+, DimTreatmentTransactionID
+, DimUserID_UserName1
+, DimUserID_UserName2
+, DimUserID_UserName3
+, DimActualAddOnID1
+, DimActualAddOnID2
+, DimActualAddOnID3
+, DimActualAddOnID4
+, DimActualAddOnID5
+, DimActualAddOnID6
+, DimActualAddOnID7
+, DimActualAddOnID8
+, DimActualAddOnID9
+, DimActualAddOnID10
+, DimUserID_ApprovalUser
+, DimUserID_MachineAuthorization
+, DimPlannedEnergyID
+, DimActualEnergyID
+, DimDateID_CourseCompletedDateTime
+, DimDateID_FirstTreatmentDate
+, DimDateID_LastTreatmentDate
+, DimDateID_PlanApprovedStatusDate
+, DimDateID_AuthorizationDate
+, DimDateID_CorrectionDateTime
+, DimDateID_TreatmentEndTime
+, DimDateID_TreatmentRecordDateTime
+, DimDateID_TreatmentStartTime
+, DimDateID_BreakPointDate
+, CompletedDateTime
+, FirstTreatmentDate
+, LastTreatmentDate
+, StatusDate
+, IsActive
+, IsBrachy
+, PlannedDoseRate
+, PlannedMU
+, AuthorizationDate
+, DimUserID_AuthorizedBy
+, OverrideParameters
+, PlannedFieldDose
+, DeliveredFieldDose
+, CorrectionDateTime
+, RefPointId
+, RefPointName
+, DoseCorrectionComment
+, CourseDoseDelivered
+, CourseDosePlanned
+, CourseDoseRemaining
+, OtherCourseDoseDelivered
+, DoseCorrection
+, TotalDoseLimit
+, DailyDoseLimit
+, SessionDoseLimit
+, BreakPointDate
+, BreakPointDose
+, BreakPointNote
+, BreakPointNum
+, NoTxSessionRemaining
+, NoTxSessionPlanned
+, NoTxSessionDelivered
+, PrimaryFlag
+, FractionsDelivered
+, FractionsPlanned
+, FractionsRemaining
+, DosePerFraction
+, DoseDelivered
+, DoseRemainingInFraction
+, RunningPartial
+, DosePredictedMax
+, DosePredictedMin
+, DosePredicted
+, DosePredictedInOtherCourses
+, DoseRemaining
+, DoseRemainingMax
+, DoseRemainingMin
+, ActualDoseRate
+, TreatmentTime
+, DeliveredMU
+, DoseDeliveredToPrimaryRefPoint
+, PFFlag
+, PFMUSubFlag
+, PIFlag
+, TreatmentEndTime
+, TreatmentRecordDateTime
+, TreatmentStartTime
+, ApprovalDate
+, CorrelatedEventNumber
+, EventNumber
+, FieldMUActual
+, FieldStatus
+, IntendedNumOfPaintings
+, IsImage
+, NoFractions
+, NoOfFractions
+, NoOfImage
+, PrintFlag
+, RadiationNumber
+, RecordStatus
+, RVFlag
+, TerminationStatus
+, DistalEndEnergy
+, DoseDelta
+, FractionNumber
+, DoseDeliveredPerFraction
+, LastChartQADate
+, ctrChartQATreatmentSer
+, ctrPhysicianIntentSer
+, ctrRefPointLogSer
+, ctrDoseCorrectionLogSer
+, ctrFieldStructureSer
+, ctrStructureSer
+, ctrPhotoSer
+, ctrTechniqueSer
+, ctrPatientVolumeSer
+, ctrRefPointSer
+, ctrBreakPointSer
+, ctrPrescriptionSer
+, LogID
+, current_timestamp as paivityshetki_stage
+FROM DWH.FactTreatmentHistory
+</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>284</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Transform fields FactTreatmentHistory</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>FactTreatmentHistoryID</name>
+        <rename>FactTreatmentHistoryID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPatientID</name>
+        <rename>DimPatientID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimCourseID</name>
+        <rename>DimCourseID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_TreatmentIntentType</name>
+        <rename>DimLookupID_TreatmentIntentType</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_CompletedByUser</name>
+        <rename>DimUserID_CompletedByUser</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_ClinicalStatus</name>
+        <rename>DimLookupID_ClinicalStatus</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlanID</name>
+        <rename>DimPlanID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_PlanStatus</name>
+        <rename>DimLookupID_PlanStatus</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_StatusUser</name>
+        <rename>DimUserID_StatusUser</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_FieldTechnique</name>
+        <rename>DimLookupID_FieldTechnique</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimFieldID</name>
+        <rename>DimFieldID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlannedAddOnID1</name>
+        <rename>DimPlannedAddOnID1</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlannedAddOnID2</name>
+        <rename>DimPlannedAddOnID2</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlannedAddOnID3</name>
+        <rename>DimPlannedAddOnID3</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlannedAddOnID4</name>
+        <rename>DimPlannedAddOnID4</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlannedAddOnID5</name>
+        <rename>DimPlannedAddOnID5</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlanMachineID</name>
+        <rename>DimPlanMachineID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_Technique</name>
+        <rename>DimLookupID_Technique</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_TechniqueLabel</name>
+        <rename>DimLookupID_TechniqueLabel</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimLookupID_TreatmentDeliveryType</name>
+        <rename>DimLookupID_TreatmentDeliveryType</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualMachineID</name>
+        <rename>DimActualMachineID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimTreatmentTransactionID</name>
+        <rename>DimTreatmentTransactionID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_UserName1</name>
+        <rename>DimUserID_UserName1</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_UserName2</name>
+        <rename>DimUserID_UserName2</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_UserName3</name>
+        <rename>DimUserID_UserName3</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID1</name>
+        <rename>DimActualAddOnID1</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID2</name>
+        <rename>DimActualAddOnID2</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID3</name>
+        <rename>DimActualAddOnID3</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID4</name>
+        <rename>DimActualAddOnID4</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID5</name>
+        <rename>DimActualAddOnID5</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID6</name>
+        <rename>DimActualAddOnID6</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID7</name>
+        <rename>DimActualAddOnID7</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID8</name>
+        <rename>DimActualAddOnID8</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID9</name>
+        <rename>DimActualAddOnID9</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualAddOnID10</name>
+        <rename>DimActualAddOnID10</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_ApprovalUser</name>
+        <rename>DimUserID_ApprovalUser</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_MachineAuthorization</name>
+        <rename>DimUserID_MachineAuthorization</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimPlannedEnergyID</name>
+        <rename>DimPlannedEnergyID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimActualEnergyID</name>
+        <rename>DimActualEnergyID</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_CourseCompletedDateTime</name>
+        <rename>DimDateID_CourseCompletedDateTime</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_FirstTreatmentDate</name>
+        <rename>DimDateID_FirstTreatmentDate</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_LastTreatmentDate</name>
+        <rename>DimDateID_LastTreatmentDate</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_PlanApprovedStatusDate</name>
+        <rename>DimDateID_PlanApprovedStatusDate</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_AuthorizationDate</name>
+        <rename>DimDateID_AuthorizationDate</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_CorrectionDateTime</name>
+        <rename>DimDateID_CorrectionDateTime</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_TreatmentEndTime</name>
+        <rename>DimDateID_TreatmentEndTime</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_TreatmentRecordDateTime</name>
+        <rename>DimDateID_TreatmentRecordDateTime</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_TreatmentStartTime</name>
+        <rename>DimDateID_TreatmentStartTime</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimDateID_BreakPointDate</name>
+        <rename>DimDateID_BreakPointDate</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>CompletedDateTime</name>
+        <rename>CompletedDateTime</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FirstTreatmentDate</name>
+        <rename>FirstTreatmentDate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LastTreatmentDate</name>
+        <rename>LastTreatmentDate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>StatusDate</name>
+        <rename>StatusDate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>IsActive</name>
+        <rename>IsActive</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>IsBrachy</name>
+        <rename>IsBrachy</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PlannedDoseRate</name>
+        <rename>PlannedDoseRate</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PlannedMU</name>
+        <rename>PlannedMU</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>AuthorizationDate</name>
+        <rename>AuthorizationDate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DimUserID_AuthorizedBy</name>
+        <rename>DimUserID_AuthorizedBy</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>OverrideParameters</name>
+        <rename>OverrideParameters</rename>
+        <type>None</type>
+        <length>32</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PlannedFieldDose</name>
+        <rename>PlannedFieldDose</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DeliveredFieldDose</name>
+        <rename>DeliveredFieldDose</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>CorrectionDateTime</name>
+        <rename>CorrectionDateTime</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>RefPointId</name>
+        <rename>RefPointId</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>RefPointName</name>
+        <rename>RefPointName</rename>
+        <type>None</type>
+        <length>64</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseCorrectionComment</name>
+        <rename>DoseCorrectionComment</rename>
+        <type>None</type>
+        <length>254</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>CourseDoseDelivered</name>
+        <rename>CourseDoseDelivered</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>CourseDosePlanned</name>
+        <rename>CourseDosePlanned</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>CourseDoseRemaining</name>
+        <rename>CourseDoseRemaining</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>OtherCourseDoseDelivered</name>
+        <rename>OtherCourseDoseDelivered</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseCorrection</name>
+        <rename>DoseCorrection</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TotalDoseLimit</name>
+        <rename>TotalDoseLimit</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DailyDoseLimit</name>
+        <rename>DailyDoseLimit</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>SessionDoseLimit</name>
+        <rename>SessionDoseLimit</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>BreakPointDate</name>
+        <rename>BreakPointDate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>BreakPointDose</name>
+        <rename>BreakPointDose</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>BreakPointNote</name>
+        <rename>BreakPointNote</rename>
+        <type>None</type>
+        <length>254</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>BreakPointNum</name>
+        <rename>BreakPointNum</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NoTxSessionRemaining</name>
+        <rename>NoTxSessionRemaining</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NoTxSessionPlanned</name>
+        <rename>NoTxSessionPlanned</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NoTxSessionDelivered</name>
+        <rename>NoTxSessionDelivered</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PrimaryFlag</name>
+        <rename>PrimaryFlag</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FractionsDelivered</name>
+        <rename>FractionsDelivered</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FractionsPlanned</name>
+        <rename>FractionsPlanned</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FractionsRemaining</name>
+        <rename>FractionsRemaining</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DosePerFraction</name>
+        <rename>DosePerFraction</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseDelivered</name>
+        <rename>DoseDelivered</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseRemainingInFraction</name>
+        <rename>DoseRemainingInFraction</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>RunningPartial</name>
+        <rename>RunningPartial</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DosePredictedMax</name>
+        <rename>DosePredictedMax</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DosePredictedMin</name>
+        <rename>DosePredictedMin</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DosePredicted</name>
+        <rename>DosePredicted</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DosePredictedInOtherCourses</name>
+        <rename>DosePredictedInOtherCourses</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseRemaining</name>
+        <rename>DoseRemaining</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseRemainingMax</name>
+        <rename>DoseRemainingMax</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseRemainingMin</name>
+        <rename>DoseRemainingMin</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ActualDoseRate</name>
+        <rename>ActualDoseRate</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TreatmentTime</name>
+        <rename>TreatmentTime</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DeliveredMU</name>
+        <rename>DeliveredMU</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseDeliveredToPrimaryRefPoint</name>
+        <rename>DoseDeliveredToPrimaryRefPoint</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PFFlag</name>
+        <rename>PFFlag</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PFMUSubFlag</name>
+        <rename>PFMUSubFlag</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PIFlag</name>
+        <rename>PIFlag</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TreatmentEndTime</name>
+        <rename>TreatmentEndTime</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TreatmentRecordDateTime</name>
+        <rename>TreatmentRecordDateTime</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TreatmentStartTime</name>
+        <rename>TreatmentStartTime</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ApprovalDate</name>
+        <rename>ApprovalDate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>CorrelatedEventNumber</name>
+        <rename>CorrelatedEventNumber</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>EventNumber</name>
+        <rename>EventNumber</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FieldMUActual</name>
+        <rename>FieldMUActual</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FieldStatus</name>
+        <rename>FieldStatus</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>IntendedNumOfPaintings</name>
+        <rename>IntendedNumOfPaintings</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>IsImage</name>
+        <rename>IsImage</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NoFractions</name>
+        <rename>NoFractions</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NoOfFractions</name>
+        <rename>NoOfFractions</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NoOfImage</name>
+        <rename>NoOfImage</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>PrintFlag</name>
+        <rename>PrintFlag</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>RadiationNumber</name>
+        <rename>RadiationNumber</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>RecordStatus</name>
+        <rename>RecordStatus</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>RVFlag</name>
+        <rename>RVFlag</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TerminationStatus</name>
+        <rename>TerminationStatus</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DistalEndEnergy</name>
+        <rename>DistalEndEnergy</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseDelta</name>
+        <rename>DoseDelta</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>FractionNumber</name>
+        <rename>FractionNumber</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>DoseDeliveredPerFraction</name>
+        <rename>DoseDeliveredPerFraction</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LastChartQADate</name>
+        <rename>LastChartQADate</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrChartQATreatmentSer</name>
+        <rename>ctrChartQATreatmentSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrPhysicianIntentSer</name>
+        <rename>ctrPhysicianIntentSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrRefPointLogSer</name>
+        <rename>ctrRefPointLogSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrDoseCorrectionLogSer</name>
+        <rename>ctrDoseCorrectionLogSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrFieldStructureSer</name>
+        <rename>ctrFieldStructureSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrStructureSer</name>
+        <rename>ctrStructureSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrPhotoSer</name>
+        <rename>ctrPhotoSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrTechniqueSer</name>
+        <rename>ctrTechniqueSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrPatientVolumeSer</name>
+        <rename>ctrPatientVolumeSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrRefPointSer</name>
+        <rename>ctrRefPointSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrBreakPointSer</name>
+        <rename>ctrBreakPointSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ctrPrescriptionSer</name>
+        <rename>ctrPrescriptionSer</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LogID</name>
+        <rename>LogID</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>paivityshetki_stage</name>
+        <rename>paivityshetki_stage</rename>
+        <type>Date</type>
+        <length>0</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>556</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

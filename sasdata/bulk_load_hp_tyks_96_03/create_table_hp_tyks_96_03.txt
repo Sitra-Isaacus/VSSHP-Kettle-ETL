@@ -1,0 +1,78 @@
+-- Table: stage_sasdata.hp_tyks_96_03
+
+-- DROP TABLE stage_sasdata.hp_tyks_96_03;
+
+CREATE TABLE stage_sasdata.hp_tyks_96_03
+(
+  hp_tyks_96_03_id INTEGER
+, sairaalanro INTEGER
+, erikoisala INTEGER
+, henkilotunnus VARCHAR(11)
+, syntymapaiva DATE
+, kunta VARCHAR(3)
+, saapumistapa SMALLINT
+, maksuluokka SMALLINT
+, hoitokerta SMALLINT
+, paadiagnoosi VARCHAR(5)
+, sivudiagnoosi_1 VARCHAR(5)
+, sivudiagnoosi_2 VARCHAR(5)
+, sivudiagnoosi_3 VARCHAR(5)
+, onko_leikattu SMALLINT
+, toimenpide_1 VARCHAR(4)
+, toimenpide_2 VARCHAR(4)
+, tapaturmapaikka SMALLINT
+, tapaturman_ulkoinen_syy VARCHAR(5)
+, mista_tullut SMALLINT
+, mihin_poistunut SMALLINT
+, potilaan_sairaanhoitopiiri VARCHAR(2)
+, sairaalan_sairaanhoitopiiri VARCHAR(2)
+, potilaan_psyk_piiri VARCHAR(2)
+, sairaalan_psyk_piiri VARCHAR(2)
+, ika SMALLINT
+, sukupuoli SMALLINT
+, diagnoosiryhma VARCHAR(2)
+, hoitopaivat_erikoisalalla INTEGER
+, vtkk_n_sairaalanumero VARCHAR(4)
+, vtkk_n_osastonumero VARCHAR(4)
+, nimi VARCHAR(20)
+, osastolle_saapumispaiva DATE
+, osastolta_poistumispaiva DATE
+, osaston_hoitopaivat INTEGER
+, jasenyyskoodi SMALLINT
+, potilaan_terveyskeskuskoodi INTEGER
+, paadiag_n_uusi_aik SMALLINT
+, sivudiag_n_uusi_aik_1 SMALLINT
+, sivudiag_n_uusi_aik_2 SMALLINT
+, sivudiag_n_uusi_aik_3 SMALLINT
+, paadiagnoosin_tarkennus VARCHAR(3)
+, sivudg_n_tarkennus_1 VARCHAR(3)
+, sivudg_n_tarkennus_2 VARCHAR(3)
+, sivudg_n_tarkennus_3 VARCHAR(3)
+, valittoman_kuolinsyyn_tark VARCHAR(3)
+, peruskuolinsyyn_tarkennus VARCHAR(3)
+, valittoman_kuolinsyyn_koodi VARCHAR(5)
+, peruskuolinsyyn_koodi VARCHAR(5)
+, sivutoimenpiteen_koodi_2 VARCHAR(5)
+, sivutoimenpiteen_koodi_3 VARCHAR(5)
+, erikoistoimenpide_1 VARCHAR(2)
+, erikoistoimenpide_2 VARCHAR(2)
+, erikoistoimenpide_3 VARCHAR(2)
+, erikoistoimenpide_4 VARCHAR(2)
+, erikoistoimenpide_5 VARCHAR(2)
+, erikoisryhma VARCHAR(6)
+, jonoon_asettamispaiva INTEGER
+, mista_tullut_1 SMALLINT
+, mihin_lahetetty SMALLINT
+, ulkomaalainen SMALLINT
+, potilaan_kotikunnan_mukaan SMALLINT
+, varalla SMALLINT
+, tieto_ladattu_tietokantaan TIMESTAMP
+, paivityshetki_stage_sasdata TIMESTAMP
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stage_sasdata.hp_tyks_96_03
+  OWNER TO ktp;
+
+

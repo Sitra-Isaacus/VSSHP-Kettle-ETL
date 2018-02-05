@@ -1,0 +1,224 @@
+
+loading data from aria files in...
+/mnt/raw/aria/bom_removed/
+... into schema ...
+stage_aria
+...
+10:01:20,760 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 4 at /opt/pentaho/pdi-ce-6.0.1.0-386/./karaf-cop ***
+***   y//data4                                                              ***
+*** Karaf Port:8804                                                         ***
+*** OSGI Service Port:9054                                                  ***
+*******************************************************************************
+Apr 19, 2016 10:01:21 AM org.apache.karaf.main.Main$KarafLockCallback lockAquired
+INFO: Lock acquired. Setting startlevel to 100
+2016/04/19 10:01:21 - Kitchen - Logging is at level : Basic logging
+2016/04/19 10:01:21 - Kitchen - Start of run.
+2016/04/19 10:01:22 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016-04-19 10:01:24.246:INFO:oejs.Server:jetty-8.1.15.v20140411
+2016-04-19 10:01:24.286:INFO:oejs.AbstractConnector:Started NIOSocketConnectorWrapper@0.0.0.0:9054
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/core
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/configuration/beans
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/configuration/parameterized-types
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/configuration/security
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/wsdl/
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/2005/08/addressing
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/08/addressing
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-management (130) [org.apache.cxf.management.InstrumentationManager]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (133) [org.apache.cxf.wsdl.WSDLManager]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (135) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (136) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/bindings/soap
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (137) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (160) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/transports/http/configuration
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/simple
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (139) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxws
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs-client
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-corba (149) [org.apache.cxf.binding.corba.CorbaBindingFactory, org.apache.cxf.binding.corba.wsdl.WSDLExtensionRegister]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/binding/coloc
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-local (151) [org.apache.cxf.transport.local.LocalTransportFactory]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-object (152) [org.apache.cxf.binding.object.ObjectBindingFactory]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/binding/object
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (153) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/transports/http-jetty/configuration
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-jms (155) [org.apache.cxf.transport.jms.JMSTransportFactory, org.apache.cxf.transport.jms.wsdl11.JMSWSDLExtensionLoader]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-udp (157) [org.apache.cxf.transport.udp.UDPTransportFactory]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/policy
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/ns/ws-policy
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/2006/07/ws-policy
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/09/policy
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/2000/09/xmldsig#
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (177) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/ws/addressing
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-mex (182) [org.apache.cxf.ws.mex.MEXServerListener]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-security (179) [org.apache.cxf.ws.security.policy.WSSecurityPolicyLoader, org.apache.cxf.ws.security.cache.CacheCleanupListener]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-rm (181) [org.apache.cxf.ws.rm.RMManager, org.apache.cxf.ws.rm.policy.RMPolicyInterceptorProvider, org.apache.cxf.ws.rm.policy.RM10AssertionBuilder, org.apache.cxf.ws.rm.policy.RM12AssertionBuilder, org.apache.cxf.ws.rm.policy.WSRMP12PolicyLoader, org.apache.cxf.ws.rm.policy.MC11PolicyLoader, org.apache.cxf.ws.rm.policy.RSPPolicyLoader]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/ws/rm/manager
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2005/02/rm/policy
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-javascript (183) [org.apache.cxf.javascript.JavascriptServerListener]
+Apr 19, 2016 10:01:25 AM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/clustering
+Apr 19, 2016 10:01:25 AM org.pentaho.caching.impl.PentahoCacheManagerFactory$RegistrationHandler$1 onSuccess
+INFO: New Caching Service registered
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/pentaho/pdi-ce-6.0.1.0-386/launcher/../lib/slf4j-log4j12-1.7.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/pentaho/pdi-ce-6.0.1.0-386/plugins/pentaho-big-data-plugin/lib/slf4j-log4j12-1.7.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+10:01:26,959 ERROR [WebjarsURLConnection] Error Transforming zip
+java.io.IOException: Pipe closed
+	at java.io.PipedInputStream.checkStateForReceive(PipedInputStream.java:261)
+	at java.io.PipedInputStream.receive(PipedInputStream.java:227)
+	at java.io.PipedOutputStream.write(PipedOutputStream.java:149)
+	at java.util.zip.DeflaterOutputStream.deflate(DeflaterOutputStream.java:253)
+	at java.util.zip.ZipOutputStream.closeEntry(ZipOutputStream.java:238)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection.transform(WebjarsURLConnection.java:190)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection.access$000(WebjarsURLConnection.java:54)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection$2.call(WebjarsURLConnection.java:90)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection$2.call(WebjarsURLConnection.java:87)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Apr 19, 2016 10:01:27 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /lineage
+Apr 19, 2016 10:01:27 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /marketplace
+10:01:27,951 ERROR [WebjarsURLConnection] Error Transforming zip
+java.io.IOException: Pipe closed
+	at java.io.PipedInputStream.checkStateForReceive(PipedInputStream.java:261)
+	at java.io.PipedInputStream.receive(PipedInputStream.java:227)
+	at java.io.PipedOutputStream.write(PipedOutputStream.java:149)
+	at java.util.zip.DeflaterOutputStream.deflate(DeflaterOutputStream.java:253)
+	at java.util.zip.ZipOutputStream.closeEntry(ZipOutputStream.java:238)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection.transform(WebjarsURLConnection.java:190)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection.access$000(WebjarsURLConnection.java:54)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection$2.call(WebjarsURLConnection.java:90)
+	at org.pentaho.osgi.platform.webjars.WebjarsURLConnection$2.call(WebjarsURLConnection.java:87)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2016/04/19 10:01:28 - bulk_insert_tables - Start of job execution
+2016/04/19 10:01:28 - bulk_insert_tables - Starting entry [Get transformation filenames]
+2016/04/19 10:01:28 - Get transformation filenames - Loading transformation from XML file [file:///home/hammaisa/Documents/ETL/aria/get_transformation_filenames.ktr]
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - get_transformation_filenames - Dispatching started for transformation [get_transformation_filenames]
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/19 10:01:28 - Copy rows to result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2016/04/19 10:01:28 - bulk_insert_tables - Starting entry [Execute transformation]
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - cfgbuilder - Warning: The configuration parameter [org] is not supported by the default configuration builder for scheme: sftp
+2016/04/19 10:01:28 - exeucte_transformation - Starting entry [Run transformation named by ${filename} parameter]
+2016/04/19 10:01:28 - Run transformation named by ${filename} parameter - Loading transformation from XML file [/home/hammaisa/Documents/ETL/aria/individual_tables/insert_treatmentrecord.ktr]
+2016/04/19 10:01:28 - insert_treatmentrecord - Dispatching started for transformation [insert_treatmentrecord]
+2016/04/19 10:01:29 - Table output TreatmentRecord.0 - Connected to database [PostgreSQL] (commit=1000)
+2016/04/19 10:01:29 - Text file input TreatmentRecord.0 - Opening file: file:///mnt/raw/aria/bom_removed/2016-04-19_treatmentrecord_upto_ser_11000000_bom_removed.txt
+2016/04/19 10:01:33 - Text file input TreatmentRecord.0 - linenr 50000
+2016/04/19 10:01:38 - Select values.0 - linenr 50000
+2016/04/19 10:01:41 - Table output TreatmentRecord.0 - linenr 50000
+2016/04/19 10:01:44 - Text file input TreatmentRecord.0 - linenr 100000
+2016/04/19 10:01:51 - Select values.0 - linenr 100000
+2016/04/19 10:01:53 - Table output TreatmentRecord.0 - linenr 100000
+2016/04/19 10:01:57 - Text file input TreatmentRecord.0 - linenr 150000
+2016/04/19 10:02:00 - Select values.0 - linenr 150000
+2016/04/19 10:02:02 - Table output TreatmentRecord.0 - linenr 150000
+2016/04/19 10:02:06 - Text file input TreatmentRecord.0 - linenr 200000
+2016/04/19 10:02:10 - Select values.0 - linenr 200000
+2016/04/19 10:02:12 - Table output TreatmentRecord.0 - linenr 200000
+2016/04/19 10:02:16 - Text file input TreatmentRecord.0 - linenr 250000
+2016/04/19 10:02:21 - Select values.0 - linenr 250000
+2016/04/19 10:02:24 - Table output TreatmentRecord.0 - linenr 250000
+2016/04/19 10:02:29 - Text file input TreatmentRecord.0 - linenr 300000
+2016/04/19 10:02:33 - Select values.0 - linenr 300000
+2016/04/19 10:02:35 - Table output TreatmentRecord.0 - linenr 300000
+2016/04/19 10:02:40 - Text file input TreatmentRecord.0 - linenr 350000
+2016/04/19 10:02:44 - Text file input TreatmentRecord.0 - Opening file: file:///mnt/raw/aria/bom_removed/2016-04-19_treatmentrecord_upto_ser_12000000_bom_removed.txt
+2016/04/19 10:02:45 - Select values.0 - linenr 350000
+2016/04/19 10:02:48 - Table output TreatmentRecord.0 - linenr 350000
+2016/04/19 10:02:52 - Text file input TreatmentRecord.0 - linenr 400000
+2016/04/19 10:02:57 - Select values.0 - linenr 400000
+2016/04/19 10:02:59 - Table output TreatmentRecord.0 - linenr 400000
+2016/04/19 10:03:03 - Text file input TreatmentRecord.0 - linenr 450000
+2016/04/19 10:03:07 - Select values.0 - linenr 450000
+2016/04/19 10:03:09 - Table output TreatmentRecord.0 - linenr 450000
+2016/04/19 10:03:12 - Text file input TreatmentRecord.0 - linenr 500000
+2016/04/19 10:03:16 - Select values.0 - linenr 500000
+2016/04/19 10:03:17 - Table output TreatmentRecord.0 - linenr 500000
+2016/04/19 10:03:21 - Text file input TreatmentRecord.0 - linenr 550000
+2016/04/19 10:03:25 - Select values.0 - linenr 550000
+2016/04/19 10:03:27 - Table output TreatmentRecord.0 - linenr 550000
+2016/04/19 10:03:30 - Text file input TreatmentRecord.0 - linenr 600000
+2016/04/19 10:03:34 - Select values.0 - linenr 600000
+2016/04/19 10:03:37 - Table output TreatmentRecord.0 - linenr 600000
+2016/04/19 10:03:41 - Text file input TreatmentRecord.0 - linenr 650000
+2016/04/19 10:03:44 - Text file input TreatmentRecord.0 - Finished processing (I=667433, O=0, R=0, W=667431, U=2, E=0)
+2016/04/19 10:03:44 - Select values.0 - linenr 650000
+2016/04/19 10:03:45 - Regex Evaluation.0 - Finished processing (I=0, O=0, R=667431, W=667431, U=0, E=0)
+2016/04/19 10:03:46 - Table output TreatmentRecord.0 - linenr 650000
+2016/04/19 10:03:47 - Select values.0 - Finished processing (I=0, O=0, R=667431, W=667431, U=0, E=0)
+2016/04/19 10:03:49 - Table output TreatmentRecord.0 - Finished processing (I=0, O=667431, R=667431, W=667431, U=0, E=0)
+2016/04/19 10:03:49 - exeucte_transformation - Finished job entry [Run transformation named by ${filename} parameter] (result=[true])
+2016/04/19 10:03:49 - bulk_insert_tables - Finished job entry [Execute transformation] (result=[true])
+2016/04/19 10:03:49 - bulk_insert_tables - Finished job entry [Get transformation filenames] (result=[true])
+2016/04/19 10:03:49 - bulk_insert_tables - Job execution finished
+2016/04/19 10:03:49 - Kitchen - Finished!
+2016/04/19 10:03:49 - Kitchen - Start=2016/04/19 10:01:21.872, Stop=2016/04/19 10:03:49.519
+2016/04/19 10:03:49 - Kitchen - Processing ended after 2 minutes and 27 seconds (147 seconds total).

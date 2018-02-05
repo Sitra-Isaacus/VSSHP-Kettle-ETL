@@ -1,0 +1,6908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>load_dm_tables</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+      <parameter>
+        <name>limit</name>
+        <default_value>10</default_value>
+        <description />
+      </parameter>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2016/05/31 16:05:22.864</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2016/05/31 16:05:22.864</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Anna_testi</name>
+    <server>SQLCLU09</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>Varsat_DM_SatSHP</database>
+    <port>1433</port>
+    <username>hammaisa</username>
+    
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MSSQL.domain</code>
+        <attribute>VSSHP</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MSSQL.instance</code>
+        <attribute>DW_Tuotanto</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PostgreSQL gradient satshp</name>
+    <server>gradient.vsshp.net</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>satshp</database>
+    <port>5432</port>
+    <username>ktp</username>
+    
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>dmf_kaynti in</from>
+      <to>now1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_kayntityyppi in</from>
+      <to>now2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now2</from>
+      <to>dmd_kayntityyppi out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_kustannuspaikka in</from>
+      <to>now3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now3</from>
+      <to>dmd_kustannuspaikka out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_erikoisala in</from>
+      <to>now4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now4</from>
+      <to>dmd_erikoisala out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_vastaanottajatyyppi in</from>
+      <to>now5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now5</from>
+      <to>dmd_vastaanottajatyyppi out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_kunta in</from>
+      <to>now7</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now7</from>
+      <to>dmd_kunta out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_toimipiste in</from>
+      <to>now6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now6</from>
+      <to>dmd_toimipiste out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_laitos in</from>
+      <to>now8</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now8</from>
+      <to>dmd_laitos out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_diagnoosi in</from>
+      <to>now9</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now9</from>
+      <to>dmd_diagnoosi out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_kayntityyppi_effica in</from>
+      <to>now10</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now10</from>
+      <to>dmd_kayntityyppi_effica out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_kontaktilaji in</from>
+      <to>now21</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now21</from>
+      <to>dmd_kontaktilaji out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_hoitojakso in</from>
+      <to>now11</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_saapumistapa in</from>
+      <to>now12</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now12</from>
+      <to>dmd_saapumistapa out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_hoitojakso_effica in</from>
+      <to>now13</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_kuvantaminen in</from>
+      <to>now14</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmd_kuvantamisentutkimusryhma in</from>
+      <to>now15</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now15</from>
+      <to>dmd_kuvantamisentutkimusryhma out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_lahete_effica in</from>
+      <to>now16</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_lahetteet in</from>
+      <to>now17</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_leikkaukset in</from>
+      <to>now18</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_psykiatria_hoitojakso_suorite in</from>
+      <to>now19</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_psykiatria_kaynti in</from>
+      <to>now20</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now1</from>
+      <to>cast4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast4</from>
+      <to>dmf_kaynti out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dmf_laboratorio</from>
+      <to>now22</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now16</from>
+      <to>cast5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast5</from>
+      <to>dmf_lahete_effica out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now17</from>
+      <to>cast6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast6</from>
+      <to>dmf_lahetteet out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now19</from>
+      <to>cast7</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast7</from>
+      <to>dmf_psykiatria_hoitojakso_suorite out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now20</from>
+      <to>cast8</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast8</from>
+      <to>dmf_psykiatria_kaynti out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now18</from>
+      <to>cast10</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast10</from>
+      <to>dmf_leikkaukset out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now13</from>
+      <to>cast1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast1</from>
+      <to>dmf_hoitojakso_effica out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now11</from>
+      <to>cast2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast2</from>
+      <to>dmf_hoitojakso</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast3</from>
+      <to>dmf_kuvantaminen out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now22</from>
+      <to>cast9</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cast9</from>
+      <to>dmf_laboratorio out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>now14</from>
+      <to>Replace \x00</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace \x00</from>
+      <to>cast3</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Replace \x00</name>
+    <type>ReplaceString</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>TRIAGELUOKKA</in_stream_name>
+        <out_stream_name />
+        <use_regex>yes</use_regex>
+        <replace_string>\x00</replace_string>
+        <replace_by_string />
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string />
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast1</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>HOITOJAKSOALKUPVM</name>
+        <rename>HOITOJAKSOALKUPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ALKUAIKA</name>
+        <rename>ALKUAIKA</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOJAKSOLOPPUPVM</name>
+        <rename>HOITOJAKSOLOPPUPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LOPPUAIKA</name>
+        <rename>LOPPUAIKA</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast10</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>SALIINTULOKLO</name>
+        <rename>SALIINTULOKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>SALISTAPOISTUMINENKLO</name>
+        <rename>SALISTAPOISTUMINENKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOIMENPIDEALKUPVM</name>
+        <rename>TOIMENPIDEALKUPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOIMENPIDEALKUKLO</name>
+        <rename>TOIMENPIDEALKUKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOIMENPIDELOPPUPVM</name>
+        <rename>TOIMENPIDELOPPUPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TOIMENPIDELOPPUKLO</name>
+        <rename>TOIMENPIDELOPPUKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>POISTUMINENYKSIKOSTAPVM</name>
+        <rename>POISTUMINENYKSIKOSTAPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>POISTUMINENYKSIKOSTAKLO</name>
+        <rename>POISTUMINENYKSIKOSTAKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TULOAIKASALIINPVM</name>
+        <rename>TULOAIKASALIINPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TULOAIKASALIINKLO</name>
+        <rename>TULOAIKASALIINKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>POISTUMINENSALISTAPVM</name>
+        <rename>POISTUMINENSALISTAPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>POISTUMINENSALISTAKLO</name>
+        <rename>POISTUMINENSALISTAKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>VALVONTAYKSIKKOONTULOPVM</name>
+        <rename>VALVONTAYKSIKKOONTULOPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>VALVONTAYKSIKKOONTULOKLO</name>
+        <rename>VALVONTAYKSIKKOONTULOKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>VALVONTAYKSIKOSTAPOISTUMINENPVM</name>
+        <rename>VALVONTAYKSIKOSTAPOISTUMINENPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>VALVONTAYKSIKOSTAPOISTUMINENKLO</name>
+        <rename>VALVONTAYKSIKOSTAPOISTUMINENKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ANESTESIAALKANUTPVM</name>
+        <rename>ANESTESIAALKANUTPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ANESTESIAALKANUTKLO</name>
+        <rename>ANESTESIAALKANUTKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ANESTESIALOPPUNUTPVM</name>
+        <rename>ANESTESIALOPPUNUTPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>ANESTESIALOPPUNUTKLO</name>
+        <rename>ANESTESIALOPPUNUTKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast2</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>HOITOJAKSOALKUPVM</name>
+        <rename>HOITOJAKSOALKUPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOJAKSOALKUKLO</name>
+        <rename>HOITOJAKSOALKUKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOJAKSOLOPPUPVM</name>
+        <rename>HOITOJAKSOLOPPUPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOJAKSOLOPPUKLO</name>
+        <rename>HOITOJAKSOLOPPUKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast3</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>MUUTOSPVM</name>
+        <rename>MUUTOSPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>MUUTOSKLO</name>
+        <rename>MUUTOSKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAUSUNTOPVM</name>
+        <rename>LAUSUNTOPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAUSUNTOKLO</name>
+        <rename>LAUSUNTOKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast4</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>KAYNTIPVM</name>
+        <rename>KAYNTIPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast5</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>SAAPUMISPVM</name>
+        <rename>SAAPUMISPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAHETE_KIRJATTU_PVM</name>
+        <rename>LAHETE_KIRJATTU_PVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAHETE_KASITTELY_PVM</name>
+        <rename>LAHETE_KASITTELY_PVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAHETE_RAPORTOINTI_PVM</name>
+        <rename>LAHETE_RAPORTOINTI_PVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast6</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>SAAPUMISPVM</name>
+        <rename>SAAPUMISPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast7</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>SUORITTEENPVM</name>
+        <rename>SUORITTEENPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TUOTEPAATOSPVM</name>
+        <rename>TUOTEPAATOSPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOJAKSOALKUPVM</name>
+        <rename>HOITOJAKSOALKUPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>HOITOJAKSOLOPPUPVM</name>
+        <rename>HOITOJAKSOLOPPUPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>SISAANKIRJAUSPVM</name>
+        <rename>SISAANKIRJAUSPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAHTOPVM</name>
+        <rename>LAHTOPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast8</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>HOITOJAKSOALKANUTPVM</name>
+        <rename>HOITOJAKSOALKANUTPVM</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cast9</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>NAYTTEENOTTOPVM</name>
+        <rename>NAYTTEENOTTOPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NAYTTEENOTTOKLO</name>
+        <rename>NAYTTEENOTTOKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TEKOPVM</name>
+        <rename>TEKOPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TEKOKLO</name>
+        <rename>TEKOKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAHETYSPVM</name>
+        <rename>LAHETYSPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>LAHETYSKLO</name>
+        <rename>LAHETYSKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILASTOINTIPVM</name>
+        <rename>TILASTOINTIPVM</rename>
+        <type>Date</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>TILASTOINTIKLO</name>
+        <rename>TILASTOINTIKLO</rename>
+        <type>Timestamp</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask>HH:mm:ss.SSSSSSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_diagnoosi in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_DIAGNOOSI
+, DATE_INSERT
+, DATE_UPDATE
+, DIAGNOOSIKOODI
+, DIAGNOOSINIMI
+, DIAGNOOSILYHYTNIMI
+, DIAGNOOSIKOODITASO
+, DIAGNOOSIYLEMPITASO
+, FK_DMD_DIAGNOOSI_YLEMPI
+FROM Yhteinen.DMD_DIAGNOOSI
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_diagnoosi out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_diagnoosi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_DIAGNOOSI</column_name>
+        <stream_name>PK_DMD_DIAGNOOSI</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>DIAGNOOSIKOODI</column_name>
+        <stream_name>DIAGNOOSIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>DIAGNOOSINIMI</column_name>
+        <stream_name>DIAGNOOSINIMI</stream_name>
+      </field>
+      <field>
+        <column_name>DIAGNOOSILYHYTNIMI</column_name>
+        <stream_name>DIAGNOOSILYHYTNIMI</stream_name>
+      </field>
+      <field>
+        <column_name>DIAGNOOSIKOODITASO</column_name>
+        <stream_name>DIAGNOOSIKOODITASO</stream_name>
+      </field>
+      <field>
+        <column_name>DIAGNOOSIYLEMPITASO</column_name>
+        <stream_name>DIAGNOOSIYLEMPITASO</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_YLEMPI</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_YLEMPI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_erikoisala in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_ERIKOISALA
+, DATE_INSERT
+, DATE_UPDATE
+, ERIKOISALAKOODI
+, ERIKOISALANIMI
+, ERIKOISALALAAJAKOODI
+, ERIKOISALALAAJANIMI
+FROM Yhteinen.DMD_ERIKOISALA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_erikoisala out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_erikoisala</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_ERIKOISALA</column_name>
+        <stream_name>PK_DMD_ERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALAKOODI</column_name>
+        <stream_name>ERIKOISALAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALANIMI</column_name>
+        <stream_name>ERIKOISALANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALALAAJAKOODI</column_name>
+        <stream_name>ERIKOISALALAAJAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALALAAJANIMI</column_name>
+        <stream_name>ERIKOISALALAAJANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kayntityyppi in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_KAYNTITYYPPI
+, DATE_INSERT
+, DATE_UPDATE
+, KAYNTITYYPPIKOODI
+, KAYNTITYYPPINIMI
+FROM Yhteinen.DMD_KAYNTITYYPPI
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kayntityyppi out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_kayntityyppi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_KAYNTITYYPPI</column_name>
+        <stream_name>PK_DMD_KAYNTITYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>KAYNTITYYPPIKOODI</column_name>
+        <stream_name>KAYNTITYYPPIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>KAYNTITYYPPINIMI</column_name>
+        <stream_name>KAYNTITYYPPINIMI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kayntityyppi_effica in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_KAYNTITYYPPI_EFFICA
+, date_insert
+, date_update
+, kayntityyppi_id
+, latpvm
+, kayntityypintunnus
+, kayntityyppitunnus
+, kayntityyppi
+, kayntityyppitarkennintunnus
+, kayntityyppitarkennin
+, kayntityyppiryhmatunnus
+, kayntityyppiryhma
+, kontaktityyppikoodi
+, kontaktityyppi
+, kavijaryhmatunnus
+, kavijaryhma
+, kayntityyppiAlkupvm
+, kayntityyppiLoppupvm
+, FK_DMD_KAYNTITYYPPI
+, mustikayntityyppi
+, psykiatriaJoraluokittelu
+FROM Yhteinen.DMD_KAYNTITYYPPI_EFFICA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kayntityyppi_effica out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_kayntityyppi_effica</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_KAYNTITYYPPI_EFFICA</column_name>
+        <stream_name>PK_DMD_KAYNTITYYPPI_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>date_insert</column_name>
+        <stream_name>date_insert</stream_name>
+      </field>
+      <field>
+        <column_name>date_update</column_name>
+        <stream_name>date_update</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppi_id</column_name>
+        <stream_name>kayntityyppi_id</stream_name>
+      </field>
+      <field>
+        <column_name>latpvm</column_name>
+        <stream_name>latpvm</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityypintunnus</column_name>
+        <stream_name>kayntityypintunnus</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppitunnus</column_name>
+        <stream_name>kayntityyppitunnus</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppi</column_name>
+        <stream_name>kayntityyppi</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppitarkennintunnus</column_name>
+        <stream_name>kayntityyppitarkennintunnus</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppitarkennin</column_name>
+        <stream_name>kayntityyppitarkennin</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppiryhmatunnus</column_name>
+        <stream_name>kayntityyppiryhmatunnus</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppiryhma</column_name>
+        <stream_name>kayntityyppiryhma</stream_name>
+      </field>
+      <field>
+        <column_name>kontaktityyppikoodi</column_name>
+        <stream_name>kontaktityyppikoodi</stream_name>
+      </field>
+      <field>
+        <column_name>kontaktityyppi</column_name>
+        <stream_name>kontaktityyppi</stream_name>
+      </field>
+      <field>
+        <column_name>kavijaryhmatunnus</column_name>
+        <stream_name>kavijaryhmatunnus</stream_name>
+      </field>
+      <field>
+        <column_name>kavijaryhma</column_name>
+        <stream_name>kavijaryhma</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppiAlkupvm</column_name>
+        <stream_name>kayntityyppiAlkupvm</stream_name>
+      </field>
+      <field>
+        <column_name>kayntityyppiLoppupvm</column_name>
+        <stream_name>kayntityyppiLoppupvm</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KAYNTITYYPPI</column_name>
+        <stream_name>FK_DMD_KAYNTITYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>mustikayntityyppi</column_name>
+        <stream_name>mustikayntityyppi</stream_name>
+      </field>
+      <field>
+        <column_name>psykiatriaJoraluokittelu</column_name>
+        <stream_name>psykiatriaJoraluokittelu</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kontaktilaji in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_KONTAKTILAJI
+, DATE_INSERT
+, DATE_UPDATE
+, KOODI
+, SELITE
+FROM Toimintatilasto.DMD_KONTAKTILAJI
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kontaktilaji out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_kontaktilaji</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_KONTAKTILAJI</column_name>
+        <stream_name>PK_DMD_KONTAKTILAJI</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>KOODI</column_name>
+        <stream_name>KOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SELITE</column_name>
+        <stream_name>SELITE</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kunta in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_KUNTA
+, DATE_INSERT
+, DATE_UPDATE
+, KUNTAKOODI
+, KUNTANIMI
+FROM Yhteinen.DMD_KUNTA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kunta out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_kunta</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_KUNTA</column_name>
+        <stream_name>PK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>KUNTAKOODI</column_name>
+        <stream_name>KUNTAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>KUNTANIMI</column_name>
+        <stream_name>KUNTANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kustannuspaikka in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_KUSTANNUSPAIKKA
+, DATE_INSERT
+, DATE_UPDATE
+, KUSTANNUSPAIKKA
+, KUSTANNUSPAIKKAKOODI
+, KUSTANNUSPAIKKANIMI
+, VASTUUYKSIKKOKOODI
+, VASTUUYKSIKKONIMI
+, VASTUUALUEKOODI
+, VASTUUALUENIMI
+, TOIMIALUEKOODI
+, TOIMIALUENIMI
+, VASTUUYKSIKKOKOODI_2016_ALKAEN
+, VASTUUYKSIKKONIMI_2016_ALKAEN
+, VASTUUALUEKOODI_2016_ALKAEN
+, VASTUUALUENIMI_2016_ALKAEN
+, TOIMIALUEKOODI_2016_ALKAEN
+, TOIMIALUENIMI_2016_ALKAEN
+FROM Yhteinen.DMD_KUSTANNUSPAIKKA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kustannuspaikka out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_kustannuspaikka</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>PK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA</column_name>
+        <stream_name>KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKAKOODI</column_name>
+        <stream_name>KUSTANNUSPAIKKAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKANIMI</column_name>
+        <stream_name>KUSTANNUSPAIKKANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUYKSIKKOKOODI</column_name>
+        <stream_name>VASTUUYKSIKKOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUYKSIKKONIMI</column_name>
+        <stream_name>VASTUUYKSIKKONIMI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUALUEKOODI</column_name>
+        <stream_name>VASTUUALUEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUALUENIMI</column_name>
+        <stream_name>VASTUUALUENIMI</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMIALUEKOODI</column_name>
+        <stream_name>TOIMIALUEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMIALUENIMI</column_name>
+        <stream_name>TOIMIALUENIMI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUYKSIKKOKOODI_2016_ALKAEN</column_name>
+        <stream_name>VASTUUYKSIKKOKOODI_2016_ALKAEN</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUYKSIKKONIMI_2016_ALKAEN</column_name>
+        <stream_name>VASTUUYKSIKKONIMI_2016_ALKAEN</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUALUEKOODI_2016_ALKAEN</column_name>
+        <stream_name>VASTUUALUEKOODI_2016_ALKAEN</stream_name>
+      </field>
+      <field>
+        <column_name>VASTUUALUENIMI_2016_ALKAEN</column_name>
+        <stream_name>VASTUUALUENIMI_2016_ALKAEN</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMIALUEKOODI_2016_ALKAEN</column_name>
+        <stream_name>TOIMIALUEKOODI_2016_ALKAEN</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMIALUENIMI_2016_ALKAEN</column_name>
+        <stream_name>TOIMIALUENIMI_2016_ALKAEN</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kuvantamisentutkimusryhma in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_KUVANTAMISENTUTKIMUSRYHMA
+, DATE_INSERT
+, DATE_UPDATE
+, TUTKIMUSRYHMAKOODI
+, TUTKIMUSRYHMANIMI
+FROM Yhteinen.DMD_KUVANTAMISENTUTKIMUSRYHMA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_kuvantamisentutkimusryhma out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_kuvantamisentutkimusryhma</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_KUVANTAMISENTUTKIMUSRYHMA</column_name>
+        <stream_name>PK_DMD_KUVANTAMISENTUTKIMUSRYHMA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>TUTKIMUSRYHMAKOODI</column_name>
+        <stream_name>TUTKIMUSRYHMAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TUTKIMUSRYHMANIMI</column_name>
+        <stream_name>TUTKIMUSRYHMANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_laitos in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_LAITOS
+, DATE_INSERT
+, DATE_UPDATE
+, LAITOS_ENTITY_ID
+, LAITOSKOODI
+, LAITOSNIMI
+, LAITOSKOODITASO
+, LAITOSLYHYTNIMI
+, LAITOSERIKOISALAKOODI
+, LAITOSSISAINENLIPPU
+, LAITOS_ENTITY_ID_EFFICA
+, LAITOSTUNNISTE_EFFICA
+, LAITOSTUNNUS2_EFFICA
+FROM Yhteinen.DMD_LAITOS
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_laitos out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_laitos</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_LAITOS</column_name>
+        <stream_name>PK_DMD_LAITOS</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOS_ENTITY_ID</column_name>
+        <stream_name>LAITOS_ENTITY_ID</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSKOODI</column_name>
+        <stream_name>LAITOSKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSNIMI</column_name>
+        <stream_name>LAITOSNIMI</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSKOODITASO</column_name>
+        <stream_name>LAITOSKOODITASO</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSLYHYTNIMI</column_name>
+        <stream_name>LAITOSLYHYTNIMI</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSERIKOISALAKOODI</column_name>
+        <stream_name>LAITOSERIKOISALAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSSISAINENLIPPU</column_name>
+        <stream_name>LAITOSSISAINENLIPPU</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOS_ENTITY_ID_EFFICA</column_name>
+        <stream_name>LAITOS_ENTITY_ID_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSTUNNISTE_EFFICA</column_name>
+        <stream_name>LAITOSTUNNISTE_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>LAITOSTUNNUS2_EFFICA</column_name>
+        <stream_name>LAITOSTUNNUS2_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_saapumistapa in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_SAAPUMISTAPA
+, DATE_INSERT
+, DATE_UPDATE
+, SAAPUMISTAPAKOODI
+, SAAPUMISTAPANIMI
+FROM Yhteinen.DMD_SAAPUMISTAPA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_saapumistapa out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_saapumistapa</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_SAAPUMISTAPA</column_name>
+        <stream_name>PK_DMD_SAAPUMISTAPA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISTAPAKOODI</column_name>
+        <stream_name>SAAPUMISTAPAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISTAPANIMI</column_name>
+        <stream_name>SAAPUMISTAPANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_toimipiste in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_TOIMIPISTE
+, DATE_INSERT
+, DATE_UPDATE
+, ENTITY_ID
+, TOIMIPISTEKOODI
+, TOIMIPISTEKOODITASO
+, VASTAANOTTOKOODI
+, VASTAANOTTONIMI
+, VASTAANOTTOLYHYTNIMI
+, VASTAANOTTOYLEMPITASO
+, OSASTOKOODI
+, OSASTONIMI
+, OSASTOLYHYTNIMI
+, OSASTOYLEMPITASO
+, SAIRAALAKOODI
+, SAIRAALANIMI
+, SAIRAALALYHYTNIMI
+, SAIRAALAYLEMPITASO
+, SAIRAANHOITOPIIRIKOODI
+, SAIRAANHOITOPIIRINIMI
+, LAHDE
+FROM Yhteinen.DMD_TOIMIPISTE
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_toimipiste out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_toimipiste</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_TOIMIPISTE</column_name>
+        <stream_name>PK_DMD_TOIMIPISTE</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>ENTITY_ID</column_name>
+        <stream_name>ENTITY_ID</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMIPISTEKOODI</column_name>
+        <stream_name>TOIMIPISTEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMIPISTEKOODITASO</column_name>
+        <stream_name>TOIMIPISTEKOODITASO</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTOKOODI</column_name>
+        <stream_name>VASTAANOTTOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTONIMI</column_name>
+        <stream_name>VASTAANOTTONIMI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTOLYHYTNIMI</column_name>
+        <stream_name>VASTAANOTTOLYHYTNIMI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTOYLEMPITASO</column_name>
+        <stream_name>VASTAANOTTOYLEMPITASO</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOKOODI</column_name>
+        <stream_name>OSASTOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTONIMI</column_name>
+        <stream_name>OSASTONIMI</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOLYHYTNIMI</column_name>
+        <stream_name>OSASTOLYHYTNIMI</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOYLEMPITASO</column_name>
+        <stream_name>OSASTOYLEMPITASO</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALAKOODI</column_name>
+        <stream_name>SAIRAALAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALANIMI</column_name>
+        <stream_name>SAIRAALANIMI</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALALYHYTNIMI</column_name>
+        <stream_name>SAIRAALALYHYTNIMI</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALAYLEMPITASO</column_name>
+        <stream_name>SAIRAALAYLEMPITASO</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAANHOITOPIIRIKOODI</column_name>
+        <stream_name>SAIRAANHOITOPIIRIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAANHOITOPIIRINIMI</column_name>
+        <stream_name>SAIRAANHOITOPIIRINIMI</stream_name>
+      </field>
+      <field>
+        <column_name>LAHDE</column_name>
+        <stream_name>LAHDE</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_vastaanottajatyyppi in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMD_VASTAANOTTAJATYYPPI
+, DATE_INSERT
+, DATE_UPDATE
+, VASTAANOTTAJATYYPPIKOODI
+, VASTAANOTTAJATYYPPINIMI
+FROM Yhteinen.DMD_VASTAANOTTAJATYYPPI
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmd_vastaanottajatyyppi out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmd_vastaanottajatyyppi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMD_VASTAANOTTAJATYYPPI</column_name>
+        <stream_name>PK_DMD_VASTAANOTTAJATYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTAJATYYPPIKOODI</column_name>
+        <stream_name>VASTAANOTTAJATYYPPIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTAJATYYPPINIMI</column_name>
+        <stream_name>VASTAANOTTAJATYYPPINIMI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_hoitojakso</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_hoitojakso</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_HOITOJAKSO</column_name>
+        <stream_name>PK_DMF_HOITOJAKSO</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KAYNTITYYPPI</column_name>
+        <stream_name>FK_DMD_KAYNTITYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUKUPUOLI</column_name>
+        <stream_name>FK_DMD_SUKUPUOLI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_ERIKOISALA</column_name>
+        <stream_name>FK_DMD_ERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_VASTAANOTTAJATYYPPI</column_name>
+        <stream_name>FK_DMD_VASTAANOTTAJATYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUORITE</column_name>
+        <stream_name>FK_DMD_SUORITE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SAIRAANHOITOPIIRI</column_name>
+        <stream_name>FK_DMD_SAIRAANHOITOPIIRI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_LAITOS_JATKOHOITOPAIKKA</column_name>
+        <stream_name>FK_DMD_LAITOS_JATKOHOITOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_LAITOS_LAHETTAJA</column_name>
+        <stream_name>FK_DMD_LAITOS_LAHETTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_PAA</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_PAA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_SIVU1</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_SIVU1</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_SIVU2</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_SIVU2</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SAAPUMISTAPA</column_name>
+        <stream_name>FK_DMD_SAAPUMISTAPA</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOALKUPVM</column_name>
+        <stream_name>HOITOJAKSOALKUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOALKUKLO</column_name>
+        <stream_name>HOITOJAKSOALKUKLO</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOLOPPUPVM</column_name>
+        <stream_name>HOITOJAKSOLOPPUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOLOPPUKLO</column_name>
+        <stream_name>HOITOJAKSOLOPPUKLO</stream_name>
+      </field>
+      <field>
+        <column_name>IKA</column_name>
+        <stream_name>IKA</stream_name>
+      </field>
+      <field>
+        <column_name>JATKOHOITOOSASTOSIIRTONA</column_name>
+        <stream_name>JATKOHOITOOSASTOSIIRTONA</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOPAIVALKM</column_name>
+        <stream_name>HOITOPAIVALKM</stream_name>
+      </field>
+      <field>
+        <column_name>LOMAPAIVALKM</column_name>
+        <stream_name>LOMAPAIVALKM</stream_name>
+      </field>
+      <field>
+        <column_name>DRGRYHMA</column_name>
+        <stream_name>DRGRYHMA</stream_name>
+      </field>
+      <field>
+        <column_name>MDCKOODI</column_name>
+        <stream_name>MDCKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>JONONIMI</column_name>
+        <stream_name>JONONIMI</stream_name>
+      </field>
+      <field>
+        <column_name>PALVELUALA</column_name>
+        <stream_name>PALVELUALA</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAANHOITOPIIRIKOODI</column_name>
+        <stream_name>SAIRAANHOITOPIIRIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>TUOTEPAATOSID</column_name>
+        <stream_name>TUOTEPAATOSID</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALAHOITOJAKSOID</column_name>
+        <stream_name>SAIRAALAHOITOJAKSOID</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALAHOITOJAKSOID</column_name>
+        <stream_name>ERIKOISALAHOITOJAKSOID</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOHOITOJAKSOID</column_name>
+        <stream_name>OSASTOHOITOJAKSOID</stream_name>
+      </field>
+      <field>
+        <column_name>IKAPAIVINA</column_name>
+        <stream_name>IKAPAIVINA</stream_name>
+      </field>
+      <field>
+        <column_name>MISTATULIKOODI</column_name>
+        <stream_name>MISTATULIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOONTULONSYYKOODI</column_name>
+        <stream_name>HOITOONTULONSYYKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>PALVELUALAKOODI</column_name>
+        <stream_name>PALVELUALAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>JATKOHOITOKOODI</column_name>
+        <stream_name>JATKOHOITOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>POSTINUMERO</column_name>
+        <stream_name>POSTINUMERO</stream_name>
+      </field>
+      <field>
+        <column_name>PAATTYNEIDENERIKOISALAHOITOJAKSOJENLKM</column_name>
+        <stream_name>PAATTYNEIDENERIKOISALAHOITOJAKSOJENLKM</stream_name>
+      </field>
+      <field>
+        <column_name>PAATTYNEIDENOSASTOHOITOJAKSOJENLKM</column_name>
+        <stream_name>PAATTYNEIDENOSASTOHOITOJAKSOJENLKM</stream_name>
+      </field>
+      <field>
+        <column_name>PAATTYNEIDENSAIRAALAHOITOJAKSOJENLKM</column_name>
+        <stream_name>PAATTYNEIDENSAIRAALAHOITOJAKSOJENLKM</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA_MUUTETTU</column_name>
+        <stream_name>KUSTANNUSPAIKKA_MUUTETTU</stream_name>
+      </field>
+      <field>
+        <column_name>date_update</column_name>
+        <stream_name>date_update</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_hoitojakso in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_HOITOJAKSO
+, DATE_INSERT
+, FK_DMD_KAYNTITYYPPI
+, FK_DMD_SUKUPUOLI
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_ERIKOISALA
+, FK_DMD_VASTAANOTTAJATYYPPI
+, FK_DMD_SUORITE
+, FK_DMD_KUNTA
+, FK_DMD_SAIRAANHOITOPIIRI
+, FK_DMD_TOIMIPISTE
+, FK_DMD_LAITOS_JATKOHOITOPAIKKA
+, FK_DMD_LAITOS_LAHETTAJA
+, FK_DMD_DIAGNOOSI_PAA
+, FK_DMD_DIAGNOOSI_SIVU1
+, FK_DMD_DIAGNOOSI_SIVU2
+, FK_DMD_SAAPUMISTAPA
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, HOITOJAKSOALKUPVM
+, HOITOJAKSOALKUKLO
+, HOITOJAKSOLOPPUPVM
+, HOITOJAKSOLOPPUKLO
+, IKA
+, JATKOHOITOOSASTOSIIRTONA
+, HOITOPAIVALKM
+, LOMAPAIVALKM
+, DRGRYHMA
+, MDCKOODI
+, JONONIMI
+, PALVELUALA
+, SAIRAANHOITOPIIRIKOODI
+, POTILAS_ID
+, TUOTEPAATOSID
+, SAIRAALAHOITOJAKSOID
+, ERIKOISALAHOITOJAKSOID
+, OSASTOHOITOJAKSOID
+, IKAPAIVINA
+, MISTATULIKOODI
+, HOITOONTULONSYYKOODI
+, PALVELUALAKOODI
+, JATKOHOITOKOODI
+, POSTINUMERO
+, PAATTYNEIDENERIKOISALAHOITOJAKSOJENLKM
+, PAATTYNEIDENOSASTOHOITOJAKSOJENLKM
+, PAATTYNEIDENSAIRAALAHOITOJAKSOJENLKM
+, KUSTANNUSPAIKKA_MUUTETTU
+, date_update
+FROM Toimintatilasto.DMF_HOITOJAKSO
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_hoitojakso_effica in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_HOITOJAKSO_EFFICA
+, DATE_INSERT
+, DATE_UPDATE
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_ERIKOISALA
+, FK_DMD_TOIMIPISTE
+, FK_DMD_SAAPUMISTAPA
+, H_ACT_ID
+, LATPVM
+, HOITOJAKSOALKUPVM
+, ALKUAIKA
+, HOITOJAKSOLOPPUPVM
+, LOPPUAIKA
+, POTILAS_ID
+, HOITOJAKSOTUNNISTE
+, HOITOEPISODITUNNISTE
+, KUSTANNUSPAIKKA_MUUTETTU
+, POISTUMISSYYKOODI
+, POISTUMISSYY
+, SAAPUMISSYYKOODI
+, SAAPUMISSYY
+, LIPPUAKTIIVINEN
+, FK_DMD_KUNTA
+, FK_DMD_DIAGNOOSI_PAA
+, FK_DMD_DIAGNOOSI_SIVU2
+, FK_DMD_DIAGNOOSI_SIVU1
+, FK_DMD_LAITOS_LAHETTAJA
+, FK_DMD_LAITOS_JATKOHOITOPAIKKA
+, LIPPUJATKOHOITOOSASTOSIIRTO
+, POTILAANIKA
+, FK_DMD_IKA
+, FK_DMD_SUKUPUOLI
+FROM Toimintatilasto.DMF_HOITOJAKSO_EFFICA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_hoitojakso_effica out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_hoitojakso_effica</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_HOITOJAKSO_EFFICA</column_name>
+        <stream_name>PK_DMF_HOITOJAKSO_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_ERIKOISALA</column_name>
+        <stream_name>FK_DMD_ERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SAAPUMISTAPA</column_name>
+        <stream_name>FK_DMD_SAAPUMISTAPA</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOALKUPVM</column_name>
+        <stream_name>HOITOJAKSOALKUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>ALKUAIKA</column_name>
+        <stream_name>ALKUAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOLOPPUPVM</column_name>
+        <stream_name>HOITOJAKSOLOPPUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LOPPUAIKA</column_name>
+        <stream_name>LOPPUAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOTUNNISTE</column_name>
+        <stream_name>HOITOJAKSOTUNNISTE</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOEPISODITUNNISTE</column_name>
+        <stream_name>HOITOEPISODITUNNISTE</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA_MUUTETTU</column_name>
+        <stream_name>KUSTANNUSPAIKKA_MUUTETTU</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMISSYYKOODI</column_name>
+        <stream_name>POISTUMISSYYKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMISSYY</column_name>
+        <stream_name>POISTUMISSYY</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISSYYKOODI</column_name>
+        <stream_name>SAAPUMISSYYKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISSYY</column_name>
+        <stream_name>SAAPUMISSYY</stream_name>
+      </field>
+      <field>
+        <column_name>LIPPUAKTIIVINEN</column_name>
+        <stream_name>LIPPUAKTIIVINEN</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_PAA</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_PAA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_SIVU2</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_SIVU2</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_SIVU1</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_SIVU1</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_LAITOS_LAHETTAJA</column_name>
+        <stream_name>FK_DMD_LAITOS_LAHETTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_LAITOS_JATKOHOITOPAIKKA</column_name>
+        <stream_name>FK_DMD_LAITOS_JATKOHOITOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>LIPPUJATKOHOITOOSASTOSIIRTO</column_name>
+        <stream_name>LIPPUJATKOHOITOOSASTOSIIRTO</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAANIKA</column_name>
+        <stream_name>POTILAANIKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_IKA</column_name>
+        <stream_name>FK_DMD_IKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUKUPUOLI</column_name>
+        <stream_name>FK_DMD_SUKUPUOLI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_kaynti in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT 
+  PK_DMF_KAYNTI
+, DATE_INSERT
+, FK_DMD_KAYNTITYYPPI
+, FK_DMD_SUKUPUOLI
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_ERIKOISALA
+, FK_DMD_VASTAANOTTAJATYYPPI
+, FK_DMD_SUORITE
+, FK_DMD_KUNTA
+, FK_DMD_SAIRAANHOITOPIIRI
+, FK_DMD_TOIMIPISTE
+, FK_DMD_LAITOS_JATKOHOITOPAIKKA
+, FK_DMD_LAITOS_LAHETTAJA
+, FK_DMD_DIAGNOOSI_PAA
+, FK_DMD_DIAGNOOSI_SIVU1
+, FK_DMD_DIAGNOOSI_SIVU2
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, KAYNTIPVM
+, IKA
+, SUORITEKOODI
+, KUNTALASKUTETTAVA
+, SAIRAANHOITOPIIRIKOODI
+, POTILAS_ID
+, KUSTANNUSPAIKKA_MUUTETTU
+, DATE_UPDATE
+, lahde
+, aktiivinenlippu
+, FK_DMD_KAYNTITYYPPI_EFFICA
+, LIPPUKAYNTI
+, LIPPUPSYKIATRIAPUOLIAVOIN
+, FK_DMD_IKA
+, LAHETETYYPPI
+, LAHETETYYPPISELITE
+, FK_DMD_KONTAKTILAJI
+FROM Toimintatilasto.DMF_KAYNTI
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_kaynti out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_kaynti</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_KAYNTI</column_name>
+        <stream_name>PK_DMF_KAYNTI</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KAYNTITYYPPI</column_name>
+        <stream_name>FK_DMD_KAYNTITYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUKUPUOLI</column_name>
+        <stream_name>FK_DMD_SUKUPUOLI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_ERIKOISALA</column_name>
+        <stream_name>FK_DMD_ERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_VASTAANOTTAJATYYPPI</column_name>
+        <stream_name>FK_DMD_VASTAANOTTAJATYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUORITE</column_name>
+        <stream_name>FK_DMD_SUORITE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SAIRAANHOITOPIIRI</column_name>
+        <stream_name>FK_DMD_SAIRAANHOITOPIIRI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_LAITOS_JATKOHOITOPAIKKA</column_name>
+        <stream_name>FK_DMD_LAITOS_JATKOHOITOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_LAITOS_LAHETTAJA</column_name>
+        <stream_name>FK_DMD_LAITOS_LAHETTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_PAA</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_PAA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_SIVU1</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_SIVU1</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_DIAGNOOSI_SIVU2</column_name>
+        <stream_name>FK_DMD_DIAGNOOSI_SIVU2</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>KAYNTIPVM</column_name>
+        <stream_name>KAYNTIPVM</stream_name>
+      </field>
+      <field>
+        <column_name>IKA</column_name>
+        <stream_name>IKA</stream_name>
+      </field>
+      <field>
+        <column_name>SUORITEKOODI</column_name>
+        <stream_name>SUORITEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>KUNTALASKUTETTAVA</column_name>
+        <stream_name>KUNTALASKUTETTAVA</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAANHOITOPIIRIKOODI</column_name>
+        <stream_name>SAIRAANHOITOPIIRIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA_MUUTETTU</column_name>
+        <stream_name>KUSTANNUSPAIKKA_MUUTETTU</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>lahde</column_name>
+        <stream_name>lahde</stream_name>
+      </field>
+      <field>
+        <column_name>aktiivinenlippu</column_name>
+        <stream_name>aktiivinenlippu</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KAYNTITYYPPI_EFFICA</column_name>
+        <stream_name>FK_DMD_KAYNTITYYPPI_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>LIPPUKAYNTI</column_name>
+        <stream_name>LIPPUKAYNTI</stream_name>
+      </field>
+      <field>
+        <column_name>LIPPUPSYKIATRIAPUOLIAVOIN</column_name>
+        <stream_name>LIPPUPSYKIATRIAPUOLIAVOIN</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_IKA</column_name>
+        <stream_name>FK_DMD_IKA</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETETYYPPI</column_name>
+        <stream_name>LAHETETYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETETYYPPISELITE</column_name>
+        <stream_name>LAHETETYYPPISELITE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KONTAKTILAJI</column_name>
+        <stream_name>FK_DMD_KONTAKTILAJI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_kuvantaminen in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_KUVANTAMINEN
+, FK_DMD_TOIMIPISTE_TEKOPAIKKA
+, FK_DMD_TOIMIPISTE_TILAAJA
+, FK_DMD_TOIMIPISTE_TUOTTAJA
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_KUVANTAMISENTUTKIMUSRYHMA
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, LOPPUPVM
+, TUTKIMUSKOODI
+, MUUTOSPVM
+, MUUTOSKLO
+, MUUTOSAIKA
+, LAUSUNTOPVM
+, LAUSUNTOKLO
+, LAUSUNTOAIKA
+, LAHETE_LAUSUNTOAIKA
+, LAHETE_KAYNTIAIKA
+, TRIAGELUOKKA
+, HINTAKERROIN
+, ULKOPUOLINEN
+, POTILAS_ID
+, date_insert
+, date_update
+, KUSTANNUSPAIKKA_MUUTETTU
+, PAKETTITUTKIMUS
+, kayntipvm
+, LIPPU_TUOTTAJA_SISAINEN
+FROM Toimintatilasto.DMF_KUVANTAMINEN
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_kuvantaminen out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_kuvantaminen</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_KUVANTAMINEN</column_name>
+        <stream_name>PK_DMF_KUVANTAMINEN</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TEKOPAIKKA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TEKOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TILAAJA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TILAAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TUOTTAJA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TUOTTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUVANTAMISENTUTKIMUSRYHMA</column_name>
+        <stream_name>FK_DMD_KUVANTAMISENTUTKIMUSRYHMA</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LOPPUPVM</column_name>
+        <stream_name>LOPPUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TUTKIMUSKOODI</column_name>
+        <stream_name>TUTKIMUSKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>MUUTOSPVM</column_name>
+        <stream_name>MUUTOSPVM</stream_name>
+      </field>
+      <field>
+        <column_name>MUUTOSKLO</column_name>
+        <stream_name>MUUTOSKLO</stream_name>
+      </field>
+      <field>
+        <column_name>MUUTOSAIKA</column_name>
+        <stream_name>MUUTOSAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>LAUSUNTOPVM</column_name>
+        <stream_name>LAUSUNTOPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LAUSUNTOKLO</column_name>
+        <stream_name>LAUSUNTOKLO</stream_name>
+      </field>
+      <field>
+        <column_name>LAUSUNTOAIKA</column_name>
+        <stream_name>LAUSUNTOAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETE_LAUSUNTOAIKA</column_name>
+        <stream_name>LAHETE_LAUSUNTOAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETE_KAYNTIAIKA</column_name>
+        <stream_name>LAHETE_KAYNTIAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>TRIAGELUOKKA</column_name>
+        <stream_name>TRIAGELUOKKA</stream_name>
+      </field>
+      <field>
+        <column_name>HINTAKERROIN</column_name>
+        <stream_name>HINTAKERROIN</stream_name>
+      </field>
+      <field>
+        <column_name>ULKOPUOLINEN</column_name>
+        <stream_name>ULKOPUOLINEN</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>date_insert</column_name>
+        <stream_name>date_insert</stream_name>
+      </field>
+      <field>
+        <column_name>date_update</column_name>
+        <stream_name>date_update</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA_MUUTETTU</column_name>
+        <stream_name>KUSTANNUSPAIKKA_MUUTETTU</stream_name>
+      </field>
+      <field>
+        <column_name>PAKETTITUTKIMUS</column_name>
+        <stream_name>PAKETTITUTKIMUS</stream_name>
+      </field>
+      <field>
+        <column_name>kayntipvm</column_name>
+        <stream_name>kayntipvm</stream_name>
+      </field>
+      <field>
+        <column_name>LIPPU_TUOTTAJA_SISAINEN</column_name>
+        <stream_name>LIPPU_TUOTTAJA_SISAINEN</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_laboratorio</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_LABORATORIO
+, FK_DMD_TOIMIPISTE_TILAAJA
+, FK_DMD_TOIMIPISTE_TEKOPAIKKA
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_KUSTANNUSPAIKKA_TEKOPAIKKA
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, TILASTOIDAANKO
+, TUTKIMUSKOODI
+, HINTA
+, TUTKIMUSTULOS
+, MITTAYKSIKKO
+, TUTKIMUSERIKOISALA
+, NAYTTEENOTTOPVM
+, NAYTTEENOTTOKLO
+, NAYTTEENOTTOAIKA
+, TEKOPVM
+, TEKOKLO
+, TEKOAIKA
+, LAHETYSPVM
+, LAHETYSKLO
+, LAHETYSAIKA
+, TILASTOINTIPVM
+, TILASTOINTIKLO
+, TILASTOINTIAIKA
+, YKSIKKOTYYPPI
+, POTILAS_ID
+, DATE_INSERT
+, DATE_UPDATE
+, KUSTANNUSPAIKKA_MUUTETTU
+FROM Toimintatilasto.DMF_LABORATORIO
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_laboratorio out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_laboratorio</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_LABORATORIO</column_name>
+        <stream_name>PK_DMF_LABORATORIO</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TILAAJA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TILAAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TEKOPAIKKA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TEKOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA_TEKOPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA_TEKOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TILASTOIDAANKO</column_name>
+        <stream_name>TILASTOIDAANKO</stream_name>
+      </field>
+      <field>
+        <column_name>TUTKIMUSKOODI</column_name>
+        <stream_name>TUTKIMUSKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>HINTA</column_name>
+        <stream_name>HINTA</stream_name>
+      </field>
+      <field>
+        <column_name>TUTKIMUSTULOS</column_name>
+        <stream_name>TUTKIMUSTULOS</stream_name>
+      </field>
+      <field>
+        <column_name>MITTAYKSIKKO</column_name>
+        <stream_name>MITTAYKSIKKO</stream_name>
+      </field>
+      <field>
+        <column_name>TUTKIMUSERIKOISALA</column_name>
+        <stream_name>TUTKIMUSERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>NAYTTEENOTTOPVM</column_name>
+        <stream_name>NAYTTEENOTTOPVM</stream_name>
+      </field>
+      <field>
+        <column_name>NAYTTEENOTTOKLO</column_name>
+        <stream_name>NAYTTEENOTTOKLO</stream_name>
+      </field>
+      <field>
+        <column_name>NAYTTEENOTTOAIKA</column_name>
+        <stream_name>NAYTTEENOTTOAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>TEKOPVM</column_name>
+        <stream_name>TEKOPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TEKOKLO</column_name>
+        <stream_name>TEKOKLO</stream_name>
+      </field>
+      <field>
+        <column_name>TEKOAIKA</column_name>
+        <stream_name>TEKOAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETYSPVM</column_name>
+        <stream_name>LAHETYSPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETYSKLO</column_name>
+        <stream_name>LAHETYSKLO</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETYSAIKA</column_name>
+        <stream_name>LAHETYSAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>TILASTOINTIPVM</column_name>
+        <stream_name>TILASTOINTIPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TILASTOINTIKLO</column_name>
+        <stream_name>TILASTOINTIKLO</stream_name>
+      </field>
+      <field>
+        <column_name>TILASTOINTIAIKA</column_name>
+        <stream_name>TILASTOINTIAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>YKSIKKOTYYPPI</column_name>
+        <stream_name>YKSIKKOTYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA_MUUTETTU</column_name>
+        <stream_name>KUSTANNUSPAIKKA_MUUTETTU</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_lahete_effica in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_LAHETE_EFFICA
+, FK_DMD_KUNTA
+, FK_DMD_KUSTANNUSPAIKKA
+, DATE_INSERT
+, DATE_UPDATE
+, LAHETEEFFICA_ID
+, LATPVM
+, LAHETENUMERO
+, erikoisalaAvain
+, LAHETTAVA_YKSIKKO
+, LAHETTAVA_ERIKOISALA_AVAIN
+, VASTAANOTTAVA_ERIKOISALA_AVAIN
+, VASTAANOTTAJALAITOS_AVAIN
+, HALLINNOLLINEN_LAHETE_TYYPPI_KOODI
+, LAHETE_RAPORTOINTI_PVM
+, SAAPUMISPVM
+, KIIREELLISYYS_KASITTELIJA
+, TILA
+, ONKO_HOITOTAKUUN_PIIRISSA_LIPPU
+, LAHETE_KIRJATTU_PVM
+, LAHETE_KASITTELY_PVM
+, SULKUSYY
+, LAHETTAJA_TYYPPI
+, KASITTELIJA_KIIREELLISYYS
+, POISTETTU_LIPPU
+, MUUTOS_PVM
+, POTILAS
+, VUOSIKUUKAUSI
+FROM Toimintatilasto.DMF_LAHETE_EFFICA
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_lahete_effica out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_lahete_effica</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_LAHETE_EFFICA</column_name>
+        <stream_name>PK_DMF_LAHETE_EFFICA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETEEFFICA_ID</column_name>
+        <stream_name>LAHETEEFFICA_ID</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETENUMERO</column_name>
+        <stream_name>LAHETENUMERO</stream_name>
+      </field>
+      <field>
+        <column_name>erikoisalaAvain</column_name>
+        <stream_name>erikoisalaAvain</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETTAVA_YKSIKKO</column_name>
+        <stream_name>LAHETTAVA_YKSIKKO</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETTAVA_ERIKOISALA_AVAIN</column_name>
+        <stream_name>LAHETTAVA_ERIKOISALA_AVAIN</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTAVA_ERIKOISALA_AVAIN</column_name>
+        <stream_name>VASTAANOTTAVA_ERIKOISALA_AVAIN</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTAJALAITOS_AVAIN</column_name>
+        <stream_name>VASTAANOTTAJALAITOS_AVAIN</stream_name>
+      </field>
+      <field>
+        <column_name>HALLINNOLLINEN_LAHETE_TYYPPI_KOODI</column_name>
+        <stream_name>HALLINNOLLINEN_LAHETE_TYYPPI_KOODI</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETE_RAPORTOINTI_PVM</column_name>
+        <stream_name>LAHETE_RAPORTOINTI_PVM</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISPVM</column_name>
+        <stream_name>SAAPUMISPVM</stream_name>
+      </field>
+      <field>
+        <column_name>KIIREELLISYYS_KASITTELIJA</column_name>
+        <stream_name>KIIREELLISYYS_KASITTELIJA</stream_name>
+      </field>
+      <field>
+        <column_name>TILA</column_name>
+        <stream_name>TILA</stream_name>
+      </field>
+      <field>
+        <column_name>ONKO_HOITOTAKUUN_PIIRISSA_LIPPU</column_name>
+        <stream_name>ONKO_HOITOTAKUUN_PIIRISSA_LIPPU</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETE_KIRJATTU_PVM</column_name>
+        <stream_name>LAHETE_KIRJATTU_PVM</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETE_KASITTELY_PVM</column_name>
+        <stream_name>LAHETE_KASITTELY_PVM</stream_name>
+      </field>
+      <field>
+        <column_name>SULKUSYY</column_name>
+        <stream_name>SULKUSYY</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETTAJA_TYYPPI</column_name>
+        <stream_name>LAHETTAJA_TYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>KASITTELIJA_KIIREELLISYYS</column_name>
+        <stream_name>KASITTELIJA_KIIREELLISYYS</stream_name>
+      </field>
+      <field>
+        <column_name>POISTETTU_LIPPU</column_name>
+        <stream_name>POISTETTU_LIPPU</stream_name>
+      </field>
+      <field>
+        <column_name>MUUTOS_PVM</column_name>
+        <stream_name>MUUTOS_PVM</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS</column_name>
+        <stream_name>POTILAS</stream_name>
+      </field>
+      <field>
+        <column_name>VUOSIKUUKAUSI</column_name>
+        <stream_name>VUOSIKUUKAUSI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_lahetteet in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_KUNTA
+, SAAPUMISPVM
+, LAHDE
+, VUOSIKUUKAUSI
+FROM Toimintatilasto.DMF_LAHETTEET
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_lahetteet out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_lahetteet</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISPVM</column_name>
+        <stream_name>SAAPUMISPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LAHDE</column_name>
+        <stream_name>LAHDE</stream_name>
+      </field>
+      <field>
+        <column_name>VUOSIKUUKAUSI</column_name>
+        <stream_name>VUOSIKUUKAUSI</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_leikkaukset in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_LEIKKAUKSET
+, FK_DMD_TOIMIPISTE_TUOTTAJA
+, FK_DMD_TOIMIPISTE_LAHETTAJA
+, FK_DMD_TOIMIPISTE_TEKOPAIKKA
+, FK_DMD_KUNTA_KOTIKUNTA
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_KUSTANNUSPAIKKA_LAHETTAJA
+, FK_DMD_KUSTANNUSPAIKKA_TEKOPAIKKA
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, LOPPUPVM
+, KAYNTIPVM
+, KAYNTITYYPPI
+, HOITOMUOTOKOODI
+, PUHTAUSLUOKKA
+, SALIAIKAMIN
+, LEIKKAUSAIKAMIN
+, ANESTESIAAIKAMIN
+, HERAAMOAIKAMIN
+, SALIINTULOKLO
+, SALISTAPOISTUMINENKLO
+, TOIMENPIDETASO
+, TASOHINTAMIN
+, ERIKOISALAKOODI
+, ERIKOISMAKSULUOKKALIPPU
+, LAAKARIENLKM
+, HOITAJIENLKM
+, ANESTESIAKOODI
+, PAATOIMENPIDEKOODI
+, TOIMENPIDEALKUPVM
+, TOIMENPIDEALKUKLO
+, TOIMENPIDEALKUAIKA
+, TOIMENPIDELOPPUPVM
+, TOIMENPIDELOPPUKLO
+, TOIMENPIDELOPPUAIKA
+, POISTUMINENYKSIKOSTAPVM
+, POISTUMINENYKSIKOSTAKLO
+, POISTUMINENYKSIKOSTAAIKA
+, TULOAIKASALIINPVM
+, TULOAIKASALIINKLO
+, TULOAIKASALIINAIKA
+, POISTUMINENSALISTAPVM
+, POISTUMINENSALISTAKLO
+, POISTUMINENSALISTAAIKA
+, VALVONTAYKSIKKOONTULOPVM
+, VALVONTAYKSIKKOONTULOKLO
+, VALVONTAYKSIKKOONTULOAIKA
+, VALVONTAYKSIKOSTAPOISTUMINENPVM
+, VALVONTAYKSIKOSTAPOISTUMINENKLO
+, VALVONTAYKSIKOSTAPOISTUMINENAIKA
+, ANESTESIAALKANUTPVM
+, ANESTESIAALKANUTKLO
+, ANESTESIAALKANUTAIKA
+, ANESTESIALOPPUNUTPVM
+, ANESTESIALOPPUNUTKLO
+, ANESTESIALOPPUNUTAIKA
+, ANESTESIOIDENASA
+, POTILAS_ID
+, LAAKARIANESTESIA_ID
+, KIRURGIPAA_ID
+, KIRURGISIVU_ID
+, DATE_INSERT
+, DATE_UPDATE
+, KUSTANNUSPAIKKA_MUUTETTU
+FROM Toimintatilasto.DMF_LEIKKAUKSET
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_leikkaukset out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_leikkaukset</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_LEIKKAUKSET</column_name>
+        <stream_name>PK_DMF_LEIKKAUKSET</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TUOTTAJA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TUOTTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_LAHETTAJA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_LAHETTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE_TEKOPAIKKA</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE_TEKOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA_KOTIKUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA_KOTIKUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA_LAHETTAJA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA_LAHETTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA_TEKOPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA_TEKOPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>LOPPUPVM</column_name>
+        <stream_name>LOPPUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>KAYNTIPVM</column_name>
+        <stream_name>KAYNTIPVM</stream_name>
+      </field>
+      <field>
+        <column_name>KAYNTITYYPPI</column_name>
+        <stream_name>KAYNTITYYPPI</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOMUOTOKOODI</column_name>
+        <stream_name>HOITOMUOTOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>PUHTAUSLUOKKA</column_name>
+        <stream_name>PUHTAUSLUOKKA</stream_name>
+      </field>
+      <field>
+        <column_name>SALIAIKAMIN</column_name>
+        <stream_name>SALIAIKAMIN</stream_name>
+      </field>
+      <field>
+        <column_name>LEIKKAUSAIKAMIN</column_name>
+        <stream_name>LEIKKAUSAIKAMIN</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIAAIKAMIN</column_name>
+        <stream_name>ANESTESIAAIKAMIN</stream_name>
+      </field>
+      <field>
+        <column_name>HERAAMOAIKAMIN</column_name>
+        <stream_name>HERAAMOAIKAMIN</stream_name>
+      </field>
+      <field>
+        <column_name>SALIINTULOKLO</column_name>
+        <stream_name>SALIINTULOKLO</stream_name>
+      </field>
+      <field>
+        <column_name>SALISTAPOISTUMINENKLO</column_name>
+        <stream_name>SALISTAPOISTUMINENKLO</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDETASO</column_name>
+        <stream_name>TOIMENPIDETASO</stream_name>
+      </field>
+      <field>
+        <column_name>TASOHINTAMIN</column_name>
+        <stream_name>TASOHINTAMIN</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALAKOODI</column_name>
+        <stream_name>ERIKOISALAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISMAKSULUOKKALIPPU</column_name>
+        <stream_name>ERIKOISMAKSULUOKKALIPPU</stream_name>
+      </field>
+      <field>
+        <column_name>LAAKARIENLKM</column_name>
+        <stream_name>LAAKARIENLKM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITAJIENLKM</column_name>
+        <stream_name>HOITAJIENLKM</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIAKOODI</column_name>
+        <stream_name>ANESTESIAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>PAATOIMENPIDEKOODI</column_name>
+        <stream_name>PAATOIMENPIDEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDEALKUPVM</column_name>
+        <stream_name>TOIMENPIDEALKUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDEALKUKLO</column_name>
+        <stream_name>TOIMENPIDEALKUKLO</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDEALKUAIKA</column_name>
+        <stream_name>TOIMENPIDEALKUAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDELOPPUPVM</column_name>
+        <stream_name>TOIMENPIDELOPPUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDELOPPUKLO</column_name>
+        <stream_name>TOIMENPIDELOPPUKLO</stream_name>
+      </field>
+      <field>
+        <column_name>TOIMENPIDELOPPUAIKA</column_name>
+        <stream_name>TOIMENPIDELOPPUAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMINENYKSIKOSTAPVM</column_name>
+        <stream_name>POISTUMINENYKSIKOSTAPVM</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMINENYKSIKOSTAKLO</column_name>
+        <stream_name>POISTUMINENYKSIKOSTAKLO</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMINENYKSIKOSTAAIKA</column_name>
+        <stream_name>POISTUMINENYKSIKOSTAAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>TULOAIKASALIINPVM</column_name>
+        <stream_name>TULOAIKASALIINPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TULOAIKASALIINKLO</column_name>
+        <stream_name>TULOAIKASALIINKLO</stream_name>
+      </field>
+      <field>
+        <column_name>TULOAIKASALIINAIKA</column_name>
+        <stream_name>TULOAIKASALIINAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMINENSALISTAPVM</column_name>
+        <stream_name>POISTUMINENSALISTAPVM</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMINENSALISTAKLO</column_name>
+        <stream_name>POISTUMINENSALISTAKLO</stream_name>
+      </field>
+      <field>
+        <column_name>POISTUMINENSALISTAAIKA</column_name>
+        <stream_name>POISTUMINENSALISTAAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>VALVONTAYKSIKKOONTULOPVM</column_name>
+        <stream_name>VALVONTAYKSIKKOONTULOPVM</stream_name>
+      </field>
+      <field>
+        <column_name>VALVONTAYKSIKKOONTULOKLO</column_name>
+        <stream_name>VALVONTAYKSIKKOONTULOKLO</stream_name>
+      </field>
+      <field>
+        <column_name>VALVONTAYKSIKKOONTULOAIKA</column_name>
+        <stream_name>VALVONTAYKSIKKOONTULOAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>VALVONTAYKSIKOSTAPOISTUMINENPVM</column_name>
+        <stream_name>VALVONTAYKSIKOSTAPOISTUMINENPVM</stream_name>
+      </field>
+      <field>
+        <column_name>VALVONTAYKSIKOSTAPOISTUMINENKLO</column_name>
+        <stream_name>VALVONTAYKSIKOSTAPOISTUMINENKLO</stream_name>
+      </field>
+      <field>
+        <column_name>VALVONTAYKSIKOSTAPOISTUMINENAIKA</column_name>
+        <stream_name>VALVONTAYKSIKOSTAPOISTUMINENAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIAALKANUTPVM</column_name>
+        <stream_name>ANESTESIAALKANUTPVM</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIAALKANUTKLO</column_name>
+        <stream_name>ANESTESIAALKANUTKLO</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIAALKANUTAIKA</column_name>
+        <stream_name>ANESTESIAALKANUTAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIALOPPUNUTPVM</column_name>
+        <stream_name>ANESTESIALOPPUNUTPVM</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIALOPPUNUTKLO</column_name>
+        <stream_name>ANESTESIALOPPUNUTKLO</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIALOPPUNUTAIKA</column_name>
+        <stream_name>ANESTESIALOPPUNUTAIKA</stream_name>
+      </field>
+      <field>
+        <column_name>ANESTESIOIDENASA</column_name>
+        <stream_name>ANESTESIOIDENASA</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>LAAKARIANESTESIA_ID</column_name>
+        <stream_name>LAAKARIANESTESIA_ID</stream_name>
+      </field>
+      <field>
+        <column_name>KIRURGIPAA_ID</column_name>
+        <stream_name>KIRURGIPAA_ID</stream_name>
+      </field>
+      <field>
+        <column_name>KIRURGISIVU_ID</column_name>
+        <stream_name>KIRURGISIVU_ID</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>KUSTANNUSPAIKKA_MUUTETTU</column_name>
+        <stream_name>KUSTANNUSPAIKKA_MUUTETTU</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_psykiatria_hoitojakso_suorite in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_PSYKIATRIA_HOITOJAKSO_SUORITE
+, FK_DMD_KUSTANNUSPAIKKA
+, FK_DMD_KUNTA
+, FK_DMD_SUKUPUOLI
+, FK_DMD_ERIKOISALA
+, FK_DMD_TOIMIPISTE
+, DATE_INSERT
+, DATE_UPDATE
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, SUORITEKOODI
+, SUORITTEENPVM
+, TUOTEPAATOSID
+, TUOTEPAATOSPVM
+, OSASTOORVASTAANOTTO
+, YLLAPITO
+, SAIRAALANHOITOJAKSONKOODI
+, OSASTONHOITOJAKSONKOODI
+, OSASTONHOITOJAKSONTUNNISTE
+, HOITOJAKSOALKUPVM
+, HOITOJAKSOLOPPUPVM
+, KUNTALASKUTUSJAKSONPAATTYMISENSYY
+, KUNTALASKUTUSJAKSONTUNNISTE
+, SAIRAALANHOITOJAKSONTUNNISTE
+, IKAPAIVINA
+, POSTINUMERO
+, SISAANKIRJAUS
+, OSASTOSIIRTONASAAPUMINEN
+, OSASTOSIIRTONALAHTO
+, ULOSKIRJAUS
+, HOITOMUOTOKOODI
+, HINTARYHMAKUNTALASKUTUS
+, LASKUTETUTHOITOPAIVATLKM
+, TILASTOIVATHOITOPAIVATLKM
+, POISSAOLOPAIVATLKM
+, MIELENTILATUTKIMUSPAIVATLKM
+, Laskutettavat_Laskutettavat_hoitopaivat
+, Laskutettavat_Tilastoitavat_hoitopaivat
+, Laskutettavat_Poissaolopaivat
+, Laskutettavat_Mielentilatutkimuspaivat
+, SISAANKIRJAUSPVM
+, SISAANKIRJAUSOSASTO
+, ERIKOISALANHOITOJAKSONKOODI
+, STATUS
+, MAKSAJAKOODI
+, TULOTAPAKOODI
+, MUUTAPAKOODI
+, SAAPUMISTAPAKOODI
+, LAHETTEENANTAJA
+, MISTATULI2
+, MISTATULI3
+, ENSIMMAINENHOITOKERTA
+, LAHTOPVM
+, MINNELAHTI2
+, MINNELAHTI3
+, HOIDONTARVELAHTIESSA
+, GASLAHTOHETKELLA
+, PITKAAIKHOIDONMAKSUMAARAYS
+, LASKUTUSHETKENKOTIKUNTA
+, POTILAS_ID
+FROM Toimintatilasto.DMF_PSYKIATRIA_HOITOJAKSO_SUORITE
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_psykiatria_hoitojakso_suorite out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_psykiatria_hoitojakso_suorite</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_PSYKIATRIA_HOITOJAKSO_SUORITE</column_name>
+        <stream_name>PK_DMF_PSYKIATRIA_HOITOJAKSO_SUORITE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA</column_name>
+        <stream_name>FK_DMD_KUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUKUPUOLI</column_name>
+        <stream_name>FK_DMD_SUKUPUOLI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_ERIKOISALA</column_name>
+        <stream_name>FK_DMD_ERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>SUORITEKOODI</column_name>
+        <stream_name>SUORITEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SUORITTEENPVM</column_name>
+        <stream_name>SUORITTEENPVM</stream_name>
+      </field>
+      <field>
+        <column_name>TUOTEPAATOSID</column_name>
+        <stream_name>TUOTEPAATOSID</stream_name>
+      </field>
+      <field>
+        <column_name>TUOTEPAATOSPVM</column_name>
+        <stream_name>TUOTEPAATOSPVM</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOORVASTAANOTTO</column_name>
+        <stream_name>OSASTOORVASTAANOTTO</stream_name>
+      </field>
+      <field>
+        <column_name>YLLAPITO</column_name>
+        <stream_name>YLLAPITO</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALANHOITOJAKSONKOODI</column_name>
+        <stream_name>SAIRAALANHOITOJAKSONKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTONHOITOJAKSONKOODI</column_name>
+        <stream_name>OSASTONHOITOJAKSONKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTONHOITOJAKSONTUNNISTE</column_name>
+        <stream_name>OSASTONHOITOJAKSONTUNNISTE</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOALKUPVM</column_name>
+        <stream_name>HOITOJAKSOALKUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOLOPPUPVM</column_name>
+        <stream_name>HOITOJAKSOLOPPUPVM</stream_name>
+      </field>
+      <field>
+        <column_name>KUNTALASKUTUSJAKSONPAATTYMISENSYY</column_name>
+        <stream_name>KUNTALASKUTUSJAKSONPAATTYMISENSYY</stream_name>
+      </field>
+      <field>
+        <column_name>KUNTALASKUTUSJAKSONTUNNISTE</column_name>
+        <stream_name>KUNTALASKUTUSJAKSONTUNNISTE</stream_name>
+      </field>
+      <field>
+        <column_name>SAIRAALANHOITOJAKSONTUNNISTE</column_name>
+        <stream_name>SAIRAALANHOITOJAKSONTUNNISTE</stream_name>
+      </field>
+      <field>
+        <column_name>IKAPAIVINA</column_name>
+        <stream_name>IKAPAIVINA</stream_name>
+      </field>
+      <field>
+        <column_name>POSTINUMERO</column_name>
+        <stream_name>POSTINUMERO</stream_name>
+      </field>
+      <field>
+        <column_name>SISAANKIRJAUS</column_name>
+        <stream_name>SISAANKIRJAUS</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOSIIRTONASAAPUMINEN</column_name>
+        <stream_name>OSASTOSIIRTONASAAPUMINEN</stream_name>
+      </field>
+      <field>
+        <column_name>OSASTOSIIRTONALAHTO</column_name>
+        <stream_name>OSASTOSIIRTONALAHTO</stream_name>
+      </field>
+      <field>
+        <column_name>ULOSKIRJAUS</column_name>
+        <stream_name>ULOSKIRJAUS</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOMUOTOKOODI</column_name>
+        <stream_name>HOITOMUOTOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>HINTARYHMAKUNTALASKUTUS</column_name>
+        <stream_name>HINTARYHMAKUNTALASKUTUS</stream_name>
+      </field>
+      <field>
+        <column_name>LASKUTETUTHOITOPAIVATLKM</column_name>
+        <stream_name>LASKUTETUTHOITOPAIVATLKM</stream_name>
+      </field>
+      <field>
+        <column_name>TILASTOIVATHOITOPAIVATLKM</column_name>
+        <stream_name>TILASTOIVATHOITOPAIVATLKM</stream_name>
+      </field>
+      <field>
+        <column_name>POISSAOLOPAIVATLKM</column_name>
+        <stream_name>POISSAOLOPAIVATLKM</stream_name>
+      </field>
+      <field>
+        <column_name>MIELENTILATUTKIMUSPAIVATLKM</column_name>
+        <stream_name>MIELENTILATUTKIMUSPAIVATLKM</stream_name>
+      </field>
+      <field>
+        <column_name>Laskutettavat_Laskutettavat_hoitopaivat</column_name>
+        <stream_name>Laskutettavat_Laskutettavat_hoitopaivat</stream_name>
+      </field>
+      <field>
+        <column_name>Laskutettavat_Tilastoitavat_hoitopaivat</column_name>
+        <stream_name>Laskutettavat_Tilastoitavat_hoitopaivat</stream_name>
+      </field>
+      <field>
+        <column_name>Laskutettavat_Poissaolopaivat</column_name>
+        <stream_name>Laskutettavat_Poissaolopaivat</stream_name>
+      </field>
+      <field>
+        <column_name>Laskutettavat_Mielentilatutkimuspaivat</column_name>
+        <stream_name>Laskutettavat_Mielentilatutkimuspaivat</stream_name>
+      </field>
+      <field>
+        <column_name>SISAANKIRJAUSPVM</column_name>
+        <stream_name>SISAANKIRJAUSPVM</stream_name>
+      </field>
+      <field>
+        <column_name>SISAANKIRJAUSOSASTO</column_name>
+        <stream_name>SISAANKIRJAUSOSASTO</stream_name>
+      </field>
+      <field>
+        <column_name>ERIKOISALANHOITOJAKSONKOODI</column_name>
+        <stream_name>ERIKOISALANHOITOJAKSONKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>STATUS</column_name>
+        <stream_name>STATUS</stream_name>
+      </field>
+      <field>
+        <column_name>MAKSAJAKOODI</column_name>
+        <stream_name>MAKSAJAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TULOTAPAKOODI</column_name>
+        <stream_name>TULOTAPAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>MUUTAPAKOODI</column_name>
+        <stream_name>MUUTAPAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>SAAPUMISTAPAKOODI</column_name>
+        <stream_name>SAAPUMISTAPAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>LAHETTEENANTAJA</column_name>
+        <stream_name>LAHETTEENANTAJA</stream_name>
+      </field>
+      <field>
+        <column_name>MISTATULI2</column_name>
+        <stream_name>MISTATULI2</stream_name>
+      </field>
+      <field>
+        <column_name>MISTATULI3</column_name>
+        <stream_name>MISTATULI3</stream_name>
+      </field>
+      <field>
+        <column_name>ENSIMMAINENHOITOKERTA</column_name>
+        <stream_name>ENSIMMAINENHOITOKERTA</stream_name>
+      </field>
+      <field>
+        <column_name>LAHTOPVM</column_name>
+        <stream_name>LAHTOPVM</stream_name>
+      </field>
+      <field>
+        <column_name>MINNELAHTI2</column_name>
+        <stream_name>MINNELAHTI2</stream_name>
+      </field>
+      <field>
+        <column_name>MINNELAHTI3</column_name>
+        <stream_name>MINNELAHTI3</stream_name>
+      </field>
+      <field>
+        <column_name>HOIDONTARVELAHTIESSA</column_name>
+        <stream_name>HOIDONTARVELAHTIESSA</stream_name>
+      </field>
+      <field>
+        <column_name>GASLAHTOHETKELLA</column_name>
+        <stream_name>GASLAHTOHETKELLA</stream_name>
+      </field>
+      <field>
+        <column_name>PITKAAIKHOIDONMAKSUMAARAYS</column_name>
+        <stream_name>PITKAAIKHOIDONMAKSUMAARAYS</stream_name>
+      </field>
+      <field>
+        <column_name>LASKUTUSHETKENKOTIKUNTA</column_name>
+        <stream_name>LASKUTUSHETKENKOTIKUNTA</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_psykiatria_kaynti in</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Anna_testi</connection>
+    <sql>SELECT
+  PK_DMF_PSYKIATRIA_KAYNTI
+, FK_DMD_PSYKIATRIAN_TOIMINTALAJI
+, FK_DMD_PSYKIATRIAN_TOIMINTALAJIN_TARKENNE
+, FK_DMD_ERIKOISALA
+, FK_DMD_SUKUPUOLI
+, FK_DMD_KUNTA_KOTIPAIKKA
+, FK_DMD_TOIMIPISTE
+, FK_DMD_KUSTANNUSPAIKKA
+, DATE_INSERT
+, DATE_UPDATE
+, H_ACT_ID
+, H_ACT_ID_FILTER
+, LATPVM
+, KAYNTIPVM
+, HOITOJAKSOALKANUTPVM
+, IKA
+, IKAPAIVINA
+, HOITOKERRATLKM
+, TULOTAPAKOODI
+, TULOSYYKOODI
+, YHTEYDENOTTAJAKOODI
+, ITSEMURHAAJATUKSIA
+, ITSEMURHAYRITYKSIA
+, VASTAANOTTOTYYPPIKOODI
+, ENSIMMAINEN_TYONTEKIJAKOODI
+, HOITOJAKSON_VIIMEINEN_KAYNTI
+, HINTARYHMA
+, KAVIJARYHMAKOODI
+, KAVIJARYHMAHILMOKOODI
+, TYONTEKIJARYHMA
+, TUOTEPAATOSID
+, SUORITEKOODI
+, POTILAS_ID
+FROM Toimintatilasto.DMF_PSYKIATRIA_KAYNTI
+</sql>
+    <limit>${limit}</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>dmf_psykiatria_kaynti out</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>PostgreSQL gradient satshp</connection>
+    <schema>stage_dw</schema>
+    <table>dmf_psykiatria_kaynti</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>PK_DMF_PSYKIATRIA_KAYNTI</column_name>
+        <stream_name>PK_DMF_PSYKIATRIA_KAYNTI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_PSYKIATRIAN_TOIMINTALAJI</column_name>
+        <stream_name>FK_DMD_PSYKIATRIAN_TOIMINTALAJI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_PSYKIATRIAN_TOIMINTALAJIN_TARKENNE</column_name>
+        <stream_name>FK_DMD_PSYKIATRIAN_TOIMINTALAJIN_TARKENNE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_ERIKOISALA</column_name>
+        <stream_name>FK_DMD_ERIKOISALA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_SUKUPUOLI</column_name>
+        <stream_name>FK_DMD_SUKUPUOLI</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUNTA_KOTIPAIKKA</column_name>
+        <stream_name>FK_DMD_KUNTA_KOTIPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_TOIMIPISTE</column_name>
+        <stream_name>FK_DMD_TOIMIPISTE</stream_name>
+      </field>
+      <field>
+        <column_name>FK_DMD_KUSTANNUSPAIKKA</column_name>
+        <stream_name>FK_DMD_KUSTANNUSPAIKKA</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_INSERT</column_name>
+        <stream_name>DATE_INSERT</stream_name>
+      </field>
+      <field>
+        <column_name>DATE_UPDATE</column_name>
+        <stream_name>DATE_UPDATE</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID</column_name>
+        <stream_name>H_ACT_ID</stream_name>
+      </field>
+      <field>
+        <column_name>H_ACT_ID_FILTER</column_name>
+        <stream_name>H_ACT_ID_FILTER</stream_name>
+      </field>
+      <field>
+        <column_name>LATPVM</column_name>
+        <stream_name>LATPVM</stream_name>
+      </field>
+      <field>
+        <column_name>KAYNTIPVM</column_name>
+        <stream_name>KAYNTIPVM</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSOALKANUTPVM</column_name>
+        <stream_name>HOITOJAKSOALKANUTPVM</stream_name>
+      </field>
+      <field>
+        <column_name>IKA</column_name>
+        <stream_name>IKA</stream_name>
+      </field>
+      <field>
+        <column_name>IKAPAIVINA</column_name>
+        <stream_name>IKAPAIVINA</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOKERRATLKM</column_name>
+        <stream_name>HOITOKERRATLKM</stream_name>
+      </field>
+      <field>
+        <column_name>TULOTAPAKOODI</column_name>
+        <stream_name>TULOTAPAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TULOSYYKOODI</column_name>
+        <stream_name>TULOSYYKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>YHTEYDENOTTAJAKOODI</column_name>
+        <stream_name>YHTEYDENOTTAJAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>ITSEMURHAAJATUKSIA</column_name>
+        <stream_name>ITSEMURHAAJATUKSIA</stream_name>
+      </field>
+      <field>
+        <column_name>ITSEMURHAYRITYKSIA</column_name>
+        <stream_name>ITSEMURHAYRITYKSIA</stream_name>
+      </field>
+      <field>
+        <column_name>VASTAANOTTOTYYPPIKOODI</column_name>
+        <stream_name>VASTAANOTTOTYYPPIKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>ENSIMMAINEN_TYONTEKIJAKOODI</column_name>
+        <stream_name>ENSIMMAINEN_TYONTEKIJAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>HOITOJAKSON_VIIMEINEN_KAYNTI</column_name>
+        <stream_name>HOITOJAKSON_VIIMEINEN_KAYNTI</stream_name>
+      </field>
+      <field>
+        <column_name>HINTARYHMA</column_name>
+        <stream_name>HINTARYHMA</stream_name>
+      </field>
+      <field>
+        <column_name>KAVIJARYHMAKOODI</column_name>
+        <stream_name>KAVIJARYHMAKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>KAVIJARYHMAHILMOKOODI</column_name>
+        <stream_name>KAVIJARYHMAHILMOKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>TYONTEKIJARYHMA</column_name>
+        <stream_name>TYONTEKIJARYHMA</stream_name>
+      </field>
+      <field>
+        <column_name>TUOTEPAATOSID</column_name>
+        <stream_name>TUOTEPAATOSID</stream_name>
+      </field>
+      <field>
+        <column_name>SUORITEKOODI</column_name>
+        <stream_name>SUORITEKOODI</stream_name>
+      </field>
+      <field>
+        <column_name>POTILAS_ID</column_name>
+        <stream_name>POTILAS_ID</stream_name>
+      </field>
+      <field>
+        <column_name>paivityshetki_stage</column_name>
+        <stream_name>paivityshetki_stage</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now1</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now10</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now11</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now12</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now13</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now14</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now15</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now16</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now17</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now18</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now19</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now2</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now20</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now21</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now22</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now3</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now4</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now5</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now6</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now7</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now8</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>now9</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>paivityshetki_stage</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
